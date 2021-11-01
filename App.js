@@ -1,0 +1,35 @@
+import { StatusBar } from "expo-status-bar";
+import React, { useState } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import AppNav from "./source/NavigationStack/MainStack";
+import * as Font from "expo-font";
+import AppLoading from "expo-app-loading";
+
+const fontLoading = () => {
+  return Font.loadAsync({
+    black: require("./assets/fonts/Montserrat-Black.ttf"),
+    bold: require("./assets/fonts/Montserrat-Bold.ttf"),
+    extraBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
+    light: require("./assets/fonts/Montserrat-Light.ttf"),
+    medium: require("./assets/fonts/Montserrat-Medium.ttf"),
+    logo: require("./assets/fonts/Montserrat-Regular.ttf"),
+    extralight: require("./assets/fonts/Montserrat-ExtraLight.ttf"),
+    semibold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
+    thin: require("./assets/fonts/Montserrat-Thin.ttf"),
+  });
+};
+
+export default function App() {
+  const [fontLoad, setFontLoad] = useState(false);
+
+  if (!fontLoad) {
+    return (
+      <AppLoading
+        startAsync={fontLoading}
+        onFinish={() => setFontLoad(true)}
+        onError={(test) => console.log(test)}
+      />
+    );
+  }
+  return <AppNav />;
+}
