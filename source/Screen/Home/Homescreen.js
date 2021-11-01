@@ -1,16 +1,17 @@
 import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
-import CategorySelection from "../../Component/Specific/categorySelection";
-import HomeBanner from "../../Component/Specific/Homebanner";
-import color from "../../../assets/Color";
-import BrandScroll from "../../Component/Specific/BrandScroll";
-import CarScroll from "../../Component/Specific/CarScroll";
+import CategorySelection from "../../Component/Utils/HomeScreenUtils/categorySelectionUtil";
+import HomeBanner from "../../Component/Utils/HomeScreenUtils/HomebannerUtil";
+
+import BrandScroll from "../../Component/Utils/HomeScreenUtils/BrandScrollUtil";
+import CarScroll from "../../Component/Utils/HomeScreenUtils/CarScrollUtil";
+import Color from "../../../assets/Color";
 const Homescreen = (props) => {
   return (
     <View
       style={{
         paddingTop: 25,
-        backgroundColor: "black",
+        backgroundColor: Color.black,
         flex: 1,
       }}
     >
@@ -42,14 +43,14 @@ const Homescreen = (props) => {
       >
         <View style={{ margin: 15, paddingVertical: 10 }}>
           <Text
-            style={{ fontSize: 28, color: 'white', fontFamily: "bold" }}
+            style={{ fontSize: 28, color: Color.white, fontFamily: "bold" }}
           >
             Good afternoon, Jashan
           </Text>
           <Text
             style={{
               fontSize: 24,
-              color: 'white',
+              color: Color.white,
               fontWeight: "bold",
               // paddingTop: 10,
             }}
@@ -57,9 +58,9 @@ const Homescreen = (props) => {
             Let's find the perfect
           </Text>
           <Text
-            style={{ fontSize: 32, color: 'white', fontFamily: "bold" }}
+            style={{ fontSize: 32, color: Color.white, fontFamily: "bold" }}
           >
-            <Text style={{ color: color.lightgreen }}>
+            <Text style={{ color: Color.lightgreen }}>
               Electric Vehicle ⚡{" "}
             </Text>
             for you

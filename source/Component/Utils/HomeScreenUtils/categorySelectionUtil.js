@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Pressable, View, Text } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import color from "../../../assets/Color";
+import color from "../../../../assets/Color";
 const CategorySelection = () => {
   const typeOfSelection = ["All", "Cars", "Scooty", "Cycle"];
   const [selected, setSelected] = useState(0);

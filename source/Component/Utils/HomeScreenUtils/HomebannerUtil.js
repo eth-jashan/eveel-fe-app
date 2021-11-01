@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
+import Color from  "../../../../assets/Color";
 
 const HomeBanner = () => {
   return (
@@ -23,10 +24,10 @@ const HomeBanner = () => {
                 {
                   width: 300,
                   height: 175,
-                  backgroundColor: "grey",
+                  backgroundColor: Color.cardGrayColor,
                   marginRight: 15,
                   borderRadius: 8,
-                  marginBottom:12
+                  marginBottom: 12,
                 },
               ]}
             ></View>
