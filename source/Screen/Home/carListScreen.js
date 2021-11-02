@@ -21,7 +21,7 @@ import { Transition, Transitioning } from "react-native-reanimated";
 
 import StaggeringView from "../../Component/Common/StaggeringView";
 
-import PriceInfo from "../../Component/Utils/CarListScreenUtils/PriceUtil";
+import TakeaTour from "../../Component/Utils/CarListScreenUtils/TakeaTourUtil";
 import TitleInfo from "../../Component/Utils/CarListScreenUtils/TitleUtil";
 import DetailView from "../../Component/Utils/CarListScreenUtils/DetailUtil";
 import { data } from "../../../model/cardata";
@@ -152,11 +152,11 @@ const CarListScreen = ({ navigation, route }) => {
               />
             </StaggeringView>
 
-            <PriceInfo
-              price_size={PRICE_SIZE}
+            <TakeaTour
+              size={PRICE_SIZE}
               data={data}
               index={index}
-              color={index % 2 === 0 ? "white" : "black"}
+              color={"black"}
             />
           </Transitioning.View>
         </SafeAreaView>

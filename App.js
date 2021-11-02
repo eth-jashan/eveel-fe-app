@@ -17,6 +17,8 @@ const fontLoading = () => {
     extralight: require("./assets/fonts/Montserrat-ExtraLight.ttf"),
     semibold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
     thin: require("./assets/fonts/Montserrat-Thin.ttf"),
+    header: require("./assets/fonts/future-earth.ttf"),
+    car: require("./assets/fonts/Dodgv2.ttf"),
   });
 };
 

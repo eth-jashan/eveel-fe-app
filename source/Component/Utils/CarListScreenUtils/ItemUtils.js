@@ -1,6 +1,6 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
-
+import { View } from "react-native";
+import styles from "./UtilStyles/ItemUtilStyles";
 const Item = ({ index, children, style }) => {
   return (
     <View key={index} style={[styles.ItemStyle, style]}>
@@ -8,13 +8,5 @@ const Item = ({ index, children, style }) => {
     </View>
   );
 };
-const styles = StyleSheet.create({
-  ItemStyle: {
-    justifyContent: "center",
-    overflow: "hidden",
-    backgroundColor: "transparent",
-    padding: 8,
-  },
-});
 
 export default Item;
