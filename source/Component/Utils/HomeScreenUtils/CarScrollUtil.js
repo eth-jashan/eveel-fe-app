@@ -3,10 +3,10 @@ import { ProgressBar } from "react-native-paper";
 import { View, Text, Image, Pressable, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import { FlatList } from "react-native-gesture-handler";
-import color from "../../../assets/Color";
-import Color from "../../../assets/Color";
+import Color from  "../../../../assets/Color";
 
 const CarScroll = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <View
@@ -19,7 +19,7 @@ const CarScroll = () => {
         <Text
           style={{
             fontFamily: "bold",
-            color: 'white',
+            color: Color.white,
             fontSize: 22,
             alignSelf: "center",
           }}
@@ -27,14 +27,17 @@ const CarScroll = () => {
           Top Model
         </Text>
         <Text
+          onPress={() => {
+            navigation.navigate("carlist");
+          }}
           style={{
             fontSize: 14,
             fontFamily: "medium",
             padding: 5,
-            color: "white",
+            color: Color.white,
             borderWidth: 1,
             borderRadius: 15,
-            borderColor: color.lightgreen,
+            borderColor: Color.lightgreen,
             alignSelf: "center",
           }}
         >
@@ -53,13 +56,13 @@ const CarScroll = () => {
             return (
               <Pressable
                 style={{
-                  backgroundColor: "#222222",
+                  backgroundColor: Color.darkgrey,
                   marginHorizontal: 20,
                   marginTop: 20,
                   paddingBottom: 10,
                   marginBottom: 40,
                   borderRadius: 20,
-                  shadowColor: "grey",
+                  shadowColor: Color.grey,
                   shadowOffset: {
                     width: 0,
                     height: 12,
@@ -72,7 +75,7 @@ const CarScroll = () => {
               >
                 <View
                   style={{
-                    shadowColor: "grey",
+                    shadowColor: Color.grey,
                     shadowOffset: {
                       width: 0,
                       height: 2,
@@ -83,7 +86,7 @@ const CarScroll = () => {
                   }}
                 >
                   <Image
-                    source={require("../../../assets/Images/car.png")}
+                    source={require("../../../../assets/Images/car.png")}
                     style={{
                       margin: 20,
                       width: Dimensions.get("screen").width / 1.5,
@@ -95,10 +98,22 @@ const CarScroll = () => {
                   />
                 </View>
                 <View style={{ margin: 15 }}>
-                  <Text style={{ fontSize: 20, fontFamily: "semibold" , color:'white'}}>
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontFamily: "semibold",
+                      color: Color.white,
+                    }}
+                  >
                     Hyundai Kona Electric
                   </Text>
-                  <Text style={{ fontSize: 18, fontFamily: "light", color:'white'}}>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      fontFamily: "light",
+                      color: Color.white,
+                    }}
+                  >
                     Starting @ ₹12.5 Lakhs
                   </Text>
                   <View>
@@ -111,7 +126,7 @@ const CarScroll = () => {
                     >
                       <Text
                         style={{
-                          color: color.lightgreen,
+                          color: Color.lightgreen,
                           fontSize: 16,
                           fontFamily: "light",
                         }}
@@ -120,7 +135,7 @@ const CarScroll = () => {
                       </Text>
                       <Text
                         style={{
-                          color: color.lightgreen,
+                          color: Color.lightgreen,
                           fontSize: 16,
                           fontFamily: "bold",
                         }}
@@ -130,11 +145,11 @@ const CarScroll = () => {
                     </View>
                     <ProgressBar
                       progress={0.5}
-                      color={color.lightgreen}
+                      color={Color.lightgreen}
                       style={{
                         height: 8,
                         borderRadius: 10,
-                        backgroundColor: "#D3D3D3",
+                        backgroundColor: Color.lightgrey,
                       }}
                     />
                   </View>
@@ -148,7 +163,7 @@ const CarScroll = () => {
                     >
                       <Text
                         style={{
-                          color: color.lightgreen,
+                          color: Color.lightgreen,
                           fontSize: 16,
                           fontFamily: "light",
                         }}
@@ -157,7 +172,7 @@ const CarScroll = () => {
                       </Text>
                       <Text
                         style={{
-                          color: color.lightgreen,
+                          color: Color.lightgreen,
                           fontSize: 16,
                           fontFamily: "bold",
                         }}
@@ -167,11 +182,11 @@ const CarScroll = () => {
                     </View>
                     <ProgressBar
                       progress={0.8}
-                      color={color.lightgreen}
+                      color={Color.lightgreen}
                       style={{
                         height: 8,
                         borderRadius: 10,
-                        backgroundColor: "#D3D3D3",
+                        backgroundColor: Color.lightgrey,
                       }}
                     />
                   </View>
@@ -185,7 +200,7 @@ const CarScroll = () => {
                     >
                       <Text
                         style={{
-                          color: color.lightgreen,
+                          color: Color.lightgreen,
                           fontSize: 16,
                           fontFamily: "light",
                         }}
@@ -194,7 +209,7 @@ const CarScroll = () => {
                       </Text>
                       <Text
                         style={{
-                          color: color.lightgreen,
+                          color: Color.lightgreen,
                           fontSize: 16,
                           fontFamily: "bold",
                         }}
@@ -204,11 +219,11 @@ const CarScroll = () => {
                     </View>
                     <ProgressBar
                       progress={0.5}
-                      color={color.lightgreen}
+                      color={Color.lightgreen}
                       style={{
                         height: 8,
                         borderRadius: 10,
-                        backgroundColor: "#D3D3D3",
+                        backgroundColor: Color.lightgrey,
                       }}
                     />
                   </View>

@@ -1,10 +1,10 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { useState } from "react";
 import { View, Text, Image } from "react-native";
-import { category } from "../../../model/dummyData";
-import color from "../../../assets/Color";
+import { category } from "../../../../model/dummyData";
+
 import { FlatList } from "react-native-gesture-handler";
-import Color from "../../../assets/Color";
+import Color from  "../../../../assets/Color";
 const BrandScroll = (props) => {
   const data = category;
   const navigation = useNavigation();
@@ -20,7 +20,7 @@ const BrandScroll = (props) => {
         <Text
           style={{
             fontFamily: "bold",
-            color: 'white',
+            color: Color.white,
             fontSize: 22,
             alignSelf: "center",
           }}
@@ -32,10 +32,10 @@ const BrandScroll = (props) => {
             fontSize: 16,
             fontFamily: "medium",
             padding: 5,
-            color: "white",
+            color: Color.white,
             borderWidth: 1,
             borderRadius: 15,
-            borderColor: color.lightgreen,
+            borderColor: Color.lightgreen,
             alignSelf: "center",
           }}
         >
@@ -70,8 +70,8 @@ const BrandScroll = (props) => {
                   shadowOpacity: 0.4,
                   shadowRadius: 16.0,
                   elevation: 16,
-                  shadowColor: color.darkgreen,
-                  backgroundColor: color.darkgreen,
+                  shadowColor: Color.darkgreen,
+                  backgroundColor: Color.darkgreen,
                 }}
               >
                 <Image

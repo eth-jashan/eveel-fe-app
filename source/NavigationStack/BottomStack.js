@@ -1,7 +1,5 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Homescreen from "../Screen/Home/Homescreen";
+
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import {
   Feather,
@@ -11,6 +9,8 @@ import {
 } from "@expo/vector-icons";
 import Pumpscreen from "../Screen/Pump/Pumpscreen";
 import Feedscreen from "../Screen/Feed/Feedscreen";
+import HomeStack from "./HomeStack";
+import Homescreen from "../Screen/Home/Homescreen";
 
 const BottomStack = createMaterialBottomTabNavigator();
 const BottomNav = () => {

@@ -9,6 +9,7 @@ const fontLoading = () => {
   return Font.loadAsync({
     black: require("./assets/fonts/Montserrat-Black.ttf"),
     bold: require("./assets/fonts/Montserrat-Bold.ttf"),
+    book: require("./assets/fonts/AirbnbCereal-Book.ttf"),
     extraBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
     light: require("./assets/fonts/Montserrat-Light.ttf"),
     medium: require("./assets/fonts/Montserrat-Medium.ttf"),
