@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import styles from "./UtilStyles/TitleUtilStyles";
 const TitleInfo = ({ title_size, index, text, color }) => {
   return (
     <View index={index} style={styles.TitleView}>
@@ -18,10 +19,5 @@ const TitleInfo = ({ title_size, index, text, color }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  TitleView: { overflow: "hidden" },
-  TitleInfo: { fontFamily: "bold", alignSelf: "center" },
-});
 
 export default TitleInfo;

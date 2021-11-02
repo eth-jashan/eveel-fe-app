@@ -3,43 +3,19 @@ import { ProgressBar } from "react-native-paper";
 import { View, Text, Image, Pressable, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import { FlatList } from "react-native-gesture-handler";
-import Color from  "../../../../assets/Color";
-
+import Color from "../../../../assets/Color";
+import styles from "./UtilStyles/CarScrollUtilStyles";
 const CarScroll = () => {
   const navigation = useNavigation();
   return (
     <View>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          margin: 15,
-        }}
-      >
-        <Text
-          style={{
-            fontFamily: "bold",
-            color: Color.white,
-            fontSize: 22,
-            alignSelf: "center",
-          }}
-        >
-          Top Model
-        </Text>
+      <View style={styles.headingBar}>
+        <Text style={styles.title}>Top Model</Text>
         <Text
           onPress={() => {
             navigation.navigate("carlist");
           }}
-          style={{
-            fontSize: 14,
-            fontFamily: "medium",
-            padding: 5,
-            color: Color.white,
-            borderWidth: 1,
-            borderRadius: 15,
-            borderColor: Color.lightgreen,
-            alignSelf: "center",
-          }}
+          style={styles.more}
         >
           See All
         </Text>
@@ -55,176 +31,51 @@ const CarScroll = () => {
           renderItem={({ item, index }) => {
             return (
               <Pressable
-                style={{
-                  backgroundColor: Color.darkgrey,
-                  marginHorizontal: 20,
-                  marginTop: 20,
-                  paddingBottom: 10,
-                  marginBottom: 40,
-                  borderRadius: 20,
-                  shadowColor: Color.grey,
-                  shadowOffset: {
-                    width: 0,
-                    height: 12,
-                  },
-                  shadowOpacity: 0.58,
-                  shadowRadius: 16.0,
-
-                  elevation: 24,
+                style={styles.Box}
+                onPress={() => {
+                  navigation.navigate("CarProfile");
                 }}
               >
-                <View
-                  style={{
-                    shadowColor: Color.grey,
-                    shadowOffset: {
-                      width: 0,
-                      height: 2,
-                    },
-                    shadowOpacity: 0.25,
-                    shadowRadius: 3.84,
-                    elevation: 5,
-                  }}
-                >
+                <View style={styles.imgview}>
                   <Image
                     source={require("../../../../assets/Images/car.png")}
-                    style={{
-                      margin: 20,
-                      width: Dimensions.get("screen").width / 1.5,
-                      height: Dimensions.get("screen").width / 2.5,
-                      borderRadius: 10,
-
-                      alignSelf: "center",
-                    }}
+                    style={styles.image}
                   />
                 </View>
                 <View style={{ margin: 15 }}>
-                  <Text
-                    style={{
-                      fontSize: 20,
-                      fontFamily: "semibold",
-                      color: Color.white,
-                    }}
-                  >
-                    Hyundai Kona Electric
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: "light",
-                      color: Color.white,
-                    }}
-                  >
-                    Starting @ ₹12.5 Lakhs
-                  </Text>
+                  <Text style={styles.name}>Hyundai Kona Electric</Text>
+                  <Text style={styles.price}>Starting @ ₹12.5 Lakhs</Text>
                   <View>
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        paddingVertical: 10,
-                      }}
-                    >
-                      <Text
-                        style={{
-                          color: Color.lightgreen,
-                          fontSize: 16,
-                          fontFamily: "light",
-                        }}
-                      >
-                        Battery
-                      </Text>
-                      <Text
-                        style={{
-                          color: Color.lightgreen,
-                          fontSize: 16,
-                          fontFamily: "bold",
-                        }}
-                      >
-                        90 mins
-                      </Text>
+                    <View style={styles.progressView}>
+                      <Text style={styles.feature}>Battery</Text>
+                      <Text style={styles.featureNumber}>90 mins</Text>
                     </View>
                     <ProgressBar
                       progress={0.5}
                       color={Color.lightgreen}
-                      style={{
-                        height: 8,
-                        borderRadius: 10,
-                        backgroundColor: Color.lightgrey,
-                      }}
+                      style={styles.progressBar}
                     />
                   </View>
                   <View>
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        paddingVertical: 10,
-                      }}
-                    >
-                      <Text
-                        style={{
-                          color: Color.lightgreen,
-                          fontSize: 16,
-                          fontFamily: "light",
-                        }}
-                      >
-                        Range
-                      </Text>
-                      <Text
-                        style={{
-                          color: Color.lightgreen,
-                          fontSize: 16,
-                          fontFamily: "bold",
-                        }}
-                      >
-                        312 km
-                      </Text>
+                    <View style={styles.progressView}>
+                      <Text style={styles.feature}>Range</Text>
+                      <Text style={styles.featureNumber}>312 km</Text>
                     </View>
                     <ProgressBar
                       progress={0.8}
                       color={Color.lightgreen}
-                      style={{
-                        height: 8,
-                        borderRadius: 10,
-                        backgroundColor: Color.lightgrey,
-                      }}
+                      style={styles.progressBar}
                     />
                   </View>
                   <View>
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        paddingVertical: 10,
-                      }}
-                    >
-                      <Text
-                        style={{
-                          color: Color.lightgreen,
-                          fontSize: 16,
-                          fontFamily: "light",
-                        }}
-                      >
-                        0-100 km/h
-                      </Text>
-                      <Text
-                        style={{
-                          color: Color.lightgreen,
-                          fontSize: 16,
-                          fontFamily: "bold",
-                        }}
-                      >
-                        9.9 sec
-                      </Text>
+                    <View style={styles.progressView}>
+                      <Text style={styles.feature}>0-100 km/h</Text>
+                      <Text style={styles.featureNumber}>9.9 sec</Text>
                     </View>
                     <ProgressBar
                       progress={0.5}
                       color={Color.lightgreen}
-                      style={{
-                        height: 8,
-                        borderRadius: 10,
-                        backgroundColor: Color.lightgrey,
-                      }}
+                      style={styles.progressBar}
                     />
                   </View>
                 </View>

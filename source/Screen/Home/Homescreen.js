@@ -6,65 +6,28 @@ import HomeBanner from "../../Component/Utils/HomeScreenUtils/HomebannerUtil";
 import BrandScroll from "../../Component/Utils/HomeScreenUtils/BrandScrollUtil";
 import CarScroll from "../../Component/Utils/HomeScreenUtils/CarScrollUtil";
 import Color from "../../../assets/Color";
+import styles from "./HomeStyles/HomescreenStyles";
 const Homescreen = (props) => {
   return (
-    <View
-      style={{
-        paddingTop: 25,
-        backgroundColor: Color.black,
-        flex: 1,
-      }}
-    >
-      <View
-        style={{
-          margin: 15,
-          flexDirection: "row",
-          justifyContent: "space-between",
-          backgroundColor: "transparent",
-        }}
-      >
+    <View style={styles.screen}>
+      <View style={styles.heading}>
         <Image
-          source={require("../../../assets/Images/header-logo-white.png")}
-          style={{
-            height: 50,
-            width: 150,
-            resizeMode: "contain",
-            alignSelf: "center",
-          }}
+          source={require("../../../assets/Images/Ellipse-white.png")}
+          style={styles.logo}
         />
         <Image
           source={require("../../../assets/Images/Ellipse.png")}
-          style={{ width: 50, height: 50, alignSelf: "center" }}
+          style={styles.profile}
         />
       </View>
       <ScrollView
-        contentContainerStyle={{ paddingBottom: 100 }}
+        contentContainerStyle={styles.screenscroll}
         showsVerticalScrollIndicator={false}
       >
-        <View style={{ margin: 15, paddingVertical: 10 }}>
-          <Text
-            style={{ fontSize: 28, color: Color.white, fontFamily: "bold" }}
-          >
-            Good afternoon, Jashan
-          </Text>
-          <Text
-            style={{
-              fontSize: 24,
-              color: Color.white,
-              fontWeight: "bold",
-              // paddingTop: 10,
-            }}
-          >
-            Let's find the perfect
-          </Text>
-          <Text
-            style={{ fontSize: 32, color: Color.white, fontFamily: "bold" }}
-          >
-            <Text style={{ color: Color.lightgreen }}>
-              Electric Vehicle ⚡{" "}
-            </Text>
-            for you
-          </Text>
+        <View style={styles.TitleView}>
+          <Text style={styles.welcome}>Good afternoon, Jashan</Text>
+          <Text style={styles.slogan}>Let's find the perfect</Text>
+          <Text style={styles.title}>Electric Vehicle ⚡ </Text>
         </View>
         <HomeBanner />
         <CategorySelection />
