@@ -25,13 +25,13 @@ export const category = [
       "https://firebasestorage.googleapis.com/v0/b/eveels.appspot.com/o/tata%20nexon%20ev%2Fnexon%20ev%20bg.webp?alt=media&token=1b1b00ac-3820-403e-a36f-5a01ebe62a33",
     description: "",
     logoUrl: require("../assets/Images/Tata.png"),
-    name: "tata",
+    name: "Tata",
   },
   {
     backgroundUrl:
       "https://firebasestorage.googleapis.com/v0/b/eveels.appspot.com/o/hyundai%20kona%20ev%2Fkona%20ev%20bg.jpg?alt=media&token=f580e26a-55b2-4d95-bfd6-70f46d3d284f",
     description: "",
     logoUrl:require("../assets/Images/Hyundai.png"),
-    name: "hyundai",
+    name: "Hyundai",
   },
 ];

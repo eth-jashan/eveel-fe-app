@@ -13,7 +13,14 @@ const BrandScroll = (props) => {
     <View>
       <View style={styles.Headingbar}>
         <Text style={styles.title}>Top Brands</Text>
-        <Text style={styles.more}>See All</Text>
+        <Text
+          onPress={() => {
+            navigation.navigate("Category");
+          }}
+          style={styles.more}
+        >
+          See All
+        </Text>
       </View>
       <View>
         <FlatList
