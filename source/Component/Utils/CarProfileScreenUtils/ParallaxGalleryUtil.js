@@ -14,7 +14,7 @@ import styles from "./UtilStyles/ParallaxGalleryUtilStyles";
 const { width, height } = Dimensions.get("window");
 const ParallaxGallery = ({ imageList }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
-  console.log("Image :", imageList);
+  //console.log("Image :", imageList);
 
   return (
     <Animated.FlatList
@@ -48,6 +48,5 @@ const ParallaxGallery = ({ imageList }) => {
     />
   );
 };
-
 
 export default ParallaxGallery;

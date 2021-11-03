@@ -30,7 +30,9 @@ export default function App() {
       <AppLoading
         startAsync={fontLoading}
         onFinish={() => setFontLoad(true)}
-        onError={(test) => console.log(test)}
+        onError={(test) => {
+          throw new Error(Text);
+        }}
       />
     );
   }
