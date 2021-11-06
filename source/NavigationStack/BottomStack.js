@@ -1,5 +1,4 @@
 import React from "react";
-
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import {
   Feather,
@@ -11,6 +10,7 @@ import Pumpscreen from "../Screen/Pump/Pumpscreen";
 import Feedscreen from "../Screen/Feed/Feedscreen";
 import HomeStack from "./HomeStack";
 import Homescreen from "../Screen/Home/Homescreen";
+import PumpTabScreen from "../Screen/Pump/PumpTabScreen";
 
 const BottomStack = createMaterialBottomTabNavigator();
 const BottomNav = () => {
@@ -44,7 +44,7 @@ const BottomNav = () => {
       />
       <BottomStack.Screen
         name="Pump"
-        component={Pumpscreen}
+        component={PumpTabScreen}
         options={{
           tabBarIcon: ({ color, focused }) => {
             return (

@@ -7,7 +7,9 @@ import BrandScroll from "../../Component/Utils/HomeScreenUtils/BrandScrollUtil";
 import CarScroll from "../../Component/Utils/HomeScreenUtils/CarScrollUtil";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/HomescreenStyles";
+import { useNavigationState } from "@react-navigation/core";
 const Homescreen = (props) => {
+  
   return (
     <View style={styles.screen}>
       <View style={styles.heading}>
