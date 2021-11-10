@@ -1,12 +1,13 @@
 import React from "react";
-import { Dimensions, View, Text, TextInput,StyleSheet } from "react-native";
+import { Dimensions, View, Text, TextInput, StyleSheet } from "react-native";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 import Dash from "react-native-dash";
 import { LinearGradient } from "expo-linear-gradient";
 import { SearchBar } from "react-native-elements";
 import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
+import styles from "./UtilStyles/MapHeaderStyles";
+import Color from "../../../../assets/Color";
 const MapHeader = ({ active }) => {
   const navigation = useNavigation();
   const onPress = () => {
@@ -19,7 +20,7 @@ const MapHeader = ({ active }) => {
         <MaterialIcons
           name="location-on"
           size={28}
-          color="#1ec0af"
+          color={Color.lightgreen}
           style={styles.IconArrange}
         />
         <Text numberOfLines={1} style={styles.Address}>
@@ -30,7 +31,7 @@ const MapHeader = ({ active }) => {
         <MaterialIcons
           name="tune"
           size={24}
-          color="#1ec0af"
+          color={Color.lightgreen}
           style={styles.FilterIcon}
         />
       </View>
@@ -38,7 +39,7 @@ const MapHeader = ({ active }) => {
       <Dash style={styles.Dash} />
 
       <View style={styles.SearchBar}>
-        <Ionicons name="search" size={16} color="#1ec0af" />
+        <Ionicons name="search" size={16} color={Color.lightgreen} />
         <TextInput
           placeholderTextColor={"white"}
           placeholder="Search in locality"
@@ -48,43 +49,5 @@ const MapHeader = ({ active }) => {
     </Pressable>
   );
 };
-
-const styles = StyleSheet.create({
-    LocationBar: {
-      width: Dimensions.get("window").width,
-      padding: 16,
-      backgroundColor: "black",
-      alignSelf: "center",
-    },
-    LocHeader: { alignSelf: "center", flexDirection: "row" },
-    IconArrange: { alignSelf: "center" },
-    Address: {
-      color: "white",
-      width: "80%",
-      fontFamily: "book",
-      fontSize: 14,
-      marginLeft: 8,
-      alignSelf: "center",
-    },
-    FilterIcon: { alignSelf: "center", marginLeft: 10 },
-    Dash: {
-      backgroundColor: "white",
-      width: "80%",
-      height: 1,
-      alignSelf: "center",
-    },
-    SearchBar: {
-      height: 40,
-      width: "90%",
-      backgroundColor: "#282629",
-      padding: 12,
-      borderRadius: 10,
-      alignSelf: "center",
-      marginTop: 12,
-      flexDirection: "row",
-    },
-    placeholder: { fontFamily: "light", width: "90%", marginLeft: 12 },
-  });
-  
 
 export default MapHeader;

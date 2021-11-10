@@ -13,7 +13,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/CategoryListScreenStyles";
-import { category } from "../../../model/dummyData";
+import { category } from "../../../model/Data/dummyData";
 
 const { width, height } = Dimensions.get("screen");
 

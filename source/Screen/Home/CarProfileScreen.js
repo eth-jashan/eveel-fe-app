@@ -24,7 +24,7 @@ import {
   features,
   variantList,
   colorVariantList,
-} from "../../../model/carProfiledata";
+} from "../../../model/Data/carProfiledata";
 const { width, height } = Dimensions.get("window");
 const CarProfilePage = () => {
   const modalize = useRef();

@@ -8,7 +8,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import ListPump from "../../Component/Utils/PumpSearchScreenUtils/listPump";
 import MapHeader from "../../Component/Utils/PumpSearchScreenUtils/MapHeader";
 //import PumpMapView from "../component/PumpMapView";
-
+import styles from "./PumpStyles/PumpSearchScreenStyles";
 const PumpSearchScreen = () => {
   const bottomSheetRef = useRef(null);
   const snapPoints = useMemo(() => ["25%", "50%", "75%"], []);
@@ -20,9 +20,5 @@ const PumpSearchScreen = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  screens: { flex: 1, backgroundColor: "black" },
-});
 
 export default PumpSearchScreen;
