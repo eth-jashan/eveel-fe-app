@@ -18,12 +18,13 @@ import {
 import { mapStyle } from "../../Component/Utils/PumpScreen/mapStylesUtil";
 import PumpInfoModal from "../../Component/Utils/PumpScreen/PumpInfoModelUtil";
 import { Modalize } from "react-native-modalize";
+import Color from "../../../assets/Color";
 // import ListPump from "../component/listPump";
 // import MapHeader from "../component/MapHeader";
 import { AntDesign } from "@expo/vector-icons";
 import Dash from "react-native-dash";
 import { useNavigationState } from "@react-navigation/core";
-
+import styles from "./PumpStyles/PumpscreenStyles";
 const { width, height } = Dimensions.get("window");
 
 // import MapViewDirections from 'react-native-maps-directions';
@@ -101,10 +102,10 @@ const pumpLocation = ({ navigation }) => {
 
   const [exit, setExit] = useState(false);
   const index = useNavigationState((state) => state);
-  console.log(
-    "PumpScreen to Homescreen state====>",
-    index.routes[0].state.routes
-  );
+  // console.log(
+  //   "PumpScreen to Homescreen state====>",
+  //   index.routes[0].state.routes
+  // );
 
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
@@ -177,7 +178,7 @@ const pumpLocation = ({ navigation }) => {
               onPress={() => navigation.navigate("PumpSearch")}
               name="search1"
               size={24}
-              color="white"
+              color={Color.white}
             />
           </View>
         </View>
@@ -195,7 +196,8 @@ const pumpLocation = ({ navigation }) => {
                   style={[
                     {
                       marginLeft: index === 0 ? 8 : 0,
-                      backgroundColor: index === select ? "#1ec0af" : null,
+                      backgroundColor:
+                        index === select ? Color.lightgreen : null,
                     },
                     styles.options,
                   ]}
@@ -203,7 +205,8 @@ const pumpLocation = ({ navigation }) => {
                   <Text
                     style={[
                       {
-                        color: index === select ? "white" : "#1ec0af",
+                        color:
+                          index === select ? Color.black : Color.lightgreen,
                       },
                       styles.OptionText,
                     ]}
@@ -216,96 +219,9 @@ const pumpLocation = ({ navigation }) => {
           />
         </View>
       </View>
-      <PumpInfoModal modalRef={pumpRef} height={200} item={pumpInfo} />
+      <PumpInfoModal modalRef={pumpRef} height={250} item={pumpInfo} />
     </View>
   );
 };
-const styles = StyleSheet.create({
-  ScreenFuller: { height: "100%", width: "100%" },
-  container: {
-    flex: 1,
-  },
-  centeredview: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "black",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  modalText: {
-    color: "white",
-    marginBottom: 15,
-    textAlign: "center",
-  },
-  map: {
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("screen").height,
-  },
-  ImageView: { width: 20, height: 20 },
-  TabArea: {
-    width: "100%",
-    backgroundColor: "black",
-    padding: 14,
-    position: "absolute",
-    bottom: 0,
-  },
-  locationText: {
-    alignSelf: "center",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: "100%",
-  },
-  address: {
-    color: "white",
-    width: "80%",
-    fontFamily: "medium",
-    fontSize: 18,
-    alignSelf: "center",
-  },
-  icon: { padding: 6, borderRadius: 20, backgroundColor: "#2a2c33" },
-  menuTitle: { fontFamily: "book", color: "white" },
-  options: {
-    marginTop: 6,
-    borderWidth: 0.5,
-    minWidth: 100,
-    marginRight: 8,
-    padding: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 20,
-    borderColor: "#1ec0af",
-  },
-  OptionText: { fontSize: 16, fontFamily: "book" },
-});
 
 export default pumpLocation;

@@ -9,7 +9,6 @@ import Color from "../../../assets/Color";
 import styles from "./HomeStyles/HomescreenStyles";
 import { useNavigationState } from "@react-navigation/core";
 const Homescreen = (props) => {
-  
   return (
     <View style={styles.screen}>
       <View style={styles.heading}>

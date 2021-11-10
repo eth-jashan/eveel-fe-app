@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 import AppNav from "./source/NavigationStack/MainStack";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
-
+import { Provider } from "react-redux";
+import store from "./source/Store/Store";
 const fontLoading = () => {
   return Font.loadAsync({
     black: require("./assets/fonts/Montserrat-Black.ttf"),
@@ -36,5 +37,9 @@ export default function App() {
       />
     );
   }
-  return <AppNav />;
+  return (
+    <Provider store={store}>
+      <AppNav />
+    </Provider>
+  );
 }

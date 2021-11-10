@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { useState } from "react";
 import { View, Text, Image } from "react-native";
-import { category } from "../../../../model/dummyData";
+import { category } from "../../../../model/Data/dummyData";
 
 import { FlatList } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";

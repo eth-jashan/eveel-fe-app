@@ -1,7 +1,7 @@
 import { useFocusEffect } from "@react-navigation/core";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-
+import styles from "./PumpStyles/PumpTabScreenStyles";
 const PumpTabScreen = (props) => {
   useFocusEffect(() => {
     setTimeout(() => {
@@ -9,8 +9,8 @@ const PumpTabScreen = (props) => {
     }, 3000);
   });
   return (
-    <View style={{ flex: 1, justifyContent: "center" }}>
-      <Text style={{ alignSelf: "center" }}>Loading...</Text>
+    <View style={styles.screen}>
+      <Text style={styles.title}>Loading...</Text>
     </View>
   );
 };

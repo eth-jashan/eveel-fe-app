@@ -11,7 +11,8 @@ import MapView from "react-native-maps";
 import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { ScrollView } from "react-native-gesture-handler";
-
+import Color from "../../../../assets/Color";
+import styles from "./UtilStyles/listPumpStyles";
 const { width, height } = Dimensions.get("window");
 
 const ListPump = () => {
@@ -49,7 +50,7 @@ const ListPump = () => {
                 <AntDesign
                   name="infocirlceo"
                   size={24}
-                  color="white"
+                  color={Color.white}
                   style={styles.IconArrange}
                 />
               </View>
@@ -71,7 +72,7 @@ const ListPump = () => {
                       name="ios-navigate-circle"
                       size={18}
                       style={styles.IconArrange}
-                      color="black"
+                      color={Color.black}
                     />
                     <Text style={styles.NavButtonText}>12 kms away</Text>
                   </View>
@@ -84,51 +85,5 @@ const ListPump = () => {
     </View>
   );
 };
-const styles = StyleSheet.create({
-  component: { flex: 1 },
-  pumpListContainer: {
-    marginVertical: 6,
-    width: width * 0.98,
-    borderRadius: 6,
-    padding: 12,
-    backgroundColor: "#282629",
-    alignSelf: "center",
-  },
-  ContentBox: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  map: { height: 60, width: 60, borderRadius: 10 },
-  Content: {
-    marginLeft: 14,
-    alignSelf: "center",
-    width: "60%",
-  },
-  PumpName: {
-    fontSize: 18,
-    fontFamily: "medium",
-    color: "white",
-  },
-  PumpAddress: {
-    fontFamily: "light",
-    fontSize: 14,
-    color: "white",
-  },
-  IconArrange: { alignSelf: "center" },
-  NavigationButtonView: { width: "100%", marginTop: 12 },
-  NavButton: {
-    width: "60%",
-    backgroundColor: "#1ec0af",
-    padding: 8,
-    alignSelf: "center",
-    borderRadius: 20,
-  },
-  NavButtonText: {
-    fontSize: 16,
-    fontFamily: "book",
-    alignSelf: "center",
-    marginLeft: 14,
-  },
-});
 
 export default ListPump;

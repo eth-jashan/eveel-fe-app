@@ -24,7 +24,7 @@ import StaggeringView from "../../Component/Common/StaggeringView";
 import TakeaTour from "../../Component/Utils/CarListScreenUtils/TakeaTourUtil";
 import TitleInfo from "../../Component/Utils/CarListScreenUtils/TitleUtil";
 import DetailView from "../../Component/Utils/CarListScreenUtils/DetailUtil";
-import { data } from "../../../model/cardata";
+import { data } from "../../../model/Data/cardata";
 
 export const TITLE_SIZE = 50;
 export const PRICE_SIZE = 40;
