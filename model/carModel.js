@@ -11,7 +11,9 @@ class CarModel {
     torque,
     startPrice,
     youtube,
-    description
+    description,
+    company,
+    type
   ) {
     this.carId = carId;
     this.companyId = companyId;
@@ -25,6 +27,8 @@ class CarModel {
     this.startPrice = startPrice;
     this.youtube = youtube;
     this.description = description;
+    this.company = company;
+    this.type = type;
   }
 }
 export default CarModel;

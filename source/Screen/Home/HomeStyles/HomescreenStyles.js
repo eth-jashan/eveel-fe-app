@@ -15,10 +15,11 @@ const styles = StyleSheet.create({
   },
   logo: {
     height: 50,
-    width: 150,
+    width: 50,
     resizeMode: "contain",
     alignSelf: "center",
   },
+  logo2: { width: 100, height: 50, alignSelf: "center" , resizeMode:'contain', marginLeft:8},
   profile: { width: 50, height: 50, alignSelf: "center" },
   screenscroll: { paddingBottom: 100 },
   TitleView: { margin: 15, paddingVertical: 10 },

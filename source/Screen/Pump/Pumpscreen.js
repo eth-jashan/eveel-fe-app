@@ -90,7 +90,6 @@ const pumpLocation = ({ navigation }) => {
   const [select, setSelect] = React.useState(false);
 
   const onLocationPress = (item) => {
-    console.log("mappppp", item);
     setPumpInfo(item);
     pumpRef?.current?.open();
   };

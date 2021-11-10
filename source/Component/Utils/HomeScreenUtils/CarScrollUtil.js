@@ -5,8 +5,10 @@ import { useNavigation } from "@react-navigation/core";
 import { FlatList } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";
 import styles from "./UtilStyles/CarScrollUtilStyles";
+import { useSelector } from "react-redux";
 const CarScroll = () => {
   const navigation = useNavigation();
+  const carList = useSelector(x=>x.car.carList)
   return (
     <View>
       <View style={styles.headingBar}>
@@ -22,7 +24,7 @@ const CarScroll = () => {
       </View>
       <View>
         <FlatList
-          data={["1", "2", "3", "4", "5"]}
+          data={carList}
           decelerationRate="fast"
           snapToAlignment="start"
           horizontal
@@ -43,12 +45,12 @@ const CarScroll = () => {
                   />
                 </View>
                 <View style={{ margin: 15 }}>
-                  <Text style={styles.name}>Hyundai Kona Electric</Text>
-                  <Text style={styles.price}>Starting @ ₹12.5 Lakhs</Text>
+                  <Text style={styles.name}>{item.company} {item.name}</Text>
+                  <Text style={styles.price}>Starting @ ₹{item.startPrice}</Text>
                   <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>Battery</Text>
-                      <Text style={styles.featureNumber}>90 mins</Text>
+                      <Text style={styles.featureNumber}>{item.battery}</Text>
                     </View>
                     <ProgressBar
                       progress={0.5}
@@ -59,7 +61,7 @@ const CarScroll = () => {
                   <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>Range</Text>
-                      <Text style={styles.featureNumber}>312 km</Text>
+                      <Text style={styles.featureNumber}>{item.range}</Text>
                     </View>
                     <ProgressBar
                       progress={0.8}
@@ -69,8 +71,8 @@ const CarScroll = () => {
                   </View>
                   <View>
                     <View style={styles.progressView}>
-                      <Text style={styles.feature}>0-100 km/h</Text>
-                      <Text style={styles.featureNumber}>9.9 sec</Text>
+                      <Text style={styles.feature}>{item.type === 'car'? '0-100 km/h':'0-60 km/h'}</Text>
+                      <Text style={styles.featureNumber}>{item.speed}</Text>
                     </View>
                     <ProgressBar
                       progress={0.5}
