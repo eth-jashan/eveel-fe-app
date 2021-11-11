@@ -19,12 +19,6 @@ const ListPump = () => {
   const navigation = useNavigation();
   const pumpList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
-  // for( let i=0; i<=20; i++){
-
-  //     pumpList.push(i.toString())
-
-  // }
-
   return (
     <View style={styles.component}>
       <FlatList

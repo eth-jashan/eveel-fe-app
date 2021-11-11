@@ -30,6 +30,7 @@ const { width, height } = Dimensions.get("window");
 // import MapViewDirections from 'react-native-maps-directions';
 // import getDirections from 'react-native-google-maps-directions'
 // import { showLocation } from 'react-native-map-link'
+
 const pumpLocation = ({ navigation }) => {
   //  const handleGetDirections = (lat, long) => {
   //     const data = {
@@ -218,7 +219,7 @@ const pumpLocation = ({ navigation }) => {
           />
         </View>
       </View>
-      <PumpInfoModal modalRef={pumpRef} height={250} item={pumpInfo} />
+      <PumpInfoModal modalRef={pumpRef} height={200} item={pumpInfo} />
     </View>
   );
 };
