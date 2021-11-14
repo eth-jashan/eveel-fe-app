@@ -8,7 +8,7 @@ import styles from "./UtilStyles/CarScrollUtilStyles";
 import { useSelector } from "react-redux";
 const CarScroll = () => {
   const navigation = useNavigation();
-  const carList = useSelector(x=>x.car.carList)
+  const carList = useSelector((x) => x.car.carList);
   return (
     <View>
       <View style={styles.headingBar}>
@@ -35,7 +35,7 @@ const CarScroll = () => {
               <Pressable
                 style={styles.Box}
                 onPress={() => {
-                  navigation.navigate("CarProfile");
+                  navigation.navigate("CarProfile", { item: item });
                 }}
               >
                 <View style={styles.imgview}>
@@ -45,8 +45,12 @@ const CarScroll = () => {
                   />
                 </View>
                 <View style={{ margin: 15 }}>
-                  <Text style={styles.name}>{item.company} {item.name}</Text>
-                  <Text style={styles.price}>Starting @ ₹{item.startPrice}</Text>
+                  <Text style={styles.name}>
+                    {item.company} {item.name}
+                  </Text>
+                  <Text style={styles.price}>
+                    Starting @ ₹{item.startPrice}
+                  </Text>
                   <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>Battery</Text>
@@ -71,7 +75,9 @@ const CarScroll = () => {
                   </View>
                   <View>
                     <View style={styles.progressView}>
-                      <Text style={styles.feature}>{item.type === 'car'? '0-100 km/h':'0-60 km/h'}</Text>
+                      <Text style={styles.feature}>
+                        {item.type === "car" ? "0-100 km/h" : "0-60 km/h"}
+                      </Text>
                       <Text style={styles.featureNumber}>{item.speed}</Text>
                     </View>
                     <ProgressBar
