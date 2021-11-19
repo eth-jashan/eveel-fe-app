@@ -19,6 +19,7 @@ import { mapStyle } from "../../Component/Utils/PumpScreen/mapStylesUtil";
 import PumpInfoModal from "../../Component/Utils/PumpScreen/PumpInfoModelUtil";
 import { Modalize } from "react-native-modalize";
 import Color from "../../../assets/Color";
+import MapViewDirections from "react-native-maps-directions";
 // import ListPump from "../component/listPump";
 // import MapHeader from "../component/MapHeader";
 import { AntDesign } from "@expo/vector-icons";
@@ -31,7 +32,15 @@ const { width, height } = Dimensions.get("window");
 // import getDirections from 'react-native-google-maps-directions'
 // import { showLocation } from 'react-native-map-link'
 
-const pumpLocation = ({ navigation }) => {
+const pumpLocation = ({ navigation, route }) => {
+  const { location } = route.params;
+  console.log("PumpScreen:", location.coords);
+  const origin = {
+    latitude: location.coords.latitude,
+    longitude: location.coords.longitude,
+  };
+  const GOOGLE_MAPS_APIKEY = "AIzaSyD3TwksghI3pgX0pDz081ATfIiCQeut00I";
+
   //  const handleGetDirections = (lat, long) => {
   //     const data = {
   //       source:{latitude:19.0333, longitude:73.0216},
@@ -89,12 +98,17 @@ const pumpLocation = ({ navigation }) => {
   });
   const pumpRef = React.useRef(null);
   const [select, setSelect] = React.useState(false);
-
+  const [selectedPump, setSelectedPump] = useState(null);
   const onLocationPress = (item) => {
     setPumpInfo(item);
+    console.log(item);
     pumpRef?.current?.open();
+    setSelectedPump({
+      latitude: item.lat,
+      longitude: item.long,
+    });
   };
-
+  const destination = { latitude: 37.771707, longitude: -122.4053769 };
   const onLocationCity = (item, index) => {
     setSelect(index);
     setPumpInfo(item);
@@ -106,7 +120,9 @@ const pumpLocation = ({ navigation }) => {
   //   "PumpScreen to Homescreen state====>",
   //   index.routes[0].state.routes
   // );
-
+  useEffect(() => {
+    console.log(selectedPump);
+  }, [selectedPump]);
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
       e.preventDefault();
@@ -166,6 +182,15 @@ const pumpLocation = ({ navigation }) => {
             </Marker>
           );
         })}
+        {selectedPump && (
+          <MapViewDirections
+            origin={origin}
+            destination={selectedPump}
+            apikey={GOOGLE_MAPS_APIKEY}
+            strokeWidth={3}
+            strokeColor={Color.lightgreen}
+          />
+        )}
       </MapView>
       <View style={styles.TabArea}>
         <View style={styles.locationText}>
@@ -219,7 +244,7 @@ const pumpLocation = ({ navigation }) => {
           />
         </View>
       </View>
-      <PumpInfoModal modalRef={pumpRef} height={200} item={pumpInfo} />
+      <PumpInfoModal modalRef={pumpRef} height={220} item={pumpInfo} />
     </View>
   );
 };

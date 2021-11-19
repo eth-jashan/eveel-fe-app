@@ -2,10 +2,10 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import Color from "../../../../assets/Color";
 const styles = StyleSheet.create({
-  screen: {
+  screen: { flex: 1 },
+  LoadedScreen: {
     paddingTop: 25,
     backgroundColor: Color.black,
-    flex: 1,
   },
   heading: {
     margin: 15,
@@ -19,7 +19,13 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     alignSelf: "center",
   },
-  logo2: { width: 100, height: 50, alignSelf: "center" , resizeMode:'contain', marginLeft:8},
+  logo2: {
+    width: 100,
+    height: 50,
+    alignSelf: "center",
+    resizeMode: "contain",
+    marginLeft: 8,
+  },
   profile: { width: 50, height: 50, alignSelf: "center" },
   screenscroll: { paddingBottom: 100 },
   TitleView: { margin: 15, paddingVertical: 10 },

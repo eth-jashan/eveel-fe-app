@@ -21,23 +21,106 @@ import styles from "./HomeStyles/CarProfileScreenStyles";
 import {
   imageGallery,
   exteriorInterior,
-  features,
   variantList,
   colorVariantList,
 } from "../../../model/Data/carProfiledata";
 const { width, height } = Dimensions.get("window");
-const CarProfilePage = () => {
+const CarProfilePage = (props) => {
   const modalize = useRef();
   const modalizeColor = useRef();
   const [colorname, setColorName] = useState();
   const [indexColor, setIndexColor] = useState();
+  const item = props.route.params.item;
+  console.log(item);
 
   const onPress = (index, title) => {
     modalizeColor.current?.open();
     setIndexColor(index);
     setColorName(title);
   };
+  const getCatLogo = (data) => {
+    switch (data) {
+      case "tata":
+        return require("../../../assets/Images/Tata.png");
 
+      case "hyundai":
+        return require("../../../assets/Images/Hyundai.png");
+
+      case "morris garage":
+        return require("../../../assets/Images/MG.png");
+
+      case "audi":
+        return require("../../../assets/Images/Audi.png");
+
+      case "mercedes":
+        return require("../../../assets/Images/Mercedes.png");
+
+      default:
+        null;
+    }
+  };
+  const features = [
+    {
+      value: item.battery,
+      title: "Battery",
+      component: (
+        <Feather
+          style={{ alignSelf: "center" }}
+          name="battery-charging"
+          size={24}
+          color={"white"}
+        />
+      ),
+    },
+    {
+      value: item.range,
+      title: "Range",
+      component: (
+        <FontAwesome5
+          style={{ alignSelf: "center" }}
+          name="road"
+          size={24}
+          color={"white"}
+        />
+      ),
+    },
+    {
+      value: item.horse,
+      title: "Horse",
+      component: (
+        <FontAwesome5
+          style={{ alignSelf: "center" }}
+          name="horse-head"
+          size={24}
+          color={"white"}
+        />
+      ),
+    },
+    {
+      value: item.torque,
+      title: "Torque",
+      component: (
+        <FontAwesome
+          style={{ alignSelf: "center" }}
+          name="gears"
+          size={24}
+          color={"white"}
+        />
+      ),
+    },
+    {
+      value: item.speed,
+      title: "0-100Km/h",
+      component: (
+        <MaterialCommunityIcons
+          style={{ alignSelf: "center" }}
+          name="speedometer"
+          size={24}
+          color={"white"}
+        />
+      ),
+    },
+  ];
   return (
     <View style={styles.screen}>
       <ScrollView style={styles.scroll}>
@@ -81,13 +164,13 @@ const CarProfilePage = () => {
             <Image
               resizeMode="contain"
               style={styles.Brand}
-              source={require("../../../assets/Images/Hyundai.png")}
+              source={getCatLogo(item.company)}
             />
           </View>
-          <Text style={styles.BrandName}>Hyundai Kona</Text>
+          <Text style={styles.BrandName}>{item.name}</Text>
           <Text style={styles.BrandRate}>
-            Starting <Text style={{ color: Color.lightgreen }}>@</Text> ₹10.36
-            lacs*
+            Starting <Text style={{ color: Color.lightgreen }}>@</Text> ₹
+            {item.startPrice}*
           </Text>
         </View>
 
@@ -118,17 +201,11 @@ const CarProfilePage = () => {
               width={Dimensions.get("window").width * 0.98}
               webViewStyle={{ borderRadius: 10 }}
               play={true}
-              videoId={"5G6_-Qo1mwU"}
+              videoId={item.youtube}
             />
           </View>
           <View style={styles.description}>
-            <Text style={styles.descText}>
-              Versatile and powerful, the KONA Electric will be the first
-              All-Electric SUV in India. Its power packed performance provides a
-              thrilling driving experience with high acceleration over long
-              distances. KONA Electric is here to change the way people think
-              about going electric.
-            </Text>
+            <Text style={styles.descText}>{item.description}</Text>
           </View>
         </View>
 

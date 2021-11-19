@@ -8,31 +8,31 @@ import Color from "../../../../assets/Color";
 import styles from "./UtilStyles/BrandScrollUtilStyles";
 
 const BrandScroll = (props) => {
-  const category = useSelector(x=>x.company.companyList)
+  const category = useSelector((x) => x.company.companyList);
   const data = category;
   const navigation = useNavigation();
   const getCatLogo = (data) => {
-    switch(data){
-      case "tata" :
-        return require("../../../../assets/Images/Tata.png")
-      
-      case "hyundai" :
-        return require("../../../../assets/Images/Hyundai.png")
+    switch (data) {
+      case "tata":
+        return require("../../../../assets/Images/Tata.png");
 
-      case "morris and garage" :
-            return require("../../../../assets/Images/MG.png")
+      case "hyundai":
+        return require("../../../../assets/Images/Hyundai.png");
 
-      case "audi" :
-          return require("../../../../assets/Images/Audi.png")
-          
+      case "morris and garage":
+        return require("../../../../assets/Images/MG.png");
+
+      case "audi":
+        return require("../../../../assets/Images/Audi.png");
+
       case "mercedes":
-        return require("../../../../assets/Images/Mercedes.png")
-      
+        return require("../../../../assets/Images/Mercedes.png");
+
       default:
-          null
+        null;
     }
-  }
-  
+  };
+
   return (
     <View>
       <View style={styles.Headingbar}>
@@ -55,7 +55,7 @@ const BrandScroll = (props) => {
           data={data}
           keyExtractor={(_, i) => i.toString()}
           renderItem={({ item, index }) => {
-            console.log (getCatLogo(item.name), item.name)
+            console.log(getCatLogo(item.name), item.name);
             return (
               <View style={styles.Box}>
                 <Image source={getCatLogo(item.name)} style={styles.image} />

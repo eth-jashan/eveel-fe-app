@@ -6,9 +6,10 @@ export const FETCH_CAR = "FETCH_CAR";
 
 export const fetchCarModel = () => {
   return async (dispatch, getState) => {
-    const response = await fetch(`${api_utils.baseURL_Demo}${endPoints.vehicle_details}.json?`);;
+    const response = await fetch(
+      `${api_utils.baseURL_Demo}${endPoints.vehicle_details}.json?`
+    );
     const resData = await response.json();
-
     const carList = [];
 
     for (const key in resData) {
@@ -31,6 +32,7 @@ export const fetchCarModel = () => {
         )
       );
     }
+
     dispatch({ type: FETCH_CAR, data: carList });
   };
 };
