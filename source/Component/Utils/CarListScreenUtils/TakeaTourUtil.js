@@ -19,14 +19,10 @@ const TakeaTour = ({ size, data, index, color }) => {
         key={`priceInfo-${index}`}
         style={styles.Button}
         onPress={() => {
-          navigation.navigate("CarProfile");
+          navigation.navigate("CarProfile", { item: data });
         }}
       >
-        <Text
-          style={styles.Buttontext}
-        >
-          Take a Tour
-        </Text>
+        <Text style={styles.Buttontext}>Take a Tour</Text>
       </TouchableOpacity>
     </Item>
   );
