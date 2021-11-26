@@ -4,10 +4,37 @@ import React from "react";
 import { Dimensions, Image, Text, View, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Feather } from "@expo/vector-icons";
+import Color from "../../../assets/Color";
+import { useDispatch } from "react-redux";
+import { googleLogin } from "../../Component/Common/GoogleLogin";
+import { login } from "../../Store/action/auth";
 const { width, height } = Dimensions.get("screen");
 
 const LoginScreen = ({ navigation }) => {
+  const dispatch = useDispatch();
+  const GoogleSignIn = async () => {
+    try {
+      const result = await googleLogin();
+      console.log("Result===>", result);
+      const name = result.user.providerData[0].displayName.split(" ");
+      console.log(name);
+      await dispatch(
+        login(
+          name[0],
+          name[1],
+          result.user.providerData[0].email,
+          result.user.uid,
+          result.credential.oauthIdToken
+        )
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const NumberLogin = async () => {
+    navigation.navigate("Phone");
+  };
   return (
     <SafeAreaView style={styles.screen}>
       <AnimatedLottieView
@@ -40,19 +67,21 @@ const LoginScreen = ({ navigation }) => {
       <View style={styles.loginSection}>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Home");
+            NumberLogin();
           }}
           style={styles.loginButtonFaceBook}
         >
           <View style={styles.LoginArea}>
-            <AntDesign name="facebook-square" size={24} color="white" />
-            <Text style={styles.LoginText}>Continue with facebook</Text>
+            <Feather name="phone" size={24} color="white" />
+            <Text style={styles.LoginText}>Continue with number</Text>
           </View>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.loginButtonGoogle}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => {
+            GoogleSignIn();
+          }}
         >
           <View style={styles.LoginArea}>
             <AntDesign name="google" size={24} color="white" />
@@ -90,7 +119,7 @@ const styles = StyleSheet.create({
   loginButtonFaceBook: {
     alignItems: "center",
     width: "80%",
-    backgroundColor: "#1a71e6",
+    backgroundColor: Color.darkgreen,
     borderRadius: 20,
     paddingVertical: 8,
     alignSelf: "center",
@@ -112,7 +141,7 @@ const styles = StyleSheet.create({
     width: "80%",
   },
   LoginText: {
-    paddingLeft: 10,
+    paddingLeft: 2,
     color: "white",
     fontFamily: "bold",
     fontSize: 18,

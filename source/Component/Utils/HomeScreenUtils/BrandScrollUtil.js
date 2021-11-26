@@ -55,7 +55,7 @@ const BrandScroll = (props) => {
           data={data}
           keyExtractor={(_, i) => i.toString()}
           renderItem={({ item, index }) => {
-            console.log(getCatLogo(item.name), item.name);
+            //console.log(getCatLogo(item.name), item.name);
             return (
               <View style={styles.Box}>
                 <Image source={getCatLogo(item.name)} style={styles.image} />

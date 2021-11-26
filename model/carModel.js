@@ -13,7 +13,9 @@ class CarModel {
     youtube,
     description,
     company,
-    type
+    type,
+    isIndian,
+    TestDrive
   ) {
     this.carId = carId;
     this.companyId = companyId;
@@ -29,6 +31,8 @@ class CarModel {
     this.description = description;
     this.company = company;
     this.type = type;
+    this.isIndian = isIndian;
+    this.TestDrive = TestDrive;
   }
 }
 export default CarModel;

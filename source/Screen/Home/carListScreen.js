@@ -25,6 +25,7 @@ import TakeaTour from "../../Component/Utils/CarListScreenUtils/TakeaTourUtil";
 import TitleInfo from "../../Component/Utils/CarListScreenUtils/TitleUtil";
 import DetailView from "../../Component/Utils/CarListScreenUtils/DetailUtil";
 import { data } from "../../../model/Data/cardata";
+import { useSelector } from "react-redux";
 
 export const TITLE_SIZE = 50;
 export const PRICE_SIZE = 40;
@@ -49,12 +50,21 @@ const transition = (
 const { width, height } = Dimensions.get("screen");
 
 const CarListScreen = ({ navigation, route }) => {
+  const List = useSelector((x) => x.car.carList);
+  const catid = route.params?.id;
   const featureList = ["battery", "speed", "horsepower", "singleCharge"];
-
   const [index, setIndex] = useState(0);
   const activeIndex = useRef(new Animated.Value(0)).current;
   const animation = useRef(new Animated.Value(0)).current;
   const ref = useRef();
+
+  let carList = List;
+  console.log(catid);
+  console.log(carList[0]);
+  if (catid !== undefined) {
+    carList = List.filter((item) => item.companyId == catid);
+  }
+
   useEffect(() => {
     Animated.timing(animation, {
       toValue: activeIndex,
@@ -79,7 +89,7 @@ const CarListScreen = ({ navigation, route }) => {
       key="up"
       direction={Directions.UP}
       onHandlerStateChange={(ev) => {
-        if (index === data.length - 1) {
+        if (index === carList.length - 1) {
           return;
         }
         if (ev.nativeEvent.state === State.END) {
@@ -104,12 +114,12 @@ const CarListScreen = ({ navigation, route }) => {
             style={[
               StyleSheet.absoluteFillObject,
               {
-                height: height * data.length,
+                height: height * carList.length,
                 transform: [{ translateY: transformY }],
               },
             ]}
           >
-            {data.map((item, i) => {
+            {carList.map((item, i) => {
               return (
                 <View
                   key={i}
@@ -131,10 +141,10 @@ const CarListScreen = ({ navigation, route }) => {
               title_size={TITLE_SIZE}
               index={index}
               color={index % 2 === 0 ? "white" : "black"}
-              text={data[index].name}
+              text={carList[index].name}
             />
             <DetailView
-              data={data}
+              data={carList}
               index={index}
               color={index % 2 === 0 ? "white" : "black"}
             />
@@ -154,7 +164,7 @@ const CarListScreen = ({ navigation, route }) => {
 
             <TakeaTour
               size={PRICE_SIZE}
-              data={data}
+              data={carList[index]}
               index={index}
               color={"black"}
             />

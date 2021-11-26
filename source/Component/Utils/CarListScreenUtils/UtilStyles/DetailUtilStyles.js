@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   feaNum: {
+    //added minWidth for the column design pls change if needed
+    minWidth: 80,
     fontSize: 22,
     fontFamily: "light",
     alignSelf: "center",
