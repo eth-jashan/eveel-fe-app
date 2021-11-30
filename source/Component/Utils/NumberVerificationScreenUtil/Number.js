@@ -6,6 +6,17 @@ import Color from "../../../../assets/Color";
 
 const PNumber = (props) => {
   const [phonenumber, setPhoneNumber] = useState("");
+  const validate = () => {
+    if (phonenumber.length != 10) {
+      alert("Enter a valid number");
+      return;
+    }
+    if (phonenumber[0] <= 7 || phonenumber[0] >= 9) {
+      alert("Enter a valid number");
+      return;
+    }
+    props.change(phonenumber);
+  };
   return (
     <View>
       <View style={{ margin: 15, paddingTop: 30 }}>
@@ -62,7 +73,7 @@ const PNumber = (props) => {
             borderRadius: 20,
           }}
           onPress={() => {
-            props.change(phonenumber);
+            validate();
           }}
         >
           <Text

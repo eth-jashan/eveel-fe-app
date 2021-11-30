@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dimensions, TouchableOpacity } from "react-native";
 import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";
+import OTPInputView from "@twotalltotems/react-native-otp-input";
 const OTP = (props) => {
   const [code, setCode] = useState(null);
+  useEffect(() => {
+    console.log(code);
+  }, [code]);
   return (
     <View>
       <View style={{ margin: 15, paddingTop: 30 }}>
@@ -16,18 +20,37 @@ const OTP = (props) => {
         style={{
           backgroundColor: Color.darkgrey,
           margin: 15,
-          padding: 10,
+
           borderRadius: 10,
-          alignSelf: "center",
+          alignContent: "center",
         }}
       >
-        <TextInput
+        {/* <TextInput
           placeholder="OTP"
           placeholderTextColor="grey"
           keyboardType="numeric"
           value={code}
           onChangeText={setCode}
           style={{ fontSize: 24, color: Color.white, paddingHorizontal: 30 }}
+        /> */}
+        <OTPInputView
+          style={{ width: "90%", height: 100, alignSelf: "center" }}
+          pinCount={6}
+          // code={this.state.code} //You can supply this prop or not. The component will be used as a controlled / uncontrolled component respectively.
+          onCodeChanged={(code) => {
+            setCode(code);
+          }}
+          autoFocusOnLoad
+          codeInputFieldStyle={{
+            borderWidth: 0,
+            borderBottomWidth: 1,
+            color: "white",
+            fontSize: 24,
+          }}
+          codeInputHighlightStyle={{ borderColor: "#03DAC6" }}
+          // onCodeFilled={(code) => {
+          //   console.log(`Code is ${code}, you are good to go!`);
+          // }}
         />
       </View>
       <View
