@@ -16,9 +16,9 @@ const LoginScreen = ({ navigation }) => {
   const GoogleSignIn = async () => {
     try {
       const result = await googleLogin();
-      console.log("Result===>", result);
+      //console.log("Result===>", result);
       const name = result.user.providerData[0].displayName.split(" ");
-      console.log(name);
+      //console.log(name);
       await dispatch(
         login(
           name[0],

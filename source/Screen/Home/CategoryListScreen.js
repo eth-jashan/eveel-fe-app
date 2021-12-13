@@ -34,57 +34,58 @@ const CategoryScreen = ({ navigation, route }) => {
     { index: "7", uri: url1 },
     { index: "7", uri: url2 },
   ]);
-  const category = useSelector(x=>x.company.companyList)
+  const category = useSelector((x) => x.company.companyList);
   const data = category;
 
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const ITEM_SIZE = width * 0.72;
   const SPACER_SIZE = (width - ITEM_SIZE) / 2;
-  const getCatLogo = (data) => {
-    switch(data){
-      case "tata" :
-        return require("../../../assets/Images/Tata.png")
-      
-      case "hyundai" :
-        return require("../../../assets/Images/Hyundai.png")
+  // const getCatLogo = (data) => {
+  //   switch (data) {
+  //     case "tata":
+  //       return require("../../../assets/Images/Tata.png");
 
-      case "morris and garage" :
-            return require("../../../assets/Images/MG.png")
+  //     case "hyundai":
+  //       return require("../../../assets/Images/Hyundai.png");
 
-      case "audi" :
-          return require("../../../assets/Images/Audi.png")
-          
-      case "mercedes":
-        return require("../../../assets/Images/Mercedes.png")
-      
-      default:
-          null
-    }
-  }
-  const getCatName = (data) => {
-    switch(data){
-      case "tata" :
-        return "Tata"
-      
-      case "hyundai" :
-        return "Hyundai"
+  //     case "morris and garage":
+  //       return require("../../../assets/Images/MG.png");
 
-      case "morris and garage" :
-        return "Morris & Garage"
+  //     case "audi":
+  //       return require("../../../assets/Images/Audi.png");
 
-      case "audi" :
-          return "Audi"
-          
-      case "mercedes":
-        return "Mercedes"
-      
-      default:
-          null
-    }
-  }
+  //     case "mercedes":
+  //       return require("../../../assets/Images/Mercedes.png");
+
+  //     default:
+  //       null;
+  //   }
+  // };
+  // const getCatName = (data) => {
+  //   switch (data) {
+  //     case "tata":
+  //       return "Tata";
+
+  //     case "hyundai":
+  //       return "Hyundai";
+
+  //     case "morris and garage":
+  //       return "Morris & Garage";
+
+  //     case "audi":
+  //       return "Audi";
+
+  //     case "mercedes":
+  //       return "Mercedes";
+
+  //     default:
+  //       null;
+  //   }
+  // };
   return (
     <SafeAreaView style={styles.Screen}>
       {data.map((item, index) => {
+        console.log("ITEM+++++>",item.backgroundImg);
         return (
           <Animated.Image
             key={index}
@@ -140,9 +141,9 @@ const CategoryScreen = ({ navigation, route }) => {
                 <Image
                   resizeMode="contain"
                   style={styles.img}
-                  source={getCatLogo(item.name)}
+                  source={{ uri: item.logoImg }}
                 />
-                <Text style={styles.Title}>{getCatName(item.name)}</Text>
+                <Text style={styles.Title}>{item.name}</Text>
 
                 <Pressable
                   onPress={() => navigation.navigate("carlist", { id: index })}

@@ -1,10 +1,9 @@
 class CompanyModel {
-  constructor(companyid, logoImg, name, type, company, backgroundImg) {
+  constructor(companyid, logoImg, name, type, backgroundImg) {
     this.companyid = companyid;
     this.logoImg = logoImg;
     this.name = name;
     this.type = type;
-    this.company = company;
     this.backgroundImg = backgroundImg;
   }
 }

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const LOGIN = "LOGIN";
 export const PHONE = "PHONE";
 export const login = (first_name, last_name, email_id, uid, token) => {
@@ -57,7 +55,7 @@ export const AddPhoneNumber = (number, uid, token) => {
 
 export const LoggedInUser = (uid) => {
   return async (dispatch) => {
-    console.log(uid);
+    //console.log(uid);
     const response = await fetch(
       `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}.json?`
     );
@@ -66,7 +64,7 @@ export const LoggedInUser = (uid) => {
       let keys = "";
       for (keys in resData) {
       }
-      console.log(keys);
+      //console.log(keys);
       if (resData[keys].number !== undefined) {
         dispatch({
           type: PHONE,

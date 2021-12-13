@@ -3,7 +3,7 @@ class CarModel {
     carId,
     companyId,
     name,
-    coverPhoto,
+    cover,
     battery,
     range,
     speed,
@@ -19,7 +19,7 @@ class CarModel {
   ) {
     this.carId = carId;
     this.companyId = companyId;
-    this.coverPhoto = coverPhoto;
+    this.cover = cover;
     this.battery = battery;
     this.range = range;
     this.speed = speed;

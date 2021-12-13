@@ -34,7 +34,7 @@ const { width, height } = Dimensions.get("window");
 
 const pumpLocation = ({ navigation, route }) => {
   const { location } = route.params;
-  console.log("PumpScreen:", location.coords);
+  //console.log("PumpScreen:", location.coords);
   const origin = {
     latitude: location.coords.latitude,
     longitude: location.coords.longitude,
@@ -101,7 +101,7 @@ const pumpLocation = ({ navigation, route }) => {
   const [selectedPump, setSelectedPump] = useState(null);
   const onLocationPress = (item) => {
     setPumpInfo(item);
-    console.log(item);
+    //console.log(item);
     pumpRef?.current?.open();
     setSelectedPump({
       latitude: item.lat,
@@ -121,7 +121,7 @@ const pumpLocation = ({ navigation, route }) => {
   //   index.routes[0].state.routes
   // );
   useEffect(() => {
-    console.log(selectedPump);
+    //console.log(selectedPump);
   }, [selectedPump]);
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {

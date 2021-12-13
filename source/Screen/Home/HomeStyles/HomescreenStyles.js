@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   profile: { width: 50, height: 50, alignSelf: "center" },
-  screenscroll: { paddingBottom: 100 },
+  screenscroll: { paddingBottom: 200 },
   TitleView: { margin: 15, paddingVertical: 10 },
   welcome: { fontSize: 28, color: Color.white, fontFamily: "bold" },
   slogan: {

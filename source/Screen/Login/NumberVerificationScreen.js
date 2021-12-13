@@ -19,7 +19,7 @@ const NumberVerification = (props) => {
 
   const sendVerification = (num) => {
     const phoneProvider = new firebase.auth.PhoneAuthProvider();
-    console.log(phoneProvider, num);
+    //console.log(phoneProvider, num);
     phoneProvider
       .verifyPhoneNumber(num, recaptchaVerifier.current)
       .then(setVerificationId)
@@ -70,7 +70,7 @@ const NumberVerification = (props) => {
   };
 
   const ResendOTP = () => {
-    console.log(phoneNumber);
+    //console.log(phoneNumber);
     sendVerification(phoneNumber);
   };
 

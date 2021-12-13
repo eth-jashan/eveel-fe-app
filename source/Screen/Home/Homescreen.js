@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import CategorySelection from "../../Component/Utils/HomeScreenUtils/categorySelectionUtil";
 import HomeBanner from "../../Component/Utils/HomeScreenUtils/HomebannerUtil";
-
 import BrandScroll from "../../Component/Utils/HomeScreenUtils/BrandScrollUtil";
 import CarScroll from "../../Component/Utils/HomeScreenUtils/CarScrollUtil";
 import Color from "../../../assets/Color";
@@ -16,6 +15,7 @@ import { LoggedInUser } from "../../Store/action/auth";
 const Homescreen = (props) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
+  const categories = useSelector((state) => state.company.companyList);
 
   //console.log("User===>", user);
   const [loading, setLoading] = useState(true);

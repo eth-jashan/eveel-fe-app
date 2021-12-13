@@ -24,6 +24,7 @@ import {
   variantList,
   colorVariantList,
 } from "../../../model/Data/carProfiledata";
+import { useSelector } from "react-redux";
 const { width, height } = Dimensions.get("window");
 const CarProfilePage = (props) => {
   const modalize = useRef();
@@ -31,34 +32,38 @@ const CarProfilePage = (props) => {
   const [colorname, setColorName] = useState();
   const [indexColor, setIndexColor] = useState();
   const item = props.route.params.item;
-  console.log(item);
+  const companyList = useSelector((state) => state.company.companyList);
+  //console.log(companyList);
+  //console.log(item);
+  const comp = companyList.filter((c) => c.companyid == item.companyId);
+  //console.log(comp);
 
   const onPress = (index, title) => {
     modalizeColor.current?.open();
     setIndexColor(index);
     setColorName(title);
   };
-  const getCatLogo = (data) => {
-    switch (data) {
-      case "tata":
-        return require("../../../assets/Images/Tata.png");
+  // const getCatLogo = (data) => {
+  //   switch (data) {
+  //     case "tata":
+  //       return require("../../../assets/Images/Tata.png");
 
-      case "hyundai":
-        return require("../../../assets/Images/Hyundai.png");
+  //     case "hyundai":
+  //       return require("../../../assets/Images/Hyundai.png");
 
-      case "morris garage":
-        return require("../../../assets/Images/MG.png");
+  //     case "morris garage":
+  //       return require("../../../assets/Images/MG.png");
 
-      case "audi":
-        return require("../../../assets/Images/Audi.png");
+  //     case "audi":
+  //       return require("../../../assets/Images/Audi.png");
 
-      case "mercedes":
-        return require("../../../assets/Images/Mercedes.png");
+  //     case "mercedes":
+  //       return require("../../../assets/Images/Mercedes.png");
 
-      default:
-        null;
-    }
-  };
+  //     default:
+  //       null;
+  //   }
+  // };
   const features = [
     {
       value: item.battery,
@@ -164,7 +169,7 @@ const CarProfilePage = (props) => {
             <Image
               resizeMode="contain"
               style={styles.Brand}
-              source={getCatLogo(item.company)}
+              source={{ uri: comp[0]?.logoImg }}
             />
           </View>
           <Text style={styles.BrandName}>{item.name}</Text>
@@ -197,7 +202,7 @@ const CarProfilePage = (props) => {
           <Text style={styles.AboutTheCar}>About The Car</Text>
           <View style={{ marginBottom: 12 }}>
             <YoutubeIframe
-              height={200}
+              height={250}
               width={Dimensions.get("window").width * 0.98}
               webViewStyle={{ borderRadius: 10 }}
               play={true}
