@@ -32,7 +32,7 @@ const DetailView = ({ data, color, index }) => {
               styles.feaNum,
             ]}
           >
-            {data[index].singleCharge}
+            {data[index].range}
           </Text>
         </View>
 
@@ -54,7 +54,7 @@ const DetailView = ({ data, color, index }) => {
               styles.feaNum,
             ]}
           >
-            142.7 PS
+            {data[index].horse}
           </Text>
         </View>
       </View>
@@ -78,7 +78,7 @@ const DetailView = ({ data, color, index }) => {
               styles.feaNum,
             ]}
           >
-            353 Nm
+            {data[index].torque}
           </Text>
         </View>
 
@@ -100,7 +100,7 @@ const DetailView = ({ data, color, index }) => {
               styles.feaNum,
             ]}
           >
-            2.4 sec
+            {data[index].speed}
           </Text>
         </View>
       </View>
@@ -123,7 +123,7 @@ const DetailView = ({ data, color, index }) => {
             styles.ChargeDuration,
           ]}
         >
-          4 hrs
+          {data[index].battery}
         </Text>
       </View>
     </StaggeringView>

@@ -6,6 +6,15 @@ import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 import { Provider } from "react-redux";
 import store from "./source/Store/Store";
+import firebase from "firebase";
+import { firebaseConfig } from "./firbase";
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app(); // if already initialized, use that one
+}
+
 const fontLoading = () => {
   return Font.loadAsync({
     black: require("./assets/fonts/Montserrat-Black.ttf"),

@@ -40,7 +40,7 @@ const CarScroll = () => {
               >
                 <View style={styles.imgview}>
                   <Image
-                    source={require("../../../../assets/Images/car.png")}
+                    source={{ uri: carList[index].cover }}
                     style={styles.image}
                   />
                 </View>

@@ -15,7 +15,7 @@ const PumpTabScreen = (props) => {
         return;
       }
       let location = await Location.getCurrentPositionAsync({});
-      console.log(location);
+      //console.log(location);
       setLocation(location);
     })();
   }, []);

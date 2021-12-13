@@ -3,7 +3,7 @@ class CarModel {
     carId,
     companyId,
     name,
-    coverPhoto,
+    cover,
     battery,
     range,
     speed,
@@ -13,11 +13,13 @@ class CarModel {
     youtube,
     description,
     company,
-    type
+    type,
+    isIndian,
+    TestDrive
   ) {
     this.carId = carId;
     this.companyId = companyId;
-    this.coverPhoto = coverPhoto;
+    this.cover = cover;
     this.battery = battery;
     this.range = range;
     this.speed = speed;
@@ -29,6 +31,8 @@ class CarModel {
     this.description = description;
     this.company = company;
     this.type = type;
+    this.isIndian = isIndian;
+    this.TestDrive = TestDrive;
   }
 }
 export default CarModel;

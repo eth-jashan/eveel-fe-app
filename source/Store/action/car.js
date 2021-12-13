@@ -18,7 +18,7 @@ export const fetchCarModel = () => {
           key,
           resData[key].catId,
           resData[key].name,
-          resData[key].coverPhoto,
+          resData[key].cover,
           resData[key].time,
           resData[key].range,
           resData[key].speed,
@@ -28,7 +28,9 @@ export const fetchCarModel = () => {
           resData[key].youtube,
           resData[key].Description,
           resData[key].brand,
-          resData[key].type
+          resData[key].type,
+          resData[key].IsIndian,
+          resData[key].TestDrive
         )
       );
     }

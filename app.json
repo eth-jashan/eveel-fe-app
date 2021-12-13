@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -27,6 +25,19 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "firebase": {
+        "apiKey": "AIzaSyBcJxIloTqWu_l-cEVBt5YHApRiVajsZHg",
+        "authDomain": "eveels-39a71.firebaseapp.com",
+        "databaseURL": "https://eveels-39a71-default-rtdb.firebaseio.com/",
+        "projectId": "eveels-39a71",
+        "storageBucket": "gs://eveels-39a71.appspot.com",
+        "messagingSenderId": "402100750779"
+      },
+      "facebook": {
+        "appId": "872730930103284"
+      }
     }
   }
 }
