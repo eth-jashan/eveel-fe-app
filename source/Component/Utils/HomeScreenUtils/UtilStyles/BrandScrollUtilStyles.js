@@ -18,9 +18,6 @@ const styles = StyleSheet.create({
     fontFamily: "medium",
     padding: 5,
     color: Color.white,
-    borderWidth: 1,
-    borderRadius: 15,
-    borderColor: Color.lightgreen,
     alignSelf: "center",
   },
   Box: {

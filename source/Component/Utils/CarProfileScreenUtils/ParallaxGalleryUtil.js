@@ -23,7 +23,7 @@ const ParallaxGallery = ({ imageList }) => {
         { useNativeDriver: true }
       )}
       data={imageList}
-      keyExtractor={(x) => x}
+      keyExtractor={(_, i) => i.toString()}
       snapToAlignment={"center"}
       snapToInterval={width * 0.8 + 40}
       decelerationRate="fast"
@@ -35,12 +35,12 @@ const ParallaxGallery = ({ imageList }) => {
           <View style={styles.component}>
             <Animated.Image
               style={styles.Img}
-              source={{ uri: item }}
+              source={{ uri: item.image }}
               resizeMode="cover"
             />
             <>
               <Text style={styles.Index}>{index + 1}.</Text>
-              <Text style={styles.Title}>{"Wireless Phone\nCharger"}</Text>
+              <Text style={styles.Title}>{item.feature}</Text>
             </>
           </View>
         );

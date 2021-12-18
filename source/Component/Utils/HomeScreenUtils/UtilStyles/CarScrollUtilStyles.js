@@ -18,9 +18,6 @@ const styles = StyleSheet.create({
     fontFamily: "medium",
     padding: 5,
     color: Color.white,
-    borderWidth: 1,
-    borderRadius: 15,
-    borderColor: Color.lightgreen,
     alignSelf: "center",
   },
   Box: {
@@ -30,14 +27,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     marginBottom: 40,
     borderRadius: 20,
-    shadowColor: Color.grey,
-    shadowOffset: {
-      width: 0,
-      height: 12,
-    },
-    shadowOpacity: 0.58,
-    shadowRadius: 16.0,
-    elevation: 24,
+    
   },
   imgview: {
     shadowColor: Color.grey,

@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Image, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  BackHandler,
+  Alert,
+  Platform,
+} from "react-native";
 import CategorySelection from "../../Component/Utils/HomeScreenUtils/categorySelectionUtil";
 import HomeBanner from "../../Component/Utils/HomeScreenUtils/HomebannerUtil";
 import BrandScroll from "../../Component/Utils/HomeScreenUtils/BrandScrollUtil";
@@ -12,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCarModel } from "../../Store/action/car";
 import HomeScreenLoadingUtil from "../../Component/Utils/HomeScreenUtils/HomeScreenLoadingUtil";
 import { LoggedInUser } from "../../Store/action/auth";
+import { fetchfeature } from "../../Store/action/feature";
 const Homescreen = (props) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
@@ -23,6 +32,7 @@ const Homescreen = (props) => {
   const homeScreenData = () => {
     dispatch(fetchCompany());
     dispatch(fetchCarModel());
+    dispatch(fetchfeature());
   };
 
   useEffect(() => {
@@ -30,11 +40,35 @@ const Homescreen = (props) => {
     homeScreenData();
     setLoading(false);
   }, [dispatch]);
-
+  useEffect(() => {
+    const backAction = () => {
+      Alert.alert("Hold on!", "Are you sure you want to go leave?", [
+        {
+          text: "Cancel",
+          onPress: () => null,
+          style: "cancel",
+        },
+        { text: "YES", onPress: () => BackHandler.exitApp() },
+      ]);
+      return true;
+    };
+    if (Platform.OS==='android') {
+      const backHandler = BackHandler.addEventListener(
+        "hardwareBackPress",
+        backAction
+      );
+      return () => backHandler.remove();
+    } else {
+      props.navigation.addListener("beforeRemove", (e) => {
+        e.preventDefault();
+      });
+    }
+  }, [props.navigation]);
   return (
     <View style={styles.screen}>
-      {loading && <HomeScreenLoadingUtil />}
-      {!loading && (
+      {loading ? (
+        <HomeScreenLoadingUtil />
+      ) : (
         <View style={styles.LoadedScreen}>
           <View style={styles.heading}>
             <View style={{ flexDirection: "row" }}>

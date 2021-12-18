@@ -28,16 +28,29 @@ import { useSelector } from "react-redux";
 const { width, height } = Dimensions.get("window");
 const CarProfilePage = (props) => {
   const modalize = useRef();
+  const modalizeSafety = useRef();
   const modalizeColor = useRef();
   const [colorname, setColorName] = useState();
   const [indexColor, setIndexColor] = useState();
   const item = props.route.params.item;
   const companyList = useSelector((state) => state.company.companyList);
   //console.log(companyList);
-  //console.log(item);
+  console.log(item);
   const comp = companyList.filter((c) => c.companyid == item.companyId);
   //console.log(comp);
-
+  const feature = useSelector((state) => state.feature.featureList);
+  //console.log(feature);
+  const exteriorFeature = feature.filter(
+    (fe) => fe.name == "ext" && fe.carid == item.carId
+  );
+  const safetyFeature = feature.filter(
+    (fe) => fe.name == "comfort" && fe.carid == item.carId
+  );
+  const gallery = feature.filter(
+    (fe) => fe.name == "gallery" && fe.carid == item.carId
+  );
+  //console.log(gallery);
+  //console.log(exteriorFeature);
   const onPress = (index, title) => {
     modalizeColor.current?.open();
     setIndexColor(index);
@@ -132,8 +145,8 @@ const CarProfilePage = (props) => {
         <View>
           <FlatList
             horizontal
-            keyExtractor={(x) => x}
-            data={imageGallery}
+            keyExtractor={(_, i) => i.toString()}
+            data={gallery}
             snapToAlignment={"center"}
             snapToInterval={Dimensions.get("window").width}
             decelerationRate="fast"
@@ -141,7 +154,7 @@ const CarProfilePage = (props) => {
             renderItem={({ item, index }) => {
               return (
                 <View style={styles.carImages}>
-                  <Image style={styles.carImage} source={{ uri: item }} />
+                  <Image style={styles.carImage} source={{ uri: item.image }} />
                 </View>
               );
             }}
@@ -151,13 +164,13 @@ const CarProfilePage = (props) => {
         <View style={styles.SmallCarCon}>
           <FlatList
             horizontal
-            data={imageGallery}
-            keyExtractor={(x) => x}
+            data={gallery}
+            keyExtractor={(_,i) => i.toString()}
             showsHorizontalScrollIndicator={false}
             renderItem={({ item, index }) => {
               return (
                 <View style={styles.smallcarImages}>
-                  <Image style={styles.carImage} source={{ uri: item }} />
+                  <Image style={styles.carImage}  source={{ uri: item.image }} />
                 </View>
               );
             }}
@@ -172,7 +185,7 @@ const CarProfilePage = (props) => {
               source={{ uri: comp[0]?.logoImg }}
             />
           </View>
-          <Text style={styles.BrandName}>{item.name}</Text>
+          <Text style={styles.BrandName}>{item.name.toUpperCase()}</Text>
           <Text style={styles.BrandRate}>
             Starting <Text style={{ color: Color.lightgreen }}>@</Text> ₹
             {item.startPrice}*
@@ -230,7 +243,7 @@ const CarProfilePage = (props) => {
             </ImageBackground>
           </Pressable>
 
-          <Pressable onPress={() => modalize.current?.open()}>
+          <Pressable onPress={() => modalizeSafety.current?.open()}>
             <ImageBackground
               resizeMode="cover"
               style={styles.features}
@@ -309,8 +322,21 @@ const CarProfilePage = (props) => {
             <Text style={styles.AndSy}>& </Text>
             Interior
           </Text>
+          <ParallaxGallery imageList={exteriorFeature} />
+        </View>
+      </Modalize>
+      <Modalize
+        modalHeight={Dimensions.get("window").height * 0.7}
+        ref={modalizeSafety}
+      >
+        <View style={styles.ModalView}>
+          <Text style={styles.ModalHeader}>
+            Safety
+            <Text style={styles.AndSy}>& </Text>
+            Comfort Feature
+          </Text>
 
-          <ParallaxGallery imageList={exteriorInterior} />
+          <ParallaxGallery imageList={safetyFeature} />
         </View>
       </Modalize>
 

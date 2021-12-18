@@ -85,7 +85,7 @@ const CategoryScreen = ({ navigation, route }) => {
   return (
     <SafeAreaView style={styles.Screen}>
       {data.map((item, index) => {
-        console.log("ITEM+++++>",item.backgroundImg);
+        //console.log("ITEM+++++>",item.backgroundImg);
         return (
           <Animated.Image
             key={index}
@@ -143,8 +143,7 @@ const CategoryScreen = ({ navigation, route }) => {
                   style={styles.img}
                   source={{ uri: item.logoImg }}
                 />
-                <Text style={styles.Title}>{item.name}</Text>
-
+                  <Text style={styles.Title}>{item.name}</Text>           
                 <Pressable
                   onPress={() => navigation.navigate("carlist", { id: index })}
                   style={styles.button}

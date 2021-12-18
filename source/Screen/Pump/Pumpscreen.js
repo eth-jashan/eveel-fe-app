@@ -19,7 +19,6 @@ import { mapStyle } from "../../Component/Utils/PumpScreen/mapStylesUtil";
 import PumpInfoModal from "../../Component/Utils/PumpScreen/PumpInfoModelUtil";
 import { Modalize } from "react-native-modalize";
 import Color from "../../../assets/Color";
-import MapViewDirections from "react-native-maps-directions";
 // import ListPump from "../component/listPump";
 // import MapHeader from "../component/MapHeader";
 import { AntDesign } from "@expo/vector-icons";
@@ -28,9 +27,9 @@ import { useNavigationState } from "@react-navigation/core";
 import styles from "./PumpStyles/PumpscreenStyles";
 const { width, height } = Dimensions.get("window");
 
-// import MapViewDirections from 'react-native-maps-directions';
-// import getDirections from 'react-native-google-maps-directions'
-// import { showLocation } from 'react-native-map-link'
+import MapViewDirections from "react-native-maps-directions";
+import getDirections from "react-native-google-maps-directions";
+import { showLocation } from "react-native-map-link";
 
 const pumpLocation = ({ navigation, route }) => {
   const { location } = route.params;
@@ -39,43 +38,44 @@ const pumpLocation = ({ navigation, route }) => {
     latitude: location.coords.latitude,
     longitude: location.coords.longitude,
   };
-  const GOOGLE_MAPS_APIKEY = "AIzaSyD3TwksghI3pgX0pDz081ATfIiCQeut00I";
+  const [selectedPump, setSelectedPump] = useState(null);
+  const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
 
-  //  const handleGetDirections = (lat, long) => {
-  //     const data = {
-  //       source:{latitude:19.0333, longitude:73.0216},
-  //       destination: {
-  //         latitude: parseFloat(lat),
-  //         longitude: parseFloat(long)
-  //       },
-  //       params: [
-  //         {
-  //           key: "travelmode",
-  //           value: "driving"        // may be "walking", "bicycling" or "transit" as well
-  //         },
-  //         {
-  //           key: "dir_action",
-  //           value: "navigate"       // this instantly initializes navigation using the given travel mode
-  //         }
-  //       ],
-  //       // waypoints: [
-  //       //   {
-  //       //     latitude: -33.8600025,
-  //       //     longitude: 18.697452
-  //       //   },
-  //       //   {
-  //       //     latitude: -33.8600026,
-  //       //     longitude: 18.697453
-  //       //   },
-  //       //      {
-  //       //     latitude: -33.8600036,
-  //       //     longitude: 18.697493
-  //       //   }
-  //       // ]
-  //     }
+  const handleGetDirections = () => {
+    const data = {
+      source: origin,
+      destination: {
+        latitude: parseFloat(selectedPump.latitude),
+        longitude: parseFloat(selectedPump.longitude),
+      },
+      params: [
+        {
+          key: "travelmode",
+          value: "driving", // may be "walking", "bicycling" or "transit" as well
+        },
+        {
+          key: "dir_action",
+          value: "navigate", // this instantly initializes navigation using the given travel mode
+        },
+      ],
+      // waypoints: [
+      //   {
+      //     latitude: -33.8600025,
+      //     longitude: 18.697452
+      //   },
+      //   {
+      //     latitude: -33.8600026,
+      //     longitude: 18.697453
+      //   },
+      //      {
+      //     latitude: -33.8600036,
+      //     longitude: 18.697493
+      //   }
+      // ]
+    };
 
-  //     getDirections(data)
-  //   }
+    getDirections(data);
+  };
   const listofPump = [
     { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
     { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
@@ -98,10 +98,10 @@ const pumpLocation = ({ navigation, route }) => {
   });
   const pumpRef = React.useRef(null);
   const [select, setSelect] = React.useState(false);
-  const [selectedPump, setSelectedPump] = useState(null);
+
   const onLocationPress = (item) => {
     setPumpInfo(item);
-    //console.log(item);
+    console.log("Item", item);
     pumpRef?.current?.open();
     setSelectedPump({
       latitude: item.lat,
@@ -109,8 +109,8 @@ const pumpLocation = ({ navigation, route }) => {
     });
   };
   const destination = { latitude: 37.771707, longitude: -122.4053769 };
-  const onLocationCity = (item, index) => {
-    setSelect(index);
+  const onLocationCity = async (item, index) => {
+    await setSelect(index);
     setPumpInfo(item);
   };
 
@@ -121,7 +121,8 @@ const pumpLocation = ({ navigation, route }) => {
   //   index.routes[0].state.routes
   // );
   useEffect(() => {
-    //console.log(selectedPump);
+    console.log("Selected", selectedPump);
+    console.log("Origin", origin);
   }, [selectedPump]);
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
@@ -153,6 +154,7 @@ const pumpLocation = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <MapView
+        userInterfaceStyle={"dark"}
         customMapStyle={mapStyle}
         region={{
           latitude: parseFloat(pumpInfo.lat),
@@ -166,7 +168,7 @@ const pumpLocation = ({ navigation, route }) => {
           return (
             <Marker
               key={i}
-              onPress={() => onLocationPress(item)}
+              onPress={async () => await onLocationPress(item)}
               coordinate={{
                 latitude: parseFloat(item.lat),
                 longitude: parseFloat(item.long),
@@ -183,13 +185,30 @@ const pumpLocation = ({ navigation, route }) => {
           );
         })}
         {selectedPump && (
-          <MapViewDirections
-            origin={origin}
-            destination={selectedPump}
-            apikey={GOOGLE_MAPS_APIKEY}
-            strokeWidth={3}
-            strokeColor={Color.lightgreen}
-          />
+          <>
+            <Marker
+              onPress={async () => await onLocationPress(item)}
+              coordinate={origin}
+            >
+              <View style={{ width: 30, height: 30 }}>
+                <Image
+                  resizeMode="contain"
+                  source={require("../../../assets/Images/top-UberX.png")}
+                  style={styles.ScreenFuller}
+                />
+              </View>
+            </Marker>
+            <MapViewDirections
+              origin={origin}
+              destination={{
+                latitude: parseFloat(selectedPump.latitude),
+                longitude: parseFloat(selectedPump.longitude),
+              }}
+              apikey={GOOGLE_MAPS_APIKEY}
+              strokeWidth={3}
+              strokeColor={Color.lightgreen}
+            />
+          </>
         )}
       </MapView>
       <View style={styles.TabArea}>
@@ -244,7 +263,12 @@ const pumpLocation = ({ navigation, route }) => {
           />
         </View>
       </View>
-      <PumpInfoModal modalRef={pumpRef} height={220} item={pumpInfo} />
+      <PumpInfoModal
+        modalRef={pumpRef}
+        height={220}
+        item={pumpInfo}
+        direction={handleGetDirections}
+      />
     </View>
   );
 };

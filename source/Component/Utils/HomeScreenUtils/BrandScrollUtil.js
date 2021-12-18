@@ -1,3 +1,4 @@
+import { AntDesign, Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/core";
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
@@ -37,14 +38,14 @@ const BrandScroll = (props) => {
     <View>
       <View style={styles.Headingbar}>
         <Text style={styles.title}>Top Brands</Text>
-        <Text
+        <TouchableOpacity
           onPress={() => {
             navigation.navigate("Category");
           }}
           style={styles.more}
         >
-          See All
-        </Text>
+          <AntDesign name="arrowright" color="white" size={24} />
+        </TouchableOpacity>
       </View>
       <View>
         <FlatList
