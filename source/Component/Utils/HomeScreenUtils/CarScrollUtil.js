@@ -1,11 +1,12 @@
 import React from "react";
 import { ProgressBar } from "react-native-paper";
-import { View, Text, Image, Pressable, Dimensions } from "react-native";
+import { View, Text, Image, Pressable, Dimensions, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import { FlatList } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";
 import styles from "./UtilStyles/CarScrollUtilStyles";
 import { useSelector } from "react-redux";
+import { AntDesign } from "@expo/vector-icons";
 const CarScroll = () => {
   const navigation = useNavigation();
   const carList = useSelector((x) => x.car.carList);
@@ -13,14 +14,14 @@ const CarScroll = () => {
     <View>
       <View style={styles.headingBar}>
         <Text style={styles.title}>Top Model</Text>
-        <Text
+        <TouchableOpacity
           onPress={() => {
             navigation.navigate("carlist");
           }}
           style={styles.more}
         >
-          See All
-        </Text>
+          <AntDesign name="arrowright" color="white" size={24} />
+        </TouchableOpacity>
       </View>
       <View>
         <FlatList

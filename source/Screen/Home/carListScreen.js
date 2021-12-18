@@ -51,7 +51,7 @@ const { width, height } = Dimensions.get("screen");
 
 const CarListScreen = ({ navigation, route }) => {
   const List = useSelector((x) => x.car.carList);
-  console.log(List);
+  //console.log(List);
   const catid = route.params?.id;
   const featureList = ["battery", "speed", "horsepower", "singleCharge"];
   const [index, setIndex] = useState(0);

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   Brand: { width: "100%", height: "100%", alignSelf: "center" },
   BrandName: {
     alignSelf: "center",
-    fontFamily: "car",
+    fontFamily: "semibold",
     fontSize: 22,
     color: Color.white,
   },
