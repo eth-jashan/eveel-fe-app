@@ -40,35 +40,35 @@ const Homescreen = (props) => {
     homeScreenData();
     setLoading(false);
   }, [dispatch]);
-  useEffect(() => {
-    const backAction = () => {
-      Alert.alert("Hold on!", "Are you sure you want to go leave?", [
-        {
-          text: "Cancel",
-          onPress: () => null,
-          style: "cancel",
-        },
-        { text: "YES", onPress: () => BackHandler.exitApp() },
-      ]);
-      return true;
-    };
-    if (Platform.OS==='android') {
-      const backHandler = BackHandler.addEventListener(
-        "hardwareBackPress",
-        backAction
-      );
-      return () => backHandler.remove();
-    } else {
-      props.navigation.addListener("beforeRemove", (e) => {
-        e.preventDefault();
-      });
-    }
-  }, [props.navigation]);
+  // useEffect(() => {
+  //   const backAction = () => {
+  //     Alert.alert("Hold on!", "Are you sure you want to go leave?", [
+  //       {
+  //         text: "Cancel",
+  //         onPress: () => null,
+  //         style: "cancel",
+  //       },
+  //       { text: "YES", onPress: () => BackHandler.exitApp() },
+  //     ]);
+  //     return true;
+  //   };
+  //   if (Platform.OS==='android') {
+  //     const backHandler = BackHandler.addEventListener(
+  //       "hardwareBackPress",
+  //       backAction
+  //     );
+  //     return () => backHandler.remove();
+  //   } else {
+  //     props.navigation.addListener("beforeRemove", (e) => {
+  //       e.preventDefault();
+  //     });
+  //   }
+  // }, [props.navigation]);
   return (
     <View style={styles.screen}>
-      {loading ? (
+      {/* {loading ? (
         <HomeScreenLoadingUtil />
-      ) : (
+      ) : ( */}
         <View style={styles.LoadedScreen}>
           <View style={styles.heading}>
             <View style={{ flexDirection: "row" }}>
@@ -103,7 +103,7 @@ const Homescreen = (props) => {
             <CarScroll />
           </ScrollView>
         </View>
-      )}
+     
     </View>
   );
 };

@@ -56,27 +56,28 @@ const CarProfilePage = (props) => {
     setIndexColor(index);
     setColorName(title);
   };
-  // const getCatLogo = (data) => {
-  //   switch (data) {
-  //     case "tata":
-  //       return require("../../../assets/Images/Tata.png");
+  const getCatLogo = (data) => {
+    switch (data) {
+      case "tata":
+        return require("../../../assets/Images/Tata.png");
 
-  //     case "hyundai":
-  //       return require("../../../assets/Images/Hyundai.png");
+      case "hyundai":
+        return require("../../../assets/Images/Hyundai.png");
 
-  //     case "morris garage":
-  //       return require("../../../assets/Images/MG.png");
+      case "morris garage":
+        return require("../../../assets/Images/MG.png");
 
-  //     case "audi":
-  //       return require("../../../assets/Images/Audi.png");
+      case "audi":
+        return require("../../../assets/Images/Audi.png");
 
-  //     case "mercedes":
-  //       return require("../../../assets/Images/Mercedes.png");
+      case "mercedes":
+        return require("../../../assets/Images/Mercedes.png");
 
-  //     default:
-  //       null;
-  //   }
-  // };
+      default:
+        null;
+    }
+  };
+  console.log('company',comp)
   const features = [
     {
       value: item.battery,
@@ -179,11 +180,15 @@ const CarProfilePage = (props) => {
 
         <View style={styles.BrandInfo}>
           <View style={styles.BrandView}>
-            <Image
+            {comp[0].type==='car'?<Image
               resizeMode="contain"
               style={styles.Brand}
-              source={{ uri: comp[0]?.logoImg }}
-            />
+              source={getCatLogo(comp[0].name)}
+            />:<Image
+            resizeMode="contain"
+            style={styles.Brand}
+            source={{uri:comp[0].logoImg}}
+          />}
           </View>
           <Text style={styles.BrandName}>{item.name.toUpperCase()}</Text>
           <Text style={styles.BrandRate}>

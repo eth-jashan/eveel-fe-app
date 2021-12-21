@@ -15,7 +15,8 @@ class CarModel {
     company,
     type,
     isIndian,
-    TestDrive
+    TestDrive,
+    sideView
   ) {
     this.carId = carId;
     this.companyId = companyId;
@@ -33,6 +34,7 @@ class CarModel {
     this.type = type;
     this.isIndian = isIndian;
     this.TestDrive = TestDrive;
+    this.sideView = sideView
   }
 }
 export default CarModel;

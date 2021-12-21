@@ -40,27 +40,27 @@ const CategoryScreen = ({ navigation, route }) => {
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const ITEM_SIZE = width * 0.72;
   const SPACER_SIZE = (width - ITEM_SIZE) / 2;
-  // const getCatLogo = (data) => {
-  //   switch (data) {
-  //     case "tata":
-  //       return require("../../../assets/Images/Tata.png");
+  const getCatLogo = (data) => {
+    switch (data) {
+      case "tata":
+        return require("../../../assets/Images/Tata.png");
 
-  //     case "hyundai":
-  //       return require("../../../assets/Images/Hyundai.png");
+      case "hyundai":
+        return require("../../../assets/Images/Hyundai.png");
 
-  //     case "morris and garage":
-  //       return require("../../../assets/Images/MG.png");
+      case "morris and garage":
+        return require("../../../assets/Images/MG.png");
 
-  //     case "audi":
-  //       return require("../../../assets/Images/Audi.png");
+      case "audi":
+        return require("../../../assets/Images/Audi.png");
 
-  //     case "mercedes":
-  //       return require("../../../assets/Images/Mercedes.png");
+      case "mercedes":
+        return require("../../../assets/Images/Mercedes.png");
 
-  //     default:
-  //       null;
-  //   }
-  // };
+      default:
+        null;
+    }
+  };
   // const getCatName = (data) => {
   //   switch (data) {
   //     case "tata":
@@ -138,11 +138,15 @@ const CategoryScreen = ({ navigation, route }) => {
                   styles.BrandView,
                 ]}
               >
-                <Image
+                {item.type==='car'?<Image
                   resizeMode="contain"
                   style={styles.img}
-                  source={{ uri: item.logoImg }}
-                />
+                  source={getCatLogo(item.name)}
+                />:<Image
+                resizeMode="contain"
+                style={styles.img}
+                source={{ uri: item.logoImg }}
+              />}
                   <Text style={styles.Title}>{item.name}</Text>           
                 <Pressable
                   onPress={() => navigation.navigate("carlist", { id: index })}

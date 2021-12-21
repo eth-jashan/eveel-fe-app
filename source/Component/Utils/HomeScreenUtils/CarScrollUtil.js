@@ -10,6 +10,7 @@ import { AntDesign } from "@expo/vector-icons";
 const CarScroll = () => {
   const navigation = useNavigation();
   const carList = useSelector((x) => x.car.carList);
+  console.log('carlist', carList)
   return (
     <View>
       <View style={styles.headingBar}>
@@ -49,9 +50,9 @@ const CarScroll = () => {
                   <Text style={styles.name}>
                     {item.company} {item.name}
                   </Text>
-                  <Text style={styles.price}>
+                  {/* <Text style={styles.price}>
                     Starting @ ₹{item.startPrice}
-                  </Text>
+                  </Text> */}
                   <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>Battery</Text>
@@ -74,7 +75,7 @@ const CarScroll = () => {
                       style={styles.progressBar}
                     />
                   </View>
-                  <View>
+                  {/* <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>
                         {item.type === "car" ? "0-100 km/h" : "0-60 km/h"}
@@ -86,7 +87,7 @@ const CarScroll = () => {
                       color={Color.lightgreen}
                       style={styles.progressBar}
                     />
-                  </View>
+                  </View> */}
                 </View>
               </Pressable>
             );

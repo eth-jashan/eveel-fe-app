@@ -5,7 +5,6 @@ import { useCallback } from "react";
 import { useState } from "react";
 import {
   View,
-  Text,
   Animated,
   StyleSheet,
   Dimensions,
@@ -85,6 +84,8 @@ const CarListScreen = ({ navigation, route }) => {
     outputRange: [height, 0, -height],
   });
 
+  console.log('carlist', carList)
+
   return (
     <FlingGestureHandler
       key="up"
@@ -158,8 +159,9 @@ const CarListScreen = ({ navigation, route }) => {
               <Image
                 style={{ width: "100%", height: "100%" }}
                 source={{
-                  uri: "https://firebasestorage.googleapis.com/v0/b/eveels-testing.appspot.com/o/TATA-nex.png?alt=media&token=db1fab62-d471-49d1-8b95-40ef3319e451",
+                  uri: carList[index].sideView
                 }}
+                resizeMode='contain'
               />
             </StaggeringView>
 

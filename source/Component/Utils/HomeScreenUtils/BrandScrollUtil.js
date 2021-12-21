@@ -12,27 +12,27 @@ const BrandScroll = (props) => {
   const category = useSelector((x) => x.company.companyList);
   const data = category;
   const navigation = useNavigation();
-  // const getCatLogo = (data) => {
-  //   switch (data) {
-  //     case "tata":
-  //       return require("../../../../assets/Images/Tata.png");
+  const getCatLogo = (data) => {
+    switch (data) {
+      case "tata":
+        return require("../../../../assets/Images/Tata.png");
 
-  //     case "hyundai":
-  //       return require("../../../../assets/Images/Hyundai.png");
+      case "hyundai":
+        return require("../../../../assets/Images/Hyundai.png");
 
-  //     case "morris and garage":
-  //       return require("../../../../assets/Images/MG.png");
+      case "morris and garage":
+        return require("../../../../assets/Images/MG.png");
 
-  //     case "audi":
-  //       return require("../../../../assets/Images/Audi.png");
+      case "audi":
+        return require("../../../../assets/Images/Audi.png");
 
-  //     case "mercedes":
-  //       return require("../../../../assets/Images/Mercedes.png");
+      case "mercedes":
+        return require("../../../../assets/Images/Mercedes.png");
 
-  //     default:
-  //       null;
-  //   }
-  // };
+      default:
+        null;
+    }
+  };
 
   return (
     <View>
@@ -56,13 +56,13 @@ const BrandScroll = (props) => {
           data={data}
           keyExtractor={(_, i) => i.toString()}
           renderItem={({ item, index }) => {
-            // console.log(getCatLogo(item.name), item);
+            console.log(getCatLogo(item.name), item);
             return (
               <TouchableOpacity
                 style={styles.Box}
                 onPress={() => navigation.navigate("carlist", { id: index })}
               >
-                <Image source={{ uri: item.logoImg }} style={styles.image} />
+                {item.type==='twoWheeler'?<Image source={{ uri:item.logoImg }} style={styles.image} />:<Image source={getCatLogo(item.name)} style={styles.image} />}
               </TouchableOpacity>
             );
           }}

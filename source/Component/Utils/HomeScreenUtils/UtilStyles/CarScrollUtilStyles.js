@@ -22,28 +22,31 @@ const styles = StyleSheet.create({
   },
   Box: {
     backgroundColor: Color.darkgrey,
-    marginHorizontal: 20,
-    marginTop: 20,
+    // marginHorizontal: 20,
+    // marginTop: 20,
     paddingBottom: 10,
-    marginBottom: 40,
+    // marginBottom: 40,
     borderRadius: 20,
+    width:275,
+    margin:22
     
   },
   imgview: {
-    shadowColor: Color.grey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    // shadowColor: Color.grey,
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 2,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 5,
   },
   image: {
-    margin: 20,
-    width: Dimensions.get("screen").width / 1.5,
+    // margin: 20,
+    width: '100%',
     height: Dimensions.get("screen").width / 2.5,
-    borderRadius: 10,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
     alignSelf: "center",
   },
   name: {
