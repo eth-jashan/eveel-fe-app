@@ -2,22 +2,26 @@ export const LOGIN = "LOGIN";
 export const PHONE = "PHONE";
 export const login = (first_name, last_name, email_id, uid, token) => {
   return async (dispatch) => {
-    const response = await fetch(
-      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}.json?`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          first_name,
-          last_name,
-          email_id,
-          token,
-        }),
-      }
+    const check = await fetch(
+      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/profile.json?`
     );
-    const resData = await response.json();
-    //console.log(resData.name);
-    //console.log(first_name, last_name, number, email_id, uid, token);
+    const checkData = await check.json();
+    if (!checkData) {
+      const response = await fetch(
+        `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/profile.json?`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            first_name,
+            last_name,
+            email_id,
+            token,
+          }),
+        }
+      );
+      const resData = await response.json();
+    }
     dispatch({
       type: LOGIN,
       token: token,
@@ -26,24 +30,32 @@ export const login = (first_name, last_name, email_id, uid, token) => {
       first_name: first_name,
       last_name: last_name,
     });
+    //console.log(resData.name);
+    //console.log(first_name, last_name, number, email_id, uid, token);
   };
 };
 
 export const AddPhoneNumber = (number, uid, token) => {
   return async (dispatch) => {
     //console.log(number, token, uid);
-    const response = await fetch(
-      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}.json?`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          number,
-          token,
-        }),
-      }
+    const check = await fetch(
+      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/profile.json?`
     );
-    const resData = await response.json();
+    const checkData = await check.json();
+    if (!checkData) {
+      const response = await fetch(
+        `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/profile.json?`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            number,
+            token,
+          }),
+        }
+      );
+      const resData = await response.json();
+    }
     dispatch({
       type: "PHONE",
       uid: uid,
@@ -57,7 +69,7 @@ export const LoggedInUser = (uid) => {
   return async (dispatch) => {
     //console.log(uid);
     const response = await fetch(
-      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}.json?`
+      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/profile.json?`
     );
     try {
       const resData = await response.json();
