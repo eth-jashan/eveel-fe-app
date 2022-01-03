@@ -1,7 +1,13 @@
 import React, { useRef, useState } from "react";
-import { Dimensions, Pressable, Animated } from "react-native";
+import {
+  Dimensions,
+  Pressable,
+  Animated,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import { View, Text, Image, StyleSheet } from "react-native";
-import { FlatList, ScrollView } from "react-native-gesture-handler";
+import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
 import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
@@ -34,6 +40,9 @@ const CarProfilePage = (props) => {
   const [indexColor, setIndexColor] = useState();
   const item = props.route.params.item;
   const companyList = useSelector((state) => state.company.companyList);
+  const topRef = useRef();
+  const thumbRef = useRef();
+  const [activeIndex, setActiveIndex] = useState(0);
   //console.log(companyList);
   console.log(item);
   const comp = companyList.filter((c) => c.companyid == item.companyId);
@@ -77,7 +86,7 @@ const CarProfilePage = (props) => {
         null;
     }
   };
-  console.log('company',comp)
+  console.log("company", comp);
   const features = [
     {
       value: item.battery,
@@ -140,11 +149,33 @@ const CarProfilePage = (props) => {
       ),
     },
   ];
+  const scrollToActiveIndex = (index) => {
+    setActiveIndex(index);
+    topRef?.current?.scrollToOffset({
+      offset: index * width,
+      animated: true,
+    });
+    const image_size = 100;
+    const space = 10;
+    if (index * (image_size + space) - image_size / 2 > width / 4) {
+      thumbRef?.current?.scrollToOffset({
+        offset: index * (image_size + space) - width / 4 + image_size / 2,
+        animated: true,
+      });
+    } else {
+      thumbRef?.current?.scrollToOffset({
+        offset: 0,
+        animated: true,
+      });
+    }
+    //scroll flatlists
+  };
   return (
     <View style={styles.screen}>
       <ScrollView style={styles.scroll}>
         <View>
           <FlatList
+            ref={topRef}
             horizontal
             keyExtractor={(_, i) => i.toString()}
             data={gallery}
@@ -152,10 +183,29 @@ const CarProfilePage = (props) => {
             snapToInterval={Dimensions.get("window").width}
             decelerationRate="fast"
             showsHorizontalScrollIndicator={false}
+            onMomentumScrollEnd={(ev) => {
+              scrollToActiveIndex(
+                Math.floor(ev.nativeEvent.contentOffset.x / width)
+              );
+            }}
             renderItem={({ item, index }) => {
               return (
-                <View style={styles.carImages}>
-                  <Image style={styles.carImage} source={{ uri: item.image }} />
+                <View
+                  style={{ width: Dimensions.get("window").width, height: 250 }}
+                >
+                  <TouchableOpacity
+                    onPress={() => {
+                      props.navigation.navigate("SlideScreen", {
+                        gallery,
+                        index,
+                      });
+                    }}
+                  >
+                    <Image
+                      style={styles.carImage}
+                      source={{ uri: item.image }}
+                    />
+                  </TouchableOpacity>
                 </View>
               );
             }}
@@ -164,15 +214,31 @@ const CarProfilePage = (props) => {
 
         <View style={styles.SmallCarCon}>
           <FlatList
+            ref={thumbRef}
             horizontal
             data={gallery}
-            keyExtractor={(_,i) => i.toString()}
+            keyExtractor={(_, i) => i.toString()}
             showsHorizontalScrollIndicator={false}
             renderItem={({ item, index }) => {
               return (
-                <View style={styles.smallcarImages}>
-                  <Image style={styles.carImage}  source={{ uri: item.image }} />
-                </View>
+                <TouchableOpacity
+                  style={styles.smallcarImages}
+                  onPress={() => scrollToActiveIndex(index)}
+                >
+                  <Image
+                    style={[
+                      styles.carImage,
+                      {
+                        borderWidth: 0.7,
+                        borderColor:
+                          index === activeIndex
+                            ? Color.lightgreen
+                            : "transparent",
+                      },
+                    ]}
+                    source={{ uri: item.image }}
+                  />
+                </TouchableOpacity>
               );
             }}
           />
@@ -180,15 +246,19 @@ const CarProfilePage = (props) => {
 
         <View style={styles.BrandInfo}>
           <View style={styles.BrandView}>
-            {comp[0].type==='car'?<Image
-              resizeMode="contain"
-              style={styles.Brand}
-              source={getCatLogo(comp[0].name)}
-            />:<Image
-            resizeMode="contain"
-            style={styles.Brand}
-            source={{uri:comp[0].logoImg}}
-          />}
+            {comp[0].type === "car" ? (
+              <Image
+                resizeMode="contain"
+                style={styles.Brand}
+                source={getCatLogo(comp[0].name)}
+              />
+            ) : (
+              <Image
+                resizeMode="contain"
+                style={styles.Brand}
+                source={{ uri: comp[0].logoImg }}
+              />
+            )}
           </View>
           <Text style={styles.BrandName}>{item.name.toUpperCase()}</Text>
           <Text style={styles.BrandRate}>
