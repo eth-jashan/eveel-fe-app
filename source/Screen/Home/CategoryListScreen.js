@@ -147,7 +147,7 @@ const CategoryScreen = ({ navigation, route }) => {
                 style={styles.img}
                 source={{ uri: item.logoImg }}
               />}
-                  <Text style={styles.Title}>{item.name}</Text>           
+                  <Text style={styles.Title}>{item.name.toUpperCase()}</Text>           
                 <Pressable
                   onPress={() => navigation.navigate("carlist", { id: index })}
                   style={styles.button}
