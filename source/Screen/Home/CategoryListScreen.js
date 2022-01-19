@@ -34,7 +34,7 @@ const CategoryScreen = ({ navigation, route }) => {
     { index: "7", uri: url1 },
     { index: "7", uri: url2 },
   ]);
-  const category = useSelector((x) => x.company.companyList);
+  const category = route.params?.list;
   const data = category;
 
   const scrollX = React.useRef(new Animated.Value(0)).current;
@@ -138,18 +138,25 @@ const CategoryScreen = ({ navigation, route }) => {
                   styles.BrandView,
                 ]}
               >
-                {item.type==='car'?<Image
-                  resizeMode="contain"
-                  style={styles.img}
-                  source={getCatLogo(item.name)}
-                />:<Image
-                resizeMode="contain"
-                style={styles.img}
-                source={{ uri: item.logoImg }}
-              />}
-                  <Text style={styles.Title}>{item.name}</Text>           
+                {item.type === "car" ? (
+                  <Image
+                    resizeMode="contain"
+                    style={styles.img}
+                    source={getCatLogo(item.name)}
+                  />
+                ) : (
+                  <Image
+                    resizeMode="contain"
+                    style={styles.img}
+                    source={{ uri: item.logoImg }}
+                  />
+                )}
+                <Text style={styles.Title}>{item.name.toUpperCase()}</Text>
                 <Pressable
-                  onPress={() => navigation.navigate("carlist", { id: index })}
+                  onPress={() => {
+                    console.log(item);
+                    navigation.navigate("carlist", { id: item.companyid });
+                  }}
                   style={styles.button}
                 >
                   <Text style={styles.ButtonText}>Take A Tour</Text>

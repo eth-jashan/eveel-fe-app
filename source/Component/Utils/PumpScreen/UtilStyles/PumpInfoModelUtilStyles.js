@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   pumpstyle: {
-    marginLeft: 22,
+    marginVertical:10,
+    marginHorizontal: 18,
   },
 
   pumpModal: {

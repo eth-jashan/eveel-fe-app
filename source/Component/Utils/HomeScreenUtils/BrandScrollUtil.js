@@ -9,7 +9,7 @@ import Color from "../../../../assets/Color";
 import styles from "./UtilStyles/BrandScrollUtilStyles";
 
 const BrandScroll = (props) => {
-  const category = useSelector((x) => x.company.companyList);
+  const category = props.companyList;
   const data = category;
   const navigation = useNavigation();
   const getCatLogo = (data) => {
@@ -40,7 +40,7 @@ const BrandScroll = (props) => {
         <Text style={styles.title}>Top Brands</Text>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Category");
+            navigation.navigate("Category", { list: category });
           }}
           style={styles.more}
         >
@@ -56,13 +56,20 @@ const BrandScroll = (props) => {
           data={data}
           keyExtractor={(_, i) => i.toString()}
           renderItem={({ item, index }) => {
-            console.log(getCatLogo(item.name), item);
+            //console.log(getCatLogo(item.name), item);
             return (
               <TouchableOpacity
                 style={styles.Box}
-                onPress={() => navigation.navigate("carlist", { id: index })}
+                onPress={() => {
+                  console.log(item.companyid);
+                  navigation.navigate("carlist", { id: item.companyid });
+                }}
               >
-                {item.type==='twoWheeler'?<Image source={{ uri:item.logoImg }} style={styles.image} />:<Image source={getCatLogo(item.name)} style={styles.image} />}
+                {item.type === "twoWheeler" ? (
+                  <Image source={{ uri: item.logoImg }} style={styles.image} />
+                ) : (
+                  <Image source={getCatLogo(item.name)} style={styles.image} />
+                )}
               </TouchableOpacity>
             );
           }}

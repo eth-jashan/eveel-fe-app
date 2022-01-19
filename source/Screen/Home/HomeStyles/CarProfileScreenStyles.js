@@ -59,14 +59,13 @@ const styles = StyleSheet.create({
   },
   features: {
     alignSelf: "center",
+    justifyContent: "center",
     marginBottom: 20,
     borderRadius: 20,
     width: Dimensions.get("window").width * 0.88,
-    height: 150,
+    height: 200,
   },
   featuresText: {
-    marginBottom: 10,
-    marginTop: 14,
     fontSize: 18,
     fontFamily: "header",
     color: Color.white,
@@ -82,17 +81,17 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginHorizontal: 8,
   },
-  EveelLogo: { height: 50, width: 50 },
+  EveelLogo: { height: 35, width: 35 },
   Variants: {
     fontFamily: "black",
     color: Color.white,
-    fontSize: 18,
+    fontSize: 16,
   },
-  BrandVar: { fontFamily: "medium", color: "white", fontSize: 16 },
+  BrandVar: { fontFamily: "medium", color: "white", fontSize: 14 },
   price: {
     fontFamily: "black",
     color: Color.lightgreen,
-    fontSize: 20,
+    fontSize: 18,
   },
   ColorView: { marginBottom: 50, marginTop: 20 },
   ColorBoxView: {

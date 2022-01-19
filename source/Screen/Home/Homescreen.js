@@ -21,11 +21,44 @@ import { fetchCarModel } from "../../Store/action/car";
 import HomeScreenLoadingUtil from "../../Component/Utils/HomeScreenUtils/HomeScreenLoadingUtil";
 import { LoggedInUser } from "../../Store/action/auth";
 import { fetchfeature } from "../../Store/action/feature";
+import { fetch_station } from "../../Store/action/station";
 const Homescreen = (props) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
-  const categories = useSelector((state) => state.company.companyList);
+  const CList = useSelector((state) => state.company.companyList);
+  const VList = useSelector((state) => state.car.vehicleList);
+  const carList = useSelector((state) => state.car.carList);
+  const scootyList = useSelector((state) => state.car.scootyList);
 
+  const [companyList, setCompanyList] = useState();
+  const [vehicleList, setVehicleList] = useState();
+
+  useEffect(() => {
+    setCompanyList(CList);
+    setVehicleList(VList);
+  }, [CList, VList]);
+
+  const SelectedCategory = (type) => {
+    switch (type) {
+      case "All":
+        setCompanyList(CList);
+        setVehicleList(VList);
+        return;
+      case "Cars":
+        setCompanyList(CList.filter((item) => item.type === "car"));
+        setVehicleList(carList);
+        console.log("CCCCCCC", companyList);
+        return;
+      case "Scooty":
+        setCompanyList(CList.filter((item) => item.type === "twoWheeler"));
+        setVehicleList(scootyList);
+        return;
+      default:
+        return;
+    }
+  };
+
+  //console.log(vehicleList);
   //console.log("User===>", user);
   const [loading, setLoading] = useState(true);
 
@@ -33,6 +66,7 @@ const Homescreen = (props) => {
     dispatch(fetchCompany());
     dispatch(fetchCarModel());
     dispatch(fetchfeature());
+    dispatch(fetch_station());
   };
 
   useEffect(() => {
@@ -69,41 +103,40 @@ const Homescreen = (props) => {
       {/* {loading ? (
         <HomeScreenLoadingUtil />
       ) : ( */}
-        <View style={styles.LoadedScreen}>
-          <View style={styles.heading}>
-            <View style={{ flexDirection: "row" }}>
-              <Image
-                source={require("../../../assets/Images/eveels-logo.png")}
-                style={styles.logo}
-              />
-              <Image
-                source={require("../../../assets/Images/eveels-words.png")}
-                style={styles.logo2}
-              />
-            </View>
+      <View style={styles.LoadedScreen}>
+        <View style={styles.heading}>
+          <View style={{ flexDirection: "row" }}>
             <Image
-              source={require("../../../assets/Images/Ellipse.png")}
-              style={styles.profile}
+              source={require("../../../assets/Images/eveels-logo.png")}
+              style={styles.logo}
+            />
+            <Image
+              source={require("../../../assets/Images/eveels-words.png")}
+              style={styles.logo2}
             />
           </View>
-          <ScrollView
-            contentContainerStyle={styles.screenscroll}
-            showsVerticalScrollIndicator={false}
-          >
-            <View style={styles.TitleView}>
-              <Text style={styles.welcome}>
-                Good afternoon, {user.first_name}
-              </Text>
-              <Text style={styles.slogan}>Let's find the perfect</Text>
-              <Text style={styles.title}>Electric Vehicle ⚡ </Text>
-            </View>
-            <HomeBanner />
-            <CategorySelection />
-            <BrandScroll />
-            <CarScroll />
-          </ScrollView>
+          <Image
+            source={require("../../../assets/Images/Ellipse.png")}
+            style={styles.profile}
+          />
         </View>
-     
+        <ScrollView
+          contentContainerStyle={styles.screenscroll}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={styles.TitleView}>
+            <Text style={styles.welcome}>
+              Good afternoon, {user.first_name}
+            </Text>
+            <Text style={styles.slogan}>Let's find the perfect</Text>
+            <Text style={styles.title}>Electric Vehicle ⚡ </Text>
+          </View>
+          <HomeBanner />
+          <CategorySelection selected={SelectedCategory} />
+          <BrandScroll companyList={companyList} />
+          <CarScroll vehicleList={vehicleList} />
+        </ScrollView>
+      </View>
     </View>
   );
 };

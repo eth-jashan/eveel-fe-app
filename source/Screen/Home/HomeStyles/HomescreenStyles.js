@@ -29,14 +29,14 @@ const styles = StyleSheet.create({
   profile: { width: 50, height: 50, alignSelf: "center" },
   screenscroll: { paddingBottom: 200 },
   TitleView: { margin: 15, paddingVertical: 10 },
-  welcome: { fontSize: 28, color: Color.white, fontFamily: "bold" },
+  welcome: { fontSize: 26, color: Color.white, fontFamily: "bold" },
   slogan: {
-    fontSize: 24,
+    fontSize: 22,
     color: Color.white,
     fontWeight: "bold",
     // paddingTop: 10,
   },
-  title: { fontSize: 32, color: Color.lightgreen, fontFamily: "bold" },
+  title: { fontSize: 30, color: Color.lightgreen, fontFamily: "bold" },
 });
 
 export default styles;

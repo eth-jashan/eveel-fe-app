@@ -30,9 +30,11 @@ import {
   variantList,
   colorVariantList,
 } from "../../../model/Data/carProfiledata";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addVechile_1 } from "../../Store/action/compareCar";
 const { width, height } = Dimensions.get("window");
 const CarProfilePage = (props) => {
+  const dispatch = useDispatch();
   const modalize = useRef();
   const modalizeSafety = useRef();
   const modalizeColor = useRef();
@@ -44,7 +46,7 @@ const CarProfilePage = (props) => {
   const thumbRef = useRef();
   const [activeIndex, setActiveIndex] = useState(0);
   //console.log(companyList);
-  console.log(item);
+  //console.log(item);
   const comp = companyList.filter((c) => c.companyid == item.companyId);
   //console.log(comp);
   const feature = useSelector((state) => state.feature.featureList);
@@ -285,7 +287,22 @@ const CarProfilePage = (props) => {
             }}
           />
         </View>
-
+        <TouchableOpacity
+          style={{
+            backgroundColor: Color.lightgreen,
+            alignSelf: "flex-start",
+            margin: 15,
+            borderRadius: 15,
+          }}
+          onPress={() => {
+            dispatch(addVechile_1(item));
+            props.navigation.navigate("CarCompare", { vehicle1: item });
+          }}
+        >
+          <Text style={{ color: "black", fontFamily: "bold", padding: 10 }}>
+            Compare the car
+          </Text>
+        </TouchableOpacity>
         <View>
           <Text style={styles.AboutTheCar}>About The Car</Text>
           <View style={{ marginBottom: 12 }}>
