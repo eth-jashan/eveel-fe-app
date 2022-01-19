@@ -14,17 +14,17 @@ import Color from "../../../../assets/Color";
 import styles from "./UtilStyles/CarScrollUtilStyles";
 import { useSelector } from "react-redux";
 import { AntDesign } from "@expo/vector-icons";
-const CarScroll = () => {
+const CarScroll = (props) => {
   const navigation = useNavigation();
-  const carList = useSelector((x) => x.car.carList);
-  console.log("carlist", carList);
+  const vehicleList = props.vehicleList;
+  //console.log("vehicleList", vehicleList);
   return (
     <View>
       <View style={styles.headingBar}>
         <Text style={styles.title}>Top Model</Text>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("carlist");
+            navigation.navigate("carlist", { list: vehicleList });
           }}
           style={styles.more}
         >
@@ -33,12 +33,12 @@ const CarScroll = () => {
       </View>
       <View>
         <FlatList
-          data={carList}
+          data={vehicleList}
           decelerationRate="fast"
           snapToAlignment="start"
           horizontal
           showsHorizontalScrollIndicator={false}
-          keyExtractor={(_, i) => i}
+          keyExtractor={(_, i) => i.toString()}
           renderItem={({ item, index }) => {
             return (
               <Pressable
@@ -49,7 +49,7 @@ const CarScroll = () => {
               >
                 <View style={styles.imgview}>
                   <Image
-                    source={{ uri: carList[index].cover }}
+                    source={{ uri: vehicleList[index].cover }}
                     style={styles.image}
                   />
                 </View>

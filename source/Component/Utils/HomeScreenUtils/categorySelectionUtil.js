@@ -3,7 +3,7 @@ import { Pressable, View, Text } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import color from "../../../../assets/Color";
 import styles from "./UtilStyles/categorySelectionUtilStyles";
-const CategorySelection = () => {
+const CategorySelection = (props) => {
   const typeOfSelection = ["All", "Cars", "Scooty", "Cycle"];
   const [selected, setSelected] = useState(0);
 
@@ -17,7 +17,10 @@ const CategorySelection = () => {
         renderItem={({ item, index }) => {
           return (
             <Pressable
-              onPress={() => setSelected(index)}
+              onPress={() => {
+                props.selected(item);
+                setSelected(index);
+              }}
               style={[
                 {
                   marginLeft: index === 0 ? 16 : 0,

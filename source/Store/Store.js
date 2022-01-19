@@ -6,6 +6,8 @@ import authReducer from "./reducer/auth";
 import featureReducer from "./reducer/feature";
 import newsReducer from "./reducer/news";
 import likedNewsReducer from "./reducer/likedNews";
+import compareCarReducer from "./reducer/compareCar";
+import pumpStationReducer from "./reducer/station";
 const reducer = combineReducers({
   company: CompanyReducer,
   car: CarReducer,
@@ -13,6 +15,8 @@ const reducer = combineReducers({
   feature: featureReducer,
   news: newsReducer,
   likedNews: likedNewsReducer,
+  compareCar: compareCarReducer,
+  pumpStation: pumpStationReducer,
 });
 
 const store = createStore(reducer, applyMiddleware(ReduxThunk));

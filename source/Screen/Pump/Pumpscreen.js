@@ -30,6 +30,7 @@ const { width, height } = Dimensions.get("window");
 import MapViewDirections from "react-native-maps-directions";
 import getDirections from "react-native-google-maps-directions";
 import { showLocation } from "react-native-map-link";
+import { useSelector } from "react-redux";
 
 const pumpLocation = ({ navigation, route }) => {
   const { location } = route.params;
@@ -76,11 +77,13 @@ const pumpLocation = ({ navigation, route }) => {
 
     getDirections(data);
   };
-  const listofPump = [
-    { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
-    { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
-    { name: "XYZ Station", lat: "19.08551", long: "72.88764" },
-  ];
+  const listofPump = useSelector((state) => state.pumpStation.stationList);
+  console.log("LISTOFPUMP", listofPump);
+  // const listofPump = [
+  //   { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
+  //   { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
+  //   { name: "XYZ Station", lat: "19.08551", long: "72.88764" },
+  // ];
 
   const listOfCity = [
     { name: "Delhi", lat: "28.7041", long: "77.1025" },
@@ -91,11 +94,7 @@ const pumpLocation = ({ navigation, route }) => {
   ];
 
   const modalizeRef = React.useRef(null);
-  const [pumpInfo, setPumpInfo] = React.useState({
-    name: "ChargeGrid",
-    lat: "19.07434",
-    long: "72.9869988",
-  });
+  const [pumpInfo, setPumpInfo] = React.useState();
   const pumpRef = React.useRef(null);
   const [select, setSelect] = React.useState(false);
 
@@ -157,8 +156,10 @@ const pumpLocation = ({ navigation, route }) => {
         userInterfaceStyle={"dark"}
         customMapStyle={mapStyle}
         region={{
-          latitude: parseFloat(pumpInfo.lat),
-          longitude: parseFloat(pumpInfo.long),
+          latitude: pumpInfo ? parseFloat(pumpInfo.lat) : origin.latitude,
+          longitude: pumpInfo
+            ? parseFloat(pumpInfo.long)
+            : origin.longitude,
           latitudeDelta: 0.422,
           longitudeDelta: 0.421,
         }}
@@ -265,7 +266,7 @@ const pumpLocation = ({ navigation, route }) => {
       </View>
       <PumpInfoModal
         modalRef={pumpRef}
-        height={220}
+        height={280}
         item={pumpInfo}
         direction={handleGetDirections}
       />

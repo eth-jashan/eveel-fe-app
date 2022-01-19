@@ -8,6 +8,7 @@ import CategoryScreen from "../Screen/Home/CategoryListScreen";
 import pumpLocation from "../Screen/Pump/Pumpscreen";
 import PumpSearchScreen from "../Screen/Pump/pumpSearchScreen";
 import PhotoSlideScreen from "../Screen/Home/PhotoSlideScreen";
+import CarCompareScreen from "../Screen/Home/CarCompareScreen";
 
 const HomeNav = createStackNavigator();
 const HomeStack = () => {
@@ -16,6 +17,7 @@ const HomeStack = () => {
       <HomeNav.Screen component={BottomNav} name="Tab" />
       <HomeNav.Screen component={CarListScreen} name="carlist" />
       <HomeNav.Screen component={CarProfilePage} name="CarProfile" />
+      <HomeNav.Screen component={CarCompareScreen} name="CarCompare" />
       <HomeNav.Screen component={CategoryScreen} name="Category" />
       <HomeNav.Screen component={pumpLocation} name="PumpScreen" />
       <HomeNav.Screen component={PumpSearchScreen} name="PumpSearch" />

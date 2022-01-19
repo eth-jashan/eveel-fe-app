@@ -2,6 +2,8 @@ import { FETCH_CAR } from "../action/car";
 
 const initialState = {
   carList: [],
+  vehicleList: [],
+  scootyList: [],
 };
 
 export default (state = initialState, action) => {
@@ -9,7 +11,9 @@ export default (state = initialState, action) => {
     case FETCH_CAR:
       return {
         ...state,
-        carList: action.data,
+        carList: action.carList,
+        vehicleList: action.vehicleList,
+        scootyList: action.scootyList,
       };
     default:
       return state;

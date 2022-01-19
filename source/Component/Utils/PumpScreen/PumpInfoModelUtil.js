@@ -16,18 +16,17 @@ const PumpInfoModal = ({ height, modalRef, item, direction }) => {
             />
           </View>
           <View style={styles.pumpstyle}>
-            <Text style={styles.pumpModal}>Tata Charging Station</Text>
-            <Text style={styles.styling}>
-              Tata motar fortune, MIDC Industrial Area, Shiravane, Nerul, Navi
-              Mumbai, Maharashtra 400614
+            <Text numberOfLines={2} style={styles.pumpModal}>
+              {item?.station}
             </Text>
+            <Text style={styles.styling}>{item?.address}</Text>
           </View>
         </View>
 
         <TouchableOpacity
           style={styles.fontStyle}
           onPress={() => {
-            console.log("hello");
+            //console.log("hello");
             direction();
           }}
         >
