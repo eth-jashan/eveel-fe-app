@@ -12,19 +12,21 @@ import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { ScrollView } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";
+import getGoogleDirections from "../../Common/GetDirection";
 import styles from "./UtilStyles/listPumpStyles";
+import { useSelector } from "react-redux";
 const { width, height } = Dimensions.get("window");
 
-const ListPump = () => {
+const ListPump = (props) => {
   const navigation = useNavigation();
-  const pumpList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-
+  const pumpList = useSelector((state) => state.pumpStation.stationList);
+  console.log(props);
   return (
     <View style={styles.component}>
       <FlatList
         data={pumpList}
-        keyExtractor={(x) => x}
-        renderItem={({ item }) => {
+        keyExtractor={(_, index) => index.toString()}
+        renderItem={({ item, index }) => {
           return (
             <View style={styles.pumpListContainer}>
               <View style={styles.ContentBox}>
@@ -34,10 +36,9 @@ const ListPump = () => {
                   </View>
 
                   <View style={styles.Content}>
-                    <Text style={styles.PumpName}>Tata Charging Station</Text>
+                    <Text style={styles.PumpName}>{item.station}</Text>
                     <Text numberOfLines={2} style={styles.PumpAddress}>
-                      Tata motar fortune, MIDC Industrial Area, Shiravane,
-                      Nerul, Navi Mumbai, Maharashtra 400614
+                      {item.address}
                     </Text>
                   </View>
                 </View>
@@ -51,7 +52,10 @@ const ListPump = () => {
 
               <View style={styles.NavigationButtonView}>
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("PumpScreen")}
+                  onPress={() => {
+                    console.log("Hello")
+                    getGoogleDirections(item.lat, item.long, props.origin);
+                  }}
                   style={styles.NavButton}
                 >
                   <View
