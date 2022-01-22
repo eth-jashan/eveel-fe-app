@@ -17,6 +17,7 @@ import { AntDesign } from "@expo/vector-icons";
 const CarScroll = (props) => {
   const navigation = useNavigation();
   const vehicleList = props.vehicleList;
+
   //console.log("vehicleList", vehicleList);
   return (
     <View>
@@ -40,6 +41,9 @@ const CarScroll = (props) => {
           showsHorizontalScrollIndicator={false}
           keyExtractor={(_, i) => i.toString()}
           renderItem={({ item, index }) => {
+            const battery = parseFloat(item.battery.split("hr")[0]);
+            const range = parseFloat(item.range.split("k")[0]);
+            const speed = parseFloat(item.speed.split("s")[0]);
             return (
               <Pressable
                 style={styles.Box}
@@ -66,7 +70,7 @@ const CarScroll = (props) => {
                       <Text style={styles.featureNumber}>{item.battery}</Text>
                     </View>
                     <ProgressBar
-                      progress={0.5}
+                      progress={1.0 / battery}
                       color={Color.lightgreen}
                       style={styles.progressBar}
                     />
@@ -77,7 +81,7 @@ const CarScroll = (props) => {
                       <Text style={styles.featureNumber}>{item.range}</Text>
                     </View>
                     <ProgressBar
-                      progress={0.8}
+                      progress={range / 450}
                       color={Color.lightgreen}
                       style={styles.progressBar}
                     />
@@ -90,7 +94,7 @@ const CarScroll = (props) => {
                       <Text style={styles.featureNumber}>{item.speed}</Text>
                     </View>
                     <ProgressBar
-                      progress={0.5}
+                      progress={5 / speed}
                       color={Color.lightgreen}
                       style={styles.progressBar}
                     />

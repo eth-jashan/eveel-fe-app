@@ -14,6 +14,7 @@ import {
   Modal,
   Button,
   Alert,
+  Platform,
 } from "react-native";
 import { mapStyle } from "../../Component/Utils/PumpScreen/mapStylesUtil";
 import PumpInfoModal from "../../Component/Utils/PumpScreen/PumpInfoModelUtil";
@@ -31,7 +32,7 @@ import MapViewDirections from "react-native-maps-directions";
 import getDirections from "react-native-google-maps-directions";
 import { showLocation } from "react-native-map-link";
 import { useSelector } from "react-redux";
-
+import getGoogleDirections from "../../Component/Common/GetDirection";
 const pumpLocation = ({ navigation, route }) => {
   const { location } = route.params;
   //console.log("PumpScreen:", location.coords);
@@ -40,45 +41,17 @@ const pumpLocation = ({ navigation, route }) => {
     longitude: location.coords.longitude,
   };
   const [selectedPump, setSelectedPump] = useState(null);
-  const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
+  const GOOGLE_MAPS_APIKEY =
+    Platform.OS === "android"
+      ? "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"
+      : "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
+  //const GOOGLE_MAPS_APIKEY = "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"; //for testing have to open the above one for iphone aswell
 
   const handleGetDirections = () => {
-    const data = {
-      source: origin,
-      destination: {
-        latitude: parseFloat(selectedPump.latitude),
-        longitude: parseFloat(selectedPump.longitude),
-      },
-      params: [
-        {
-          key: "travelmode",
-          value: "driving", // may be "walking", "bicycling" or "transit" as well
-        },
-        {
-          key: "dir_action",
-          value: "navigate", // this instantly initializes navigation using the given travel mode
-        },
-      ],
-      // waypoints: [
-      //   {
-      //     latitude: -33.8600025,
-      //     longitude: 18.697452
-      //   },
-      //   {
-      //     latitude: -33.8600026,
-      //     longitude: 18.697453
-      //   },
-      //      {
-      //     latitude: -33.8600036,
-      //     longitude: 18.697493
-      //   }
-      // ]
-    };
-
-    getDirections(data);
+    getGoogleDirections(selectedPump.latitude, selectedPump.longitude, origin);
   };
   const listofPump = useSelector((state) => state.pumpStation.stationList);
-  console.log("LISTOFPUMP", listofPump);
+  //console.log("LISTOFPUMP", listofPump);
   // const listofPump = [
   //   { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
   //   { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
@@ -92,8 +65,6 @@ const pumpLocation = ({ navigation, route }) => {
     { name: "Hyderabad", lat: "17.3850", long: "78.4867" },
     { name: "Chennai", lat: "19.08551", long: "72.88764" },
   ];
-
-  const modalizeRef = React.useRef(null);
   const [pumpInfo, setPumpInfo] = React.useState();
   const pumpRef = React.useRef(null);
   const [select, setSelect] = React.useState(false);
@@ -107,7 +78,6 @@ const pumpLocation = ({ navigation, route }) => {
       longitude: item.long,
     });
   };
-  const destination = { latitude: 37.771707, longitude: -122.4053769 };
   const onLocationCity = async (item, index) => {
     await setSelect(index);
     setPumpInfo(item);
@@ -119,10 +89,6 @@ const pumpLocation = ({ navigation, route }) => {
   //   "PumpScreen to Homescreen state====>",
   //   index.routes[0].state.routes
   // );
-  useEffect(() => {
-    console.log("Selected", selectedPump);
-    console.log("Origin", origin);
-  }, [selectedPump]);
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
       e.preventDefault();
@@ -157,9 +123,7 @@ const pumpLocation = ({ navigation, route }) => {
         customMapStyle={mapStyle}
         region={{
           latitude: pumpInfo ? parseFloat(pumpInfo.lat) : origin.latitude,
-          longitude: pumpInfo
-            ? parseFloat(pumpInfo.long)
-            : origin.longitude,
+          longitude: pumpInfo ? parseFloat(pumpInfo.long) : origin.longitude,
           latitudeDelta: 0.422,
           longitudeDelta: 0.421,
         }}
@@ -220,7 +184,9 @@ const pumpLocation = ({ navigation, route }) => {
           </Text>
           <View style={styles.icon}>
             <AntDesign
-              onPress={() => navigation.navigate("PumpSearch")}
+              onPress={() =>
+                navigation.navigate("PumpSearch", { origin: origin })
+              }
               name="search1"
               size={24}
               color={Color.white}

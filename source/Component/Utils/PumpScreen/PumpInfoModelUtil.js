@@ -4,6 +4,8 @@ import { Modalize } from "react-native-modalize";
 import { Ionicons } from "@expo/vector-icons";
 import styles from "./UtilStyles/PumpInfoModelUtilStyles";
 const PumpInfoModal = ({ height, modalRef, item, direction }) => {
+  const address = item?.address ? item?.address : "";
+  console.log("Address", item?.address);
   return (
     <Modalize modalStyle={styles.modal} modalHeight={height} ref={modalRef}>
       <View style={styles.styleUp}>
@@ -19,7 +21,10 @@ const PumpInfoModal = ({ height, modalRef, item, direction }) => {
             <Text numberOfLines={2} style={styles.pumpModal}>
               {item?.station}
             </Text>
-            <Text style={styles.styling}>{item?.address}</Text>
+            <Text style={styles.styling}>
+              {address.slice(0, 100)}
+              {address.length > 75 ? "..." : ""}
+            </Text>
           </View>
         </View>
 

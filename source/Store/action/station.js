@@ -16,7 +16,7 @@ export const fetch_station = () => {
           key,
           resData[key].Address,
           resData[key].Lat,
-          resData[key].Lng,
+          resData[key].Long,
           resData[key].Station
         )
       );

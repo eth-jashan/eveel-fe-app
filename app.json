@@ -18,10 +18,16 @@
       "supportsTablet": true
     },
     "android": {
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"
+        }
+      },
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.Eveels.App"
     },
     "web": {
       "favicon": "./assets/favicon.png"

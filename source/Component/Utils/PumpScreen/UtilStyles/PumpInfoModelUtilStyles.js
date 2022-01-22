@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   pumpstyle: {
-    marginVertical:10,
+    marginVertical: 10,
     marginHorizontal: 18,
   },
 
@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     fontFamily: "book",
     alignSelf: "center",
     marginLeft: 14,
-   
   },
 });
 

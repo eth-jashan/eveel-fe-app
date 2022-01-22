@@ -151,7 +151,11 @@ const CategoryScreen = ({ navigation, route }) => {
                     source={{ uri: item.logoImg }}
                   />
                 )}
-                <Text style={styles.Title}>{item.name.toUpperCase()}</Text>
+                <Text style={styles.Title}>
+                  {item.name !== "morris and garage"
+                    ? item.name.toUpperCase()
+                    : "MG"}
+                </Text>
                 <Pressable
                   onPress={() => {
                     console.log(item);

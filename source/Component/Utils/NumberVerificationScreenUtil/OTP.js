@@ -20,20 +20,25 @@ const OTP = (props) => {
         style={{
           backgroundColor: Color.darkgrey,
           margin: 15,
-
+          marginHorizontal: 30,
           borderRadius: 10,
           alignContent: "center",
         }}
       >
-        {/* <TextInput
+        <TextInput
           placeholder="OTP"
           placeholderTextColor="grey"
           keyboardType="numeric"
           value={code}
           onChangeText={setCode}
-          style={{ fontSize: 24, color: Color.white, paddingHorizontal: 30 }}
-        /> */}
-        <OTPInputView
+          style={{
+            fontSize: 24,
+            color: Color.white,
+            padding: 15,
+            textAlign: "center",
+          }}
+        />
+        {/* <OTPInputView
           style={{ width: "90%", height: 100, alignSelf: "center" }}
           pinCount={6}
           // code={this.state.code} //You can supply this prop or not. The component will be used as a controlled / uncontrolled component respectively.
@@ -51,7 +56,7 @@ const OTP = (props) => {
           // onCodeFilled={(code) => {
           //   console.log(`Code is ${code}, you are good to go!`);
           // }}
-        />
+        /> */}
       </View>
       <View
         style={{
