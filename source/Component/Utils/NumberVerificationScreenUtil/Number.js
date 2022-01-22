@@ -11,7 +11,7 @@ const PNumber = (props) => {
       alert("Enter a valid number");
       return;
     }
-    if (phonenumber[0] <= 7 || phonenumber[0] >= 9) {
+    if (phonenumber[0] < 6 || phonenumber[0] > 9) {
       alert("Enter a valid number");
       return;
     }
