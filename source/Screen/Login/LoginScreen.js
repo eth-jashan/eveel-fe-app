@@ -99,7 +99,8 @@ const styles = StyleSheet.create({
     width: width,
     backgroundColor: "black",
     justifyContent: "space-between",
-    padding: 12,
+    paddingHorizontal: 10,
+    paddingVertical: 50,
   },
   image: {
     alignSelf: "center",
@@ -137,14 +138,13 @@ const styles = StyleSheet.create({
   },
   LoginArea: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    width: "80%",
+    justifyContent: "space-around",
+    width: "90%",
   },
   LoginText: {
-    paddingLeft: 2,
     color: "white",
     fontFamily: "bold",
-    fontSize: 18,
+    fontSize: 16,
     alignSelf: "center",
   },
 });

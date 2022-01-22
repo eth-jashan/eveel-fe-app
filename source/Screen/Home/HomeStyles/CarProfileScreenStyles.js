@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     fontFamily: "header",
     color: Color.white,
     alignSelf: "center",
+    textAlign:'center'
   },
   Constyle: {
     alignSelf: "center",
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   ModalView: {
-    height: Dimensions.get("window").height * 0.7,
+    height: Dimensions.get("window").height * 0.75,
     backgroundColor: Color.black,
     padding: 10,
   },

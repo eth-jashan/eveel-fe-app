@@ -14,6 +14,7 @@ import {
   Modal,
   Button,
   Alert,
+  Platform,
 } from "react-native";
 import { mapStyle } from "../../Component/Utils/PumpScreen/mapStylesUtil";
 import PumpInfoModal from "../../Component/Utils/PumpScreen/PumpInfoModelUtil";
@@ -40,7 +41,10 @@ const pumpLocation = ({ navigation, route }) => {
     longitude: location.coords.longitude,
   };
   const [selectedPump, setSelectedPump] = useState(null);
-  const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
+  const GOOGLE_MAPS_APIKEY =
+    Platform.OS === "android"
+      ? "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"
+      : "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
 
   const handleGetDirections = () => {
     const data = {
@@ -157,9 +161,7 @@ const pumpLocation = ({ navigation, route }) => {
         customMapStyle={mapStyle}
         region={{
           latitude: pumpInfo ? parseFloat(pumpInfo.lat) : origin.latitude,
-          longitude: pumpInfo
-            ? parseFloat(pumpInfo.long)
-            : origin.longitude,
+          longitude: pumpInfo ? parseFloat(pumpInfo.long) : origin.longitude,
           latitudeDelta: 0.422,
           longitudeDelta: 0.421,
         }}

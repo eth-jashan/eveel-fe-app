@@ -319,7 +319,7 @@ const CarProfilePage = (props) => {
           </View>
         </View>
 
-        <View>
+        <View style={{ alignItems: "center" }}>
           <Pressable onPress={() => modalize.current?.open()}>
             <ImageBackground
               resizeMode="cover"
@@ -418,7 +418,7 @@ const CarProfilePage = (props) => {
         </View>
       </Modalize>
       <Modalize
-        modalHeight={Dimensions.get("window").height * 0.7}
+        modalHeight={Dimensions.get("window").height * 0.75}
         ref={modalizeSafety}
       >
         <View style={styles.ModalView}>

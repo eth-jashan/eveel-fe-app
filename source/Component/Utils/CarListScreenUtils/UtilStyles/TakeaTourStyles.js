@@ -1,10 +1,13 @@
 import React from "react";
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions, Platform } from "react-native";
 import Color from "../../../../../assets/Color";
 const { width, height } = Dimensions.get("screen");
 
 const styles = StyleSheet.create({
-  screen: { top: height / 4, alignItems: "center" },
+  screen: {
+    top: Platform.OS === "android" ? height / 5 : height / 4,
+    alignItems: "center",
+  },
   Button: {
     backgroundColor: Color.lightgreen,
     width: "80%",

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   BrandView: {
     backgroundColor: Color.darkgrey,
     overflow: "hidden",
-    height: height / 2,
+    height: height / 1.8,
     margin: 20,
     borderRadius: 20,
     padding: 10,
