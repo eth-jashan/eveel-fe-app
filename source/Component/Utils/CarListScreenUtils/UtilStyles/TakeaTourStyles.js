@@ -9,16 +9,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   Button: {
+    //top: Platform.OS === "android" ? height / 5 : height / 4,
     backgroundColor: Color.lightgreen,
-    width: "80%",
-    borderRadius: 20,
+    width: "90%",
+    borderRadius: 12,
+    alignSelf:'center'
   },
   Buttontext: {
-    fontSize: 24,
+    fontSize: 18,
     color: Color.darkgreen,
-    margin: 10,
+    // margin: 10,
+    padding:8,
     alignSelf: "center",
     fontFamily: "semibold",
+  },
+  ItemStyle: {
+    justifyContent: "center",
+    // overflow: "hidden",
+    // backgroundColor: "transparent",
+    // padding: 8,
   },
 });
 

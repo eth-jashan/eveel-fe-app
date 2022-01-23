@@ -27,10 +27,7 @@ import Dash from "react-native-dash";
 import { useNavigationState } from "@react-navigation/core";
 import styles from "./PumpStyles/PumpscreenStyles";
 const { width, height } = Dimensions.get("window");
-
 import MapViewDirections from "react-native-maps-directions";
-import getDirections from "react-native-google-maps-directions";
-import { showLocation } from "react-native-map-link";
 import { useSelector } from "react-redux";
 import getGoogleDirections from "../../Component/Common/GetDirection";
 const pumpLocation = ({ navigation, route }) => {
@@ -50,8 +47,8 @@ const pumpLocation = ({ navigation, route }) => {
   const handleGetDirections = () => {
     getGoogleDirections(selectedPump.latitude, selectedPump.longitude, origin);
   };
-  const listofPump = useSelector((state) => state.pumpStation.stationList);
-  //console.log("LISTOFPUMP", listofPump);
+  let listofPump = useSelector((state) => state.pumpStation.stationList);
+  console.log(listofPump.length)
   // const listofPump = [
   //   { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
   //   { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
@@ -63,7 +60,6 @@ const pumpLocation = ({ navigation, route }) => {
     { name: "Mumbai", lat: "19.0760", long: "72.8777" },
     { name: "Bangalore", lat: "12.9716", long: "77.5946" },
     { name: "Hyderabad", lat: "17.3850", long: "78.4867" },
-    { name: "Chennai", lat: "19.08551", long: "72.88764" },
   ];
   const [pumpInfo, setPumpInfo] = React.useState();
   const pumpRef = React.useRef(null);
@@ -133,20 +129,15 @@ const pumpLocation = ({ navigation, route }) => {
           return (
             <Marker
               key={i}
+              tracksViewChanges={false}
               onPress={async () => await onLocationPress(item)}
               coordinate={{
                 latitude: parseFloat(item.lat),
                 longitude: parseFloat(item.long),
               }}
-            >
-              <View style={styles.ImageView}>
-                <Image
-                  resizeMode="contain"
-                  source={require("../../../assets/Images/map-pointer-multi.png")}
-                  style={styles.ScreenFuller}
-                />
-              </View>
-            </Marker>
+              style={{height:10, width:10}}
+              icon={require("../../../assets/Images/pumpMarker.png")}
+            />
           );
         })}
         {selectedPump && (
@@ -163,16 +154,16 @@ const pumpLocation = ({ navigation, route }) => {
                 />
               </View>
             </Marker>
-            <MapViewDirections
+            {/* <MapViewDirections
               origin={origin}
               destination={{
                 latitude: parseFloat(selectedPump.latitude),
                 longitude: parseFloat(selectedPump.longitude),
               }}
-              apikey={GOOGLE_MAPS_APIKEY}
+              apikey={'AIzaSyAR3NazhoEGTvIUknJn8xy3HWLkNYkBhoA'}
               strokeWidth={3}
               strokeColor={Color.lightgreen}
-            />
+            /> */}
           </>
         )}
       </MapView>
