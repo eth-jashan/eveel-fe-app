@@ -1,5 +1,9 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import {
+  createDrawerNavigator,
+  DrawerItemList,
+} from "@react-navigation/drawer";
 import Homescreen from "../Screen/Home/Homescreen";
 import CarListScreen from "../Screen/Home/carListScreen";
 import BottomNav from "./BottomStack";
@@ -9,6 +13,8 @@ import pumpLocation from "../Screen/Pump/Pumpscreen";
 import PumpSearchScreen from "../Screen/Pump/pumpSearchScreen";
 import PhotoSlideScreen from "../Screen/Home/PhotoSlideScreen";
 import CarCompareScreen from "../Screen/Home/CarCompareScreen";
+import DrawerContent from "../Screen/Home/DrawerProfileContent";
+import { Dimensions } from "react-native";
 
 const HomeNav = createStackNavigator();
 const HomeStack = () => {
@@ -26,4 +32,21 @@ const HomeStack = () => {
   );
 };
 
-export default HomeStack;
+const HomeDrawerNav = createDrawerNavigator();
+
+const HomeDrawer = () => {
+  return (
+    <HomeDrawerNav.Navigator
+      screenOptions={{
+        headerShown:false,
+        drawerPosition: "right",
+        drawerType: "front",
+      }}
+      drawerContent={(props) => <DrawerContent {...props} />}
+    >
+      <HomeDrawerNav.Screen name="Home" component={HomeStack} />
+    </HomeDrawerNav.Navigator>
+  );
+};
+
+export default HomeDrawer;
