@@ -18,11 +18,11 @@ const PumpInfoModal = ({ height, modalRef, item, direction }) => {
             />
           </View>
           <View style={styles.pumpstyle}>
-            <Text numberOfLines={2} style={styles.pumpModal}>
+            <Text numberOfLines={1} style={styles.pumpModal}>
               {item?.station}
             </Text>
             <Text style={styles.styling}>
-              {address.slice(0, 100)}
+              {address.slice(0, 50)}
               {address.length > 75 ? "..." : ""}
             </Text>
           </View>

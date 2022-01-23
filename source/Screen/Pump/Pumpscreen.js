@@ -223,7 +223,7 @@ const pumpLocation = ({ navigation, route }) => {
       </View>
       <PumpInfoModal
         modalRef={pumpRef}
-        height={280}
+        height={200}
         item={pumpInfo}
         direction={handleGetDirections}
       />
