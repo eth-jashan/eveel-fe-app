@@ -7,6 +7,7 @@ import {
   BackHandler,
   Alert,
   Platform,
+  TouchableOpacity,
 } from "react-native";
 import CategorySelection from "../../Component/Utils/HomeScreenUtils/categorySelectionUtil";
 import HomeBanner from "../../Component/Utils/HomeScreenUtils/HomebannerUtil";
@@ -22,7 +23,7 @@ import HomeScreenLoadingUtil from "../../Component/Utils/HomeScreenUtils/HomeScr
 import { LoggedInUser } from "../../Store/action/auth";
 import { fetchfeature } from "../../Store/action/feature";
 import { fetch_station } from "../../Store/action/station";
-const Homescreen = (props) => {
+const Homescreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
   const CList = useSelector((state) => state.company.companyList);
@@ -115,10 +116,16 @@ const Homescreen = (props) => {
               style={styles.logo2}
             />
           </View>
-          <Image
-            source={require("../../../assets/Images/Ellipse.png")}
-            style={styles.profile}
-          />
+          <TouchableOpacity
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          >
+            <Image
+              source={require("../../../assets/Images/Ellipse.png")}
+              style={styles.profile}
+            />
+          </TouchableOpacity>
         </View>
         <ScrollView
           contentContainerStyle={styles.screenscroll}
