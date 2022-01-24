@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Dimensions,
   Pressable,
@@ -11,6 +11,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
 import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
+import * as Cars from "./../../Store/action/likedCars";
 import {
   Ionicons,
   FontAwesome5,
@@ -32,6 +33,7 @@ import {
 } from "../../../model/Data/carProfiledata";
 import { useDispatch, useSelector } from "react-redux";
 import { addVechile_1 } from "../../Store/action/compareCar";
+import { set } from "react-native-reanimated";
 const { width, height } = Dimensions.get("window");
 const CarProfilePage = (props) => {
   const dispatch = useDispatch();
@@ -44,12 +46,17 @@ const CarProfilePage = (props) => {
   const companyList = useSelector((state) => state.company.companyList);
   const topRef = useRef();
   const thumbRef = useRef();
+  const [likedCar, setLikedCar] = useState();
   const [activeIndex, setActiveIndex] = useState(0);
   //console.log(companyList);
   //console.log(item);
   const comp = companyList.filter((c) => c.companyid == item.companyId);
   //console.log(comp);
   const feature = useSelector((state) => state.feature.featureList);
+  const likedcar = useSelector((state) => state.likedCars.likedCarList);
+  useEffect(() => {
+    console.log("Liked Car List===>", likedcar);
+  }, [likedcar]);
   //console.log(feature);
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
@@ -88,7 +95,7 @@ const CarProfilePage = (props) => {
         null;
     }
   };
-  console.log("company", comp);
+  //console.log("company", comp);
   const features = [
     {
       value: item.battery,
@@ -151,6 +158,17 @@ const CarProfilePage = (props) => {
       ),
     },
   ];
+  const likeCar = () => {
+    if (likedCar == true) {
+      console.log(item.carId);
+      dispatch(Cars.likedCars(item.carId));
+    } else if (likedCar == false) {
+      dispatch(Cars.dislikedCar(item.carId));
+    }
+  };
+  useEffect(() => {
+    likeCar();
+  }, [likedCar]);
   const scrollToActiveIndex = (index) => {
     setActiveIndex(index);
     topRef?.current?.scrollToOffset({
@@ -213,7 +231,30 @@ const CarProfilePage = (props) => {
             }}
           />
         </View>
-
+        <TouchableOpacity
+          style={{ position: "absolute", alignSelf: "flex-end", marginTop: 30 }}
+          onPress={async () => {
+            if (likedCar) {
+              setLikedCar(false);
+            } else {
+              setLikedCar(true);
+            }
+          }}
+        >
+          <AntDesign
+            name={likedCar ? "heart" : "hearto"}
+            size={24}
+            color={likedCar ? Color.lightgreen : "white"}
+            style={{
+              margin: 20,
+              backgroundColor: Color.darkgrey,
+              padding: 8,
+              borderRadius: 20,
+              alignSelf: "center",
+              overflow: "hidden",
+            }}
+          />
+        </TouchableOpacity>
         <View style={styles.SmallCarCon}>
           <FlatList
             ref={thumbRef}
