@@ -1,22 +1,19 @@
 import NewsModel from "../../../model/newsModel";
-
+import api_utils from "../../../assets/api";
 export const ADD_LIKEDNEWS = "ADD_LIKEDNEWS";
 export const FETCH_LIKEDNEWS = "FETCH_LIKEDNEWS";
-export const add_likedNews = (news) => {
+export const add_likedNews = (id) => {
   return async (dispatch, getState) => {
     const uid = getState().auth.uid;
     const response = await fetch(
-      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/news.json?`,
+      `${api_utils.baseURL_Demo}/users/${uid}/liked_news.json?`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          imageUri: news.imageUri,
-          title: news.title,
-          body: news.body,
-          link: news.link,
+          newsId: id,
         }),
       }
     );
@@ -29,21 +26,13 @@ export const fetch_likedNews = () => {
   return async (dispatch, getState) => {
     const uid = getState().auth.uid;
     const response = await fetch(
-      `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/news.json?`
+      `${api_utils.baseURL_Demo}/users/${uid}/liked_news.json?`
     );
     const resData = await response.json();
-    const newsList = [];
+    const newsIdList = [];
     for (const key in resData) {
-      newsList.push(
-        new NewsModel(
-          key,
-          resData[key].imageUri,
-          resData[key].title,
-          resData[key].body,
-          resData[key].link
-        )
-      );
+      newsIdList.push(resData[key].newsId);
     }
-    dispatch({ type: FETCH_LIKEDNEWS, list: newsList });
+    dispatch({ type: FETCH_LIKEDNEWS, list: newsIdList });
   };
 };
