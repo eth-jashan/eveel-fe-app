@@ -23,6 +23,7 @@ import HomeScreenLoadingUtil from "../../Component/Utils/HomeScreenUtils/HomeScr
 import { LoggedInUser } from "../../Store/action/auth";
 import { fetchfeature } from "../../Store/action/feature";
 import { fetch_station } from "../../Store/action/station";
+import { fetchLikedCar } from "../../Store/action/likedCars";
 const Homescreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
@@ -30,7 +31,6 @@ const Homescreen = ({ navigation }) => {
   const VList = useSelector((state) => state.car.vehicleList);
   const carList = useSelector((state) => state.car.carList);
   const scootyList = useSelector((state) => state.car.scootyList);
-
   const [companyList, setCompanyList] = useState();
   const [vehicleList, setVehicleList] = useState();
 
@@ -51,10 +51,12 @@ const Homescreen = ({ navigation }) => {
         console.log("CCCCCCC", companyList);
         return;
       case "Scooty":
-        setCompanyList(CList.filter((item) => item.type === "twoWheeler"));
+        setCompanyList(CList.filter̀̀((item) => item.type === "twoWheeler"));
         setVehicleList(scootyList);
         return;
       default:
+        setCompanyList(CList);
+        setVehicleList(VList);
         return;
     }
   };
@@ -68,6 +70,7 @@ const Homescreen = ({ navigation }) => {
     dispatch(fetchCarModel());
     dispatch(fetchfeature());
     dispatch(fetch_station());
+    dispatch(fetchLikedCar());
   };
 
   useEffect(() => {

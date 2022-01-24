@@ -170,7 +170,7 @@ const CarListScreen = ({ navigation, route }) => {
                       borderRadius: 12,
                       alignSelf:'center', position:'absolute', bottom:40}}
                     onPress={() => {
-                      console.log('heyyyy', carList[index])
+                      //console.log('heyyyy', carList[index])
                       navigation.navigate("CarProfile", { item: carList[index] });
                     }}
                   >

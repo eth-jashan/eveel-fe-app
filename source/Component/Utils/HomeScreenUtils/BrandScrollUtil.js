@@ -61,7 +61,7 @@ const BrandScroll = (props) => {
               <TouchableOpacity
                 style={styles.Box}
                 onPress={() => {
-                  console.log(item.companyid);
+                  //console.log(item.companyid);
                   navigation.navigate("carlist", { id: item.companyid });
                 }}
               >

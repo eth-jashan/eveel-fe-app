@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import styles from "./UtilStyles/PumpInfoModelUtilStyles";
 const PumpInfoModal = ({ height, modalRef, item, direction }) => {
   const address = item?.address ? item?.address : "";
-  console.log("Address", item?.address);
+  //console.log("Address", item?.address);
   return (
     <Modalize modalStyle={styles.modal} modalHeight={height} ref={modalRef}>
       <View style={styles.styleUp}>

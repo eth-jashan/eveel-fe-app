@@ -1,6 +1,6 @@
 class LikedCarModel {
-  constructor(id, carId) {
-    this.id = id;
+  constructor(key, carId) {
+    this.key = key;
     this.carId = carId;
   }
 }

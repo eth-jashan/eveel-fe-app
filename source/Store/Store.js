@@ -8,6 +8,7 @@ import newsReducer from "./reducer/news";
 import likedNewsReducer from "./reducer/likedNews";
 import compareCarReducer from "./reducer/compareCar";
 import pumpStationReducer from "./reducer/station";
+import ownedCarReducer from "./reducer/ownedCar";
 import likedCarsReducer from "./reducer/likedCars";
 const reducer = combineReducers({
   company: CompanyReducer,
@@ -18,6 +19,7 @@ const reducer = combineReducers({
   likedNews: likedNewsReducer,
   compareCar: compareCarReducer,
   pumpStation: pumpStationReducer,
+  ownedCar: ownedCarReducer,
   likedCars: likedCarsReducer,
 });
 

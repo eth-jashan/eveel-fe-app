@@ -7,6 +7,7 @@ import HomeStack from "./HomeStack";
 import LoginScreen from "../Screen/Login/LoginScreen";
 import StartupScreen from "../Screen/StartupScreen";
 import NumberVerification from "../Screen/Login/NumberVerificationScreen";
+import VehicleSelectScreen from "../Screen/VehicleSelect/VehicleSelectScreen";
 
 const FlowStack = createStackNavigator();
 const AppNav = () => {
@@ -15,6 +16,10 @@ const AppNav = () => {
       <FlowStack.Navigator screenOptions={{ headerShown: false }}>
         <FlowStack.Screen component={StartupScreen} name="Startup" />
         <FlowStack.Screen component={LoginScreen} name="Login" />
+        <FlowStack.Screen
+          component={VehicleSelectScreen}
+          name="SelectVehicle"
+        />
         <FlowStack.Screen component={NumberVerification} name="Phone" />
         <FlowStack.Screen component={HomeStack} name="Home" />
       </FlowStack.Navigator>
