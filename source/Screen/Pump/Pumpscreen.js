@@ -67,7 +67,7 @@ const pumpLocation = ({ navigation, route }) => {
 
   const onLocationPress = (item) => {
     setPumpInfo(item);
-    console.log("Item", item);
+    //console.log("Item", item);
     pumpRef?.current?.open();
     setSelectedPump({
       latitude: item.lat,

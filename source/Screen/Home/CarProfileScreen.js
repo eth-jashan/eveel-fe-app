@@ -11,7 +11,6 @@ import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
 import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
-import * as Cars from "./../../Store/action/likedCars";
 import {
   Ionicons,
   FontAwesome5,
@@ -34,6 +33,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { addVechile_1 } from "../../Store/action/compareCar";
 import { set } from "react-native-reanimated";
+import {
+  addLikedCar,
+  dislikedCar,
+  fetchLikedCar,
+} from "../../Store/action/likedCars";
 const { width, height } = Dimensions.get("window");
 const CarProfilePage = (props) => {
   const dispatch = useDispatch();
@@ -46,17 +50,13 @@ const CarProfilePage = (props) => {
   const companyList = useSelector((state) => state.company.companyList);
   const topRef = useRef();
   const thumbRef = useRef();
-  const [likedCar, setLikedCar] = useState();
+  const [likedCar, setLikedCar] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   //console.log(companyList);
   //console.log(item);
   const comp = companyList.filter((c) => c.companyid == item.companyId);
   //console.log(comp);
   const feature = useSelector((state) => state.feature.featureList);
-  const likedcar = useSelector((state) => state.likedCars.likedCarList);
-  useEffect(() => {
-    console.log("Liked Car List===>", likedcar);
-  }, [likedcar]);
   //console.log(feature);
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
@@ -67,8 +67,17 @@ const CarProfilePage = (props) => {
   const gallery = feature.filter(
     (fe) => fe.name == "gallery" && fe.carid == item.carId
   );
+  const likecarList = useSelector((state) => state.likedCars.likedCarList);
+  const likecar = likecarList.filter((car) => car.carId === item.carId);
   //console.log(gallery);
   //console.log(exteriorFeature);
+  useEffect(() => {
+    if (likecar.length == 0) {
+      setLikedCar(false);
+    } else {
+      setLikedCar(true);
+    }
+  }, []);
   const onPress = (index, title) => {
     modalizeColor.current?.open();
     setIndexColor(index);
@@ -158,17 +167,6 @@ const CarProfilePage = (props) => {
       ),
     },
   ];
-  const likeCar = () => {
-    if (likedCar == true) {
-      console.log(item.carId);
-      dispatch(Cars.likedCars(item.carId));
-    } else if (likedCar == false) {
-      dispatch(Cars.dislikedCar(item.carId));
-    }
-  };
-  useEffect(() => {
-    likeCar();
-  }, [likedCar]);
   const scrollToActiveIndex = (index) => {
     setActiveIndex(index);
     topRef?.current?.scrollToOffset({
@@ -234,10 +232,13 @@ const CarProfilePage = (props) => {
         <TouchableOpacity
           style={{ position: "absolute", alignSelf: "flex-end", marginTop: 30 }}
           onPress={async () => {
-            if (likedCar) {
-              setLikedCar(false);
+            await setLikedCar((prev) => !prev);
+            if (!likedCar) {
+              //Like
+              dispatch(addLikedCar(item.carId));
             } else {
-              setLikedCar(true);
+              //Dislike
+              dispatch(dislikedCar(item.carId));
             }
           }}
         >

@@ -1,5 +1,12 @@
 import React from "react";
-import { FlatList, Image, View, Text, TouchableOpacity, ScrollView } from "react-native";
+import {
+  FlatList,
+  Image,
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import Color from "../../../../assets/Color";
 import { addVechile_2 } from "../../../Store/action/compareCar";
@@ -11,7 +18,7 @@ const CarList = (props) => {
       : useSelector((state) => state.car.scootyList);
   const list = List.filter((item) => item.carId !== props.vehicle1.carId);
   return (
-    <ScrollView style={{ marginTop: 50 }}>
+    <View style={{ marginTop: 50 }}>
       <View style={{ margin: 15 }}>
         <Text
           style={{
@@ -76,7 +83,7 @@ const CarList = (props) => {
           );
         }}
       />
-    </ScrollView>
+    </View>
   );
 };
 

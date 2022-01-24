@@ -20,7 +20,7 @@ const { width, height } = Dimensions.get("window");
 const ListPump = (props) => {
   const navigation = useNavigation();
   const pumpList = useSelector((state) => state.pumpStation.stationList);
-  console.log(props);
+  //console.log(props);
   return (
     <View style={styles.component}>
       <FlatList

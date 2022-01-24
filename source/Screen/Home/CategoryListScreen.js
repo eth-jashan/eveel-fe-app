@@ -158,7 +158,7 @@ const CategoryScreen = ({ navigation, route }) => {
                 </Text>
                 <Pressable
                   onPress={() => {
-                    console.log(item);
+                    //console.log(item);
                     navigation.navigate("carlist", { id: item.companyid });
                   }}
                   style={styles.button}

@@ -1,4 +1,4 @@
-import { LIKED_CAR, FETCH_LIKED_CAR, DISLIKED_CAR } from "../action/likedCars";
+import { ADD_LIKED_CAR, FETCH_LIKED_CAR } from "../action/likedCars";
 
 const initialState = {
   likedCarList: [],
@@ -6,24 +6,16 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case LIKED_CAR:
-      // console.log("AAAA===>", action.likedcar);
-      // const list = [...state.likedCarList];
-      // return {
-      //   ...state,
-      //   likedCarList: list.concat(action.likedcar),
-      // };
-      const list = [state.likedCarList];
-      console.log("list==>", list);
-      console.log(action.likedcar);
+    case ADD_LIKED_CAR:
+      const list = [...state.likedCarList];
       return {
         ...state,
-        likedCarList: list.concat(action.likedcar),
+        likedCarList: list.concat(action.car),
       };
     case FETCH_LIKED_CAR:
       return {
         ...state,
-        likedCarList: action.likedCarList,
+        likedCarList: action.list,
       };
     default:
       return state;

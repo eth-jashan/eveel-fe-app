@@ -9,6 +9,7 @@ import { FirebaseRecaptchaVerifierModal } from "expo-firebase-recaptcha";
 import firebase from "firebase";
 import { useDispatch } from "react-redux";
 import { AddPhoneNumber } from "../../Store/action/auth";
+import { getContacts } from "../../Store/action/contact";
 const NumberVerification = (props) => {
   const dispatch = useDispatch();
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -61,6 +62,7 @@ const NumberVerification = (props) => {
   useEffect(() => {
     if (send.number) {
       dispatch(AddPhoneNumber(send.number, send.uid, send.token));
+      dispatch(getContacts(send.uid));
     }
   }, [send]);
 
