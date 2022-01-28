@@ -15,7 +15,6 @@ import BrandScroll from "../../Component/Utils/HomeScreenUtils/BrandScrollUtil";
 import CarScroll from "../../Component/Utils/HomeScreenUtils/CarScrollUtil";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/HomescreenStyles";
-import { useNavigationState } from "@react-navigation/core";
 import { fetchCompany } from "../../Store/action/company";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCarModel } from "../../Store/action/car";
@@ -24,6 +23,7 @@ import { LoggedInUser } from "../../Store/action/auth";
 import { fetchfeature } from "../../Store/action/feature";
 import { fetch_station } from "../../Store/action/station";
 import { fetchLikedCar } from "../../Store/action/likedCars";
+import AnimatedLottieView from "lottie-react-native";
 const Homescreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
@@ -33,6 +33,7 @@ const Homescreen = ({ navigation }) => {
   const scootyList = useSelector((state) => state.car.scootyList);
   const [companyList, setCompanyList] = useState();
   const [vehicleList, setVehicleList] = useState();
+  const [empty, setEmpty] = useState(false);
 
   useEffect(() => {
     setCompanyList(CList);
@@ -42,27 +43,28 @@ const Homescreen = ({ navigation }) => {
   const SelectedCategory = (type) => {
     switch (type) {
       case "All":
+        setEmpty(false);
         setCompanyList(CList);
         setVehicleList(VList);
         return;
       case "Cars":
+        setEmpty(false);
         setCompanyList(CList.filter((item) => item.type === "car"));
         setVehicleList(carList);
         console.log("CCCCCCC", companyList);
         return;
       case "Scooty":
-        setCompanyList(CList.filter̀̀((item) => item.type === "twoWheeler"));
+        setEmpty(false);
+        setCompanyList(CList.filter((item) => item.type === "twoWheeler"));
         setVehicleList(scootyList);
         return;
+      case "Cycle":
+        setEmpty(true);
+        return;
       default:
-        setCompanyList(CList);
-        setVehicleList(VList);
         return;
     }
   };
-
-  //console.log(vehicleList);
-  //console.log("User===>", user);
   const [loading, setLoading] = useState(true);
 
   const homeScreenData = () => {
@@ -143,8 +145,28 @@ const Homescreen = ({ navigation }) => {
           </View>
           <HomeBanner />
           <CategorySelection selected={SelectedCategory} />
-          <BrandScroll companyList={companyList} />
-          <CarScroll vehicleList={vehicleList} />
+          {!empty && <BrandScroll companyList={companyList} />}
+          {!empty && <CarScroll vehicleList={vehicleList} />}
+          {empty && (
+            <View style={{ paddingTop: 50 }}>
+              <AnimatedLottieView
+                style={{ alignSelf: "center", width: 200, height: 200 }}
+                autoPlay={true}
+                source={require("../../../assets/lottie-files/21538-timer-countdown.json")}
+              />
+              <Text
+                style={{
+                  padding: 10,
+                  color: Color.lightgreen,
+                  fontFamily: "bold",
+                  fontSize: 24,
+                  textAlign: "center",
+                }}
+              >
+                Coming Soon
+              </Text>
+            </View>
+          )}
         </ScrollView>
       </View>
     </View>

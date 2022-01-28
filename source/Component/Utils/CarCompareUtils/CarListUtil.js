@@ -33,6 +33,7 @@ const CarList = (props) => {
       </View>
       <FlatList
         data={list}
+        style={{ paddingBottom: 100 }}
         keyExtractor={(item) => item.carId}
         renderItem={({ item, index }) => {
           return (
