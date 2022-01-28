@@ -4,7 +4,7 @@
     "slug": "Eveels-App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Images/Ellipse.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -20,7 +20,7 @@
     "android": {
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"
+          "apiKey": "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88"
         }
       },
       "adaptiveIcon": {

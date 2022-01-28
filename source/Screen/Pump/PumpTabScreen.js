@@ -4,6 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 import styles from "./PumpStyles/PumpTabScreenStyles";
 import * as Location from "expo-location";
 const PumpTabScreen = (props) => {
+  const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
   const [go, setGo] = useState(false);
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -15,10 +16,21 @@ const PumpTabScreen = (props) => {
         return;
       }
       let location = await Location.getCurrentPositionAsync({});
-      //console.log(location);
+      console.log(location);
       setLocation(location);
     })();
   }, []);
+  // useEffect(() => {
+  //   return async () => {
+  //     if (location != null) {
+  //       const response = await fetch(
+  //         `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.coords.latitude},${location.coords.longitude}&amp;key=${GOOGLE_MAPS_APIKEY}`
+  //       );
+  //       const resData = await response.json();
+  //       console.log(resData);
+  //     }
+  //   };
+  // }, [location]);
   // const GotoMap = () => {
   //   props.navigation.navigate("PumpScreen", {
   //     location: location,
