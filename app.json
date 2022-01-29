@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "https",
     "name": "Eveels-App",
     "slug": "Eveels-App",
     "version": "1.0.0",
