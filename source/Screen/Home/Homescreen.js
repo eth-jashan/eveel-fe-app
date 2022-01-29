@@ -34,6 +34,18 @@ const Homescreen = ({ navigation }) => {
   const [companyList, setCompanyList] = useState();
   const [vehicleList, setVehicleList] = useState();
   const [empty, setEmpty] = useState(false);
+  const hours = new Date().getHours();
+  const [greetings, setGreetings] = useState("");
+
+  useEffect(() => {
+    if (hours < 12) {
+      setGreetings("morning");
+    } else if (hours < 16) {
+      setGreetings("afternoon");
+    } else {
+      setGreetings("evening");
+    }
+  }, []);
 
   useEffect(() => {
     setCompanyList(CList);
@@ -138,7 +150,7 @@ const Homescreen = ({ navigation }) => {
         >
           <View style={styles.TitleView}>
             <Text style={styles.welcome}>
-              Good afternoon, {user.first_name}
+              Good {greetings}, {user.first_name}
             </Text>
             <Text style={styles.slogan}>Let's find the perfect</Text>
             <Text style={styles.title}>Electric Vehicle ⚡ </Text>
