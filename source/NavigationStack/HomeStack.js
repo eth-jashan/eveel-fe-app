@@ -12,20 +12,52 @@ import PhotoSlideScreen from "../Screen/Home/PhotoSlideScreen";
 import CarCompareScreen from "../Screen/Home/CarCompareScreen";
 import DrawerContent from "../Screen/Drawer/DrawerProfileContent";
 import LikedCarList from "../Screen/Drawer/LikedCarList";
+import { TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 const HomeNav = createStackNavigator();
 const HomeStack = () => {
   return (
-    <HomeNav.Navigator screenOptions={{ headerShown: false }}>
-      <HomeNav.Screen component={BottomNav} name="Tab" />
-      <HomeNav.Screen component={CarListScreen} name="carlist" />
+    <HomeNav.Navigator screenOptions={{}}>
+      <HomeNav.Screen
+        component={BottomNav}
+        name="Tab"
+        options={{ headerShown: false }}
+      />
+      <HomeNav.Screen
+        component={CarListScreen}
+        name="carlist"
+        options={{ headerShown: false }}
+      />
       <HomeNav.Screen component={CarProfilePage} name="CarProfile" />
-      <HomeNav.Screen component={CarCompareScreen} name="CarCompare" />
-      <HomeNav.Screen component={CategoryScreen} name="Category" />
-      <HomeNav.Screen component={pumpLocation} name="PumpScreen" />
-      <HomeNav.Screen component={PumpSearchScreen} name="PumpSearch" />
+      <HomeNav.Screen
+        component={CarCompareScreen}
+        name="CarCompare"
+        options={{ headerShown: false }}
+      />
+      <HomeNav.Screen
+        component={CategoryScreen}
+        name="Category"
+        options={{ headerShown: false }}
+      />
+      <HomeNav.Screen
+        component={pumpLocation}
+        name="PumpScreen"
+        options={{ headerShown: false }}
+      />
+      <HomeNav.Screen
+        component={PumpSearchScreen}
+        name="PumpSearch"
+        options={{ headerShown: false }}
+      />
       <HomeNav.Screen component={PhotoSlideScreen} name="SlideScreen" />
-      <HomeNav.Screen component={LikedCarList} name="LikedCars" />
+      <HomeNav.Screen
+        component={LikedCarList}
+        name="LikedCars"
+        options={{
+          headerShown: false,
+        }}
+      />
     </HomeNav.Navigator>
   );
 };

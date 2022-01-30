@@ -11,9 +11,10 @@ import {
   ScrollView,
 } from "react-native";
 import FeatureList from "../../Component/Utils/CarProfileScreenUtils/FeatureListUtil";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { ImageBackground } from "react-native";
 import { Modalize } from "react-native-modalize";
+import { useNavigation } from "@react-navigation/native";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/CarProfileScreenStyles";
 import {
@@ -30,12 +31,13 @@ import YoutubeCard from "../../Component/Utils/CarProfileScreenUtils/YoutubeUtil
 import FeatureModel from "../../Component/Utils/CarProfileScreenUtils/FeatureModal";
 const { width, height } = Dimensions.get("window");
 const CarProfilePage = (props) => {
+  const navigation = useNavigation();
+  const dispatch = useDispatch();
   const item = props.route.params.item;
   const companyList = useSelector((state) => state.company.companyList);
   const comp = companyList.filter((state) => state.companyid == item.companyId);
   const feature = useSelector((state) => state.feature.featureList);
   const likecarList = useSelector((state) => state.likedCars.likedCarList);
-  const dispatch = useDispatch();
   const modalize = useRef();
   const modalizeSafety = useRef();
   const modalizeColor = useRef();
@@ -45,6 +47,54 @@ const CarProfilePage = (props) => {
   const [indexColor, setIndexColor] = useState();
   const [likedCar, setLikedCar] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  navigation.setOptions({
+    headerShown: true,
+    headerTitle: "",
+    headerTransparent: true,
+    headerLeft: () => {
+      return (
+        <TouchableOpacity
+          style={{ marginHorizontal: 15 }}
+          onPress={() => {
+            props.navigation.goBack();
+          }}
+        >
+          <Ionicons name="arrow-back" color={Color.black} size={25} />
+        </TouchableOpacity>
+      );
+    },
+    headerRight: () => {
+      return (
+        <TouchableOpacity
+          style={{
+            backgroundColor: Color.darkgrey,
+            marginHorizontal: 15,
+            borderRadius: 20,
+          }}
+          onPress={async () => {
+            await setLikedCar((prev) => !prev);
+            if (!likedCar) {
+              await dispatch(Cars.addLikedCar(item.carId));
+            } else {
+              await dispatch(Cars.dislikedCar(item.carId));
+              await dispatch(Cars.fetchLikedCar());
+            }
+          }}
+        >
+          <AntDesign
+            name={likedCar ? "heart" : "hearto"}
+            size={24}
+            color={likedCar ? Color.lightgreen : Color.white}
+            style={{
+              padding: 8,
+              alignSelf: "center",
+              overflow: "hidden",
+            }}
+          />
+        </TouchableOpacity>
+      );
+    },
+  });
 
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
@@ -98,7 +148,7 @@ const CarProfilePage = (props) => {
           gallery={gallery}
           scrollToActiveIndex={scrollToActiveIndex}
         />
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={{ position: "absolute", alignSelf: "flex-end", marginTop: 30 }}
           onPress={async () => {
             await setLikedCar((prev) => !prev);
@@ -123,7 +173,7 @@ const CarProfilePage = (props) => {
               overflow: "hidden",
             }}
           />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <SmallSlide
           thumbRef={thumbRef}
           gallery={gallery}
