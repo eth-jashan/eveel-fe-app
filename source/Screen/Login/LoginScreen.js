@@ -1,6 +1,6 @@
 import AnimatedLottieView from "lottie-react-native";
 import LottieView from "lottie-react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { Dimensions, Image, Text, View, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -9,6 +9,7 @@ import Color from "../../../assets/Color";
 import { useDispatch } from "react-redux";
 import { googleLogin } from "../../Component/Common/GoogleLogin";
 import { login } from "../../Store/action/auth";
+import { getContacts } from "../../Store/action/contact";
 const { width, height } = Dimensions.get("screen");
 
 const LoginScreen = ({ navigation }) => {
@@ -28,6 +29,7 @@ const LoginScreen = ({ navigation }) => {
           result.credential.oauthIdToken
         )
       );
+      dispatch(getContacts(result.user.uid));
     } catch (err) {
       console.log(err);
     }
@@ -137,7 +139,7 @@ const styles = StyleSheet.create({
   LoginArea: {
     flexDirection: "row",
     justifyContent: "space-around",
-    width:'100%'
+    width: "100%",
   },
   LoginText: {
     color: "white",

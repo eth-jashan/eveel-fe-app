@@ -15,7 +15,6 @@ import BrandScroll from "../../Component/Utils/HomeScreenUtils/BrandScrollUtil";
 import CarScroll from "../../Component/Utils/HomeScreenUtils/CarScrollUtil";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/HomescreenStyles";
-import { useNavigationState } from "@react-navigation/core";
 import { fetchCompany } from "../../Store/action/company";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCarModel } from "../../Store/action/car";
@@ -23,6 +22,8 @@ import HomeScreenLoadingUtil from "../../Component/Utils/HomeScreenUtils/HomeScr
 import { LoggedInUser } from "../../Store/action/auth";
 import { fetchfeature } from "../../Store/action/feature";
 import { fetch_station } from "../../Store/action/station";
+import { fetchLikedCar } from "../../Store/action/likedCars";
+import AnimatedLottieView from "lottie-react-native";
 const Homescreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
@@ -30,9 +31,21 @@ const Homescreen = ({ navigation }) => {
   const VList = useSelector((state) => state.car.vehicleList);
   const carList = useSelector((state) => state.car.carList);
   const scootyList = useSelector((state) => state.car.scootyList);
-
   const [companyList, setCompanyList] = useState();
   const [vehicleList, setVehicleList] = useState();
+  const [empty, setEmpty] = useState(false);
+  const hours = new Date().getHours();
+  const [greetings, setGreetings] = useState("");
+
+  useEffect(() => {
+    if (hours < 12) {
+      setGreetings("morning");
+    } else if (hours < 16) {
+      setGreetings("afternoon");
+    } else {
+      setGreetings("evening");
+    }
+  }, []);
 
   useEffect(() => {
     setCompanyList(CList);
@@ -42,25 +55,28 @@ const Homescreen = ({ navigation }) => {
   const SelectedCategory = (type) => {
     switch (type) {
       case "All":
+        setEmpty(false);
         setCompanyList(CList);
         setVehicleList(VList);
         return;
       case "Cars":
+        setEmpty(false);
         setCompanyList(CList.filter((item) => item.type === "car"));
         setVehicleList(carList);
         console.log("CCCCCCC", companyList);
         return;
       case "Scooty":
+        setEmpty(false);
         setCompanyList(CList.filter((item) => item.type === "twoWheeler"));
         setVehicleList(scootyList);
+        return;
+      case "Cycle":
+        setEmpty(true);
         return;
       default:
         return;
     }
   };
-
-  //console.log(vehicleList);
-  //console.log("User===>", user);
   const [loading, setLoading] = useState(true);
 
   const homeScreenData = () => {
@@ -68,6 +84,7 @@ const Homescreen = ({ navigation }) => {
     dispatch(fetchCarModel());
     dispatch(fetchfeature());
     dispatch(fetch_station());
+    dispatch(fetchLikedCar());
   };
 
   useEffect(() => {
@@ -133,15 +150,35 @@ const Homescreen = ({ navigation }) => {
         >
           <View style={styles.TitleView}>
             <Text style={styles.welcome}>
-              Good afternoon, {user.first_name}
+              Good {greetings}, {user.first_name}
             </Text>
             <Text style={styles.slogan}>Let's find the perfect</Text>
             <Text style={styles.title}>Electric Vehicle ⚡ </Text>
           </View>
           <HomeBanner />
           <CategorySelection selected={SelectedCategory} />
-          <BrandScroll companyList={companyList} />
-          <CarScroll vehicleList={vehicleList} />
+          {!empty && <BrandScroll companyList={companyList} />}
+          {!empty && <CarScroll vehicleList={vehicleList} />}
+          {empty && (
+            <View style={{ paddingTop: 50 }}>
+              <AnimatedLottieView
+                style={{ alignSelf: "center", width: 200, height: 200 }}
+                autoPlay={true}
+                source={require("../../../assets/lottie-files/21538-timer-countdown.json")}
+              />
+              <Text
+                style={{
+                  padding: 10,
+                  color: Color.lightgreen,
+                  fontFamily: "bold",
+                  fontSize: 24,
+                  textAlign: "center",
+                }}
+              >
+                Coming Soon
+              </Text>
+            </View>
+          )}
         </ScrollView>
       </View>
     </View>

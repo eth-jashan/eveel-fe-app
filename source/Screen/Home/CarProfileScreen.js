@@ -1,13 +1,17 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
+  View,
+  Text,
+  Image,
   Dimensions,
   Pressable,
   Animated,
   FlatList,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
-import { View, Text, Image, StyleSheet } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+// import { View, Text, Image, StyleSheet } from "react-native";
+// import { ScrollView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
 import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
@@ -23,35 +27,89 @@ import {
 import YoutubeIframe from "react-native-youtube-iframe";
 import { ImageBackground } from "react-native";
 import { Modalize } from "react-native-modalize";
+import { useNavigation } from "@react-navigation/native";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/CarProfileScreenStyles";
 import {
-  imageGallery,
-  exteriorInterior,
   variantList,
   colorVariantList,
 } from "../../../model/Data/carProfiledata";
 import { useDispatch, useSelector } from "react-redux";
 import { addVechile_1 } from "../../Store/action/compareCar";
+import * as Cars from "../../Store/action/likedCars";
+import getCatLogo from "../../Component/Utils/CarProfileScreenUtils/GetCatLogoUtil";
+import BigSlide from "../../Component/Utils/CarProfileScreenUtils/BigSlidePhotoUtil";
+import SmallSlide from "../../Component/Utils/CarProfileScreenUtils/SmallSlidePhotoUtil";
+import YoutubeCard from "../../Component/Utils/CarProfileScreenUtils/YoutubeUtil";
+import FeatureModel from "../../Component/Utils/CarProfileScreenUtils/FeatureModal";
 const { width, height } = Dimensions.get("window");
+
 const CarProfilePage = (props) => {
+  const navigation = useNavigation();
   const dispatch = useDispatch();
+  const item = props.route.params.item;
+  const companyList = useSelector((state) => state.company.companyList);
+  const comp = companyList.filter((state) => state.companyid == item.companyId);
+  const feature = useSelector((state) => state.feature.featureList);
+  const likecarList = useSelector((state) => state.likedCars.likedCarList);
   const modalize = useRef();
   const modalizeSafety = useRef();
   const modalizeColor = useRef();
-  const [colorname, setColorName] = useState();
-  const [indexColor, setIndexColor] = useState();
-  const item = props.route.params.item;
-  const companyList = useSelector((state) => state.company.companyList);
   const topRef = useRef();
   const thumbRef = useRef();
+  const [colorname, setColorName] = useState();
+  const [indexColor, setIndexColor] = useState();
+  const [likedCar, setLikedCar] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  //console.log(companyList);
-  //console.log(item);
-  const comp = companyList.filter((c) => c.companyid == item.companyId);
-  //console.log(comp);
-  const feature = useSelector((state) => state.feature.featureList);
-  //console.log(feature);
+  // navigation.setOptions({
+  //   headerShown: true,
+  //   headerTitle: "",
+  //   headerTransparent: true,
+  //   headerLeft: () => {
+  //     return (
+  //       <TouchableOpacity
+  //         style={{ marginHorizontal: 15 }}
+  //         onPress={() => {
+  //           props.navigation.navigate('Home');
+  //         }}
+  //       >
+  //         <Ionicons name="arrow-back" color={Color.black} size={25} />
+  //       </TouchableOpacity>
+  //     );
+  //   },
+  //   headerRight: () => {
+  //     return (
+  //       <TouchableOpacity
+  //         style={{
+  //           backgroundColor: Color.darkgrey,
+  //           marginHorizontal: 15,
+  //           borderRadius: 20,
+  //         }}
+  //         onPress={async () => {
+  //           await setLikedCar((prev) => !prev);
+  //           if (!likedCar) {
+  //             await dispatch(Cars.addLikedCar(item.carId));
+  //           } else {
+  //             await dispatch(Cars.dislikedCar(item.carId));
+  //             await dispatch(Cars.fetchLikedCar());
+  //           }
+  //         }}
+  //       >
+  //         <AntDesign
+  //           name={likedCar ? "heart" : "hearto"}
+  //           size={24}
+  //           color={likedCar ? Color.lightgreen : Color.white}
+  //           style={{
+  //             padding: 8,
+  //             alignSelf: "center",
+  //             overflow: "hidden",
+  //           }}
+  //         />
+  //       </TouchableOpacity>
+  //     );
+  //   },
+  // });
+
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
   );
@@ -61,8 +119,15 @@ const CarProfilePage = (props) => {
   const gallery = feature.filter(
     (fe) => fe.name == "gallery" && fe.carid == item.carId
   );
-  //console.log(gallery);
-  //console.log(exteriorFeature);
+  const likecar = likecarList.filter((car) => car.carId === item.carId);
+  useEffect(() => {
+    if (likecar.length == 0) {
+      setLikedCar(false);
+    } else {
+      setLikedCar(true);
+    }
+  }, []);
+  // console.log(gallery);
   const onPress = (index, title) => {
     modalizeColor.current?.open();
     setIndexColor(index);
@@ -199,77 +264,47 @@ const CarProfilePage = (props) => {
   };
   return (
     <View style={styles.screen}>
-      <ScrollView style={styles.scroll}>
-        <View>
-          <FlatList
-            ref={topRef}
-            horizontal
-            keyExtractor={(_, i) => i.toString()}
-            data={gallery}
-            snapToAlignment={"center"}
-            snapToInterval={Dimensions.get("window").width}
-            decelerationRate="fast"
-            showsHorizontalScrollIndicator={false}
-            onMomentumScrollEnd={(ev) => {
-              scrollToActiveIndex(
-                Math.floor(ev.nativeEvent.contentOffset.x / width)
-              );
-            }}
-            renderItem={({ item, index }) => {
-              return (
-                <View
-                  style={{ width: Dimensions.get("window").width, height: 250 }}
-                >
-                  <TouchableOpacity
-                    onPress={() => {
-                      props.navigation.navigate("SlideScreen", {
-                        gallery,
-                        index,
-                      });
-                    }}
-                  >
-                    <Image
-                      style={styles.carImage}
-                      source={{ uri: item.image }}
-                    />
-                  </TouchableOpacity>
-                </View>
-              );
+      <ScrollView 
+      // stickyHeaderIndices={[0]}
+      style={styles.scroll}>
+        <BigSlide
+          topRef={topRef}
+          gallery={gallery}
+          carId={item.carId}
+          scrollToActiveIndex={scrollToActiveIndex}
+        />
+        {/* <TouchableOpacity
+          style={{ position: "absolute", alignSelf: "flex-end", marginTop: 30 }}
+          onPress={async () => {
+            await setLikedCar((prev) => !prev);
+            if (!likedCar) {
+              await dispatch(Cars.addLikedCar(item.carId));
+            } else {
+              await dispatch(Cars.dislikedCar(item.carId));
+              await dispatch(Cars.fetchLikedCar());
+            }
+          }}
+        >
+          <AntDesign
+            name={likedCar ? "heart" : "hearto"}
+            size={24}
+            color={likedCar ? Color.lightgreen : "white"}
+            style={{
+              margin: 20,
+              backgroundColor: Color.darkgrey,
+              padding: 8,
+              borderRadius: 20,
+              alignSelf: "center",
+              overflow: "hidden",
             }}
           />
-        </View>
-
-        <View style={styles.SmallCarCon}>
-          <FlatList
-            ref={thumbRef}
-            horizontal
-            data={gallery}
-            keyExtractor={(_, i) => i.toString()}
-            showsHorizontalScrollIndicator={false}
-            renderItem={({ item, index }) => {
-              return (
-                <TouchableOpacity
-                  style={styles.smallcarImages}
-                  onPress={() => scrollToActiveIndex(index)}
-                >
-                  <Image
-                    style={[
-                      styles.carImage,
-                      {
-                        borderWidth: 0.7,
-                        borderColor:
-                          index === activeIndex
-                            ? Color.lightgreen
-                            : "transparent",
-                      },
-                    ]}
-                    source={{ uri: item.image }}
-                  />
-                </TouchableOpacity>
-              );
-            }}
-          />
-        </View>
+        </TouchableOpacity> */}
+        <SmallSlide
+          thumbRef={thumbRef}
+          gallery={gallery}
+          scrollToActiveIndex={scrollToActiveIndex}
+          activeIndex={activeIndex}
+        />
 
         <View style={styles.BrandInfo}>
           <View style={styles.BrandView}>
@@ -442,34 +477,18 @@ const CarProfilePage = (props) => {
           />
         </View>
       </ScrollView>
-      <Modalize
-        modalHeight={Dimensions.get("window").height * 0.7}
-        ref={modalize}
-      >
-        <View style={styles.ModalView}>
-          <Text style={styles.ModalHeader}>
-            Exterior
-            <Text style={styles.AndSy}>& </Text>
-            Interior
-          </Text>
-          <ParallaxGallery imageList={exteriorFeature} />
-        </View>
-      </Modalize>
-      <Modalize
-        modalHeight={Dimensions.get("window").height * 0.75}
-        ref={modalizeSafety}
-      >
-        <View style={styles.ModalView}>
-          <Text style={styles.ModalHeader}>
-            Safety
-            <Text style={styles.AndSy}>& </Text>
-            Comfort Feature
-          </Text>
-
-          <ParallaxGallery imageList={safetyFeature} />
-        </View>
-      </Modalize>
-
+      <FeatureModel
+        modalize={modalize}
+        firstLine={"Exterior"}
+        secondLine={"Interior"}
+        List={exteriorFeature}
+      />
+      <FeatureModel
+        modalize={modalizeSafety}
+        firstLine={"Safety"}
+        secondLine={"Comfort Feature"}
+        List={safetyFeature}
+      />
       <Modalize
         modalHeight={Dimensions.get("window").height * 0.6}
         ref={modalizeColor}

@@ -3,7 +3,15 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useCallback } from "react";
 import { useState } from "react";
-import { View, Animated, StyleSheet, Dimensions, Image, Pressable, Text } from "react-native";
+import {
+  View,
+  Animated,
+  StyleSheet,
+  Dimensions,
+  Image,
+  Pressable,
+  Text,
+} from "react-native";
 import {
   Directions,
   FlingGestureHandler,
@@ -109,7 +117,9 @@ const CarListScreen = ({ navigation, route }) => {
           }
         }}
       >
-        <SafeAreaView style={{ height: height, width: width, backgroundColor:'red'}}>
+        <SafeAreaView
+          style={{ height: height, width: width, backgroundColor: "red" }}
+        >
           <Animated.View
             style={[
               StyleSheet.absoluteFillObject,
@@ -164,18 +174,32 @@ const CarListScreen = ({ navigation, route }) => {
             </StaggeringView>
           </Transitioning.View>
           <Pressable
-                    //key={`priceInfo-${index}`}
-                    style={{backgroundColor: Color.lightgreen,
-                      width: "90%",
-                      borderRadius: 12,
-                      alignSelf:'center', position:'absolute', bottom:40}}
-                    onPress={() => {
-                      console.log('heyyyy', carList[index])
-                      navigation.navigate("CarProfile", { item: carList[index] });
-                    }}
-                  >
-                    <Text style={{fontSize: 18, color: Color.darkgreen, padding:8, alignSelf: "center", fontFamily: "semibold"}}>Take a Tour</Text>
-                  </Pressable>      
+            //key={`priceInfo-${index}`}
+            style={{
+              backgroundColor: Color.lightgreen,
+              width: "90%",
+              borderRadius: 12,
+              alignSelf: "center",
+              position: "absolute",
+              bottom: 50,
+            }}
+            onPress={() => {
+              //console.log('heyyyy', carList[index])
+              navigation.navigate("CarProfile", { item: carList[index] });
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 18,
+                color: Color.darkgreen,
+                padding: 8,
+                alignSelf: "center",
+                fontFamily: "semibold",
+              }}
+            >
+              Take a Tour
+            </Text>
+          </Pressable>
         </SafeAreaView>
       </FlingGestureHandler>
     </FlingGestureHandler>

@@ -38,17 +38,14 @@ const pumpLocation = ({ navigation, route }) => {
     longitude: location.coords.longitude,
   };
   const [selectedPump, setSelectedPump] = useState(null);
-  const GOOGLE_MAPS_APIKEY =
-    Platform.OS === "android"
-      ? "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"
-      : "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
+  const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
   //const GOOGLE_MAPS_APIKEY = "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"; //for testing have to open the above one for iphone aswell
 
   const handleGetDirections = () => {
     getGoogleDirections(selectedPump.latitude, selectedPump.longitude, origin);
   };
   let listofPump = useSelector((state) => state.pumpStation.stationList);
-  console.log(listofPump.length)
+  console.log(listofPump.length);
   // const listofPump = [
   //   { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
   //   { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
@@ -67,7 +64,7 @@ const pumpLocation = ({ navigation, route }) => {
 
   const onLocationPress = (item) => {
     setPumpInfo(item);
-    console.log("Item", item);
+    //console.log("Item", item);
     pumpRef?.current?.open();
     setSelectedPump({
       latitude: item.lat,
@@ -135,7 +132,7 @@ const pumpLocation = ({ navigation, route }) => {
                 latitude: parseFloat(item.lat),
                 longitude: parseFloat(item.long),
               }}
-              style={{height:10, width:10}}
+              style={{ height: 10, width: 10 }}
               icon={require("../../../assets/Images/pumpMarker.png")}
             />
           );
@@ -154,16 +151,16 @@ const pumpLocation = ({ navigation, route }) => {
                 />
               </View>
             </Marker>
-            {/* <MapViewDirections
+            <MapViewDirections
               origin={origin}
               destination={{
                 latitude: parseFloat(selectedPump.latitude),
                 longitude: parseFloat(selectedPump.longitude),
               }}
-              apikey={'AIzaSyAR3NazhoEGTvIUknJn8xy3HWLkNYkBhoA'}
+              apikey={GOOGLE_MAPS_APIKEY}
               strokeWidth={3}
               strokeColor={Color.lightgreen}
-            /> */}
+            />
           </>
         )}
       </MapView>

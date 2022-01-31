@@ -1,6 +1,5 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Text } from "react-native";
 import AppNav from "./source/NavigationStack/MainStack";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
