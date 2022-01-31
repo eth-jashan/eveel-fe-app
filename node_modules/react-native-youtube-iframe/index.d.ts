@@ -2,6 +2,22 @@ import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 import {WebViewProps} from 'react-native-webview';
 
+export enum PLAYER_STATES {
+  ENDED = 'ended',
+  PAUSED = 'paused',
+  PLAYING = 'playing',
+  UNSTARTED = 'unstarted',
+  BUFFERING = 'buffering',
+  VIDEO_CUED = 'video cued',
+}
+
+export enum PLAYER_ERRORS {
+  HTML5_ERROR = 'HTML5_error',
+  VIDEO_NOT_FOUND = 'video_not_found',
+  EMBED_NOT_ALLOWED = 'embed_not_allowed',
+  INVALID_PARAMETER = 'invalid_parameter',
+}
+
 export interface YoutubeIframeRef {
   getDuration: () => Promise<number>;
   getVideoUrl: () => Promise<string>;
@@ -44,7 +60,7 @@ export interface YoutubeIframeProps {
   /**
    * Specifies the YouTube Video ID of the video to be played.
    */
-  videoId: string;
+  videoId?: string;
   /**
    * Specifies the playlist to play. It can be either the playlist ID or a list of video IDs
    *
@@ -156,7 +172,7 @@ export interface YoutubeMeta {
   thumbnail_url: string;
 }
 
-declare const YoutubeIframe: React.SFC<YoutubeIframeProps>;
+declare const YoutubeIframe: React.VFC<YoutubeIframeProps>;
 
 export default YoutubeIframe;
 

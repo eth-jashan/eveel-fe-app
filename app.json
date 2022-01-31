@@ -15,7 +15,14 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier":"com.eveels.app",
+      "supportsTablet": true,
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "config":{
+        "googleSignIn":{
+          "reservedClientId":"com.googleusercontent.apps.420327498036-4iqmvde474ihb8emsmr3v1eqh6l9nbas"
+        }
+      }
     },
     "android": {
       "config": {
@@ -23,11 +30,12 @@
           "apiKey": "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"
         }
       },
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.Eveels.App"
+      "package": "com.eveels.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

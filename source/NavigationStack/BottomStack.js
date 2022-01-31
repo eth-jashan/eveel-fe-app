@@ -4,11 +4,8 @@ import {
   Feather,
   Ionicons,
   MaterialCommunityIcons,
-  MaterialIcons,
 } from "@expo/vector-icons";
-import Pumpscreen from "../Screen/Pump/Pumpscreen";
 import Feedscreen from "../Screen/Feed/Feedscreen";
-import HomeStack from "./HomeStack";
 import Homescreen from "../Screen/Home/Homescreen";
 import PumpTabScreen from "../Screen/Pump/PumpTabScreen";
 
@@ -16,7 +13,7 @@ const BottomStack = createMaterialBottomTabNavigator();
 const BottomNav = () => {
   return (
     <BottomStack.Navigator
-      initialRouteName="Home"
+      initialRouteName="Home_Bottom"
       activeColor="#00FFCC"
       labeled={false}
       barStyle={{
@@ -34,7 +31,7 @@ const BottomNav = () => {
       shifting={true}
     >
       <BottomStack.Screen
-        name="Home"
+        name="Home_Bottom"
         component={Homescreen}
         options={{
           tabBarIcon: ({ color, focused }) => {

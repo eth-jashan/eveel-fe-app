@@ -9,8 +9,6 @@ const StartupScreen = (props) => {
   const selector = useSelector((state) => state.auth);
   const checkifLoggedIn = async () => {
     firebase.auth().onAuthStateChanged(async (user) => {
-      //console.log(user.uid);
-      //console.log(selector);
       if (user) {
         dispatch(LoggedInUser(user.uid));
         props.navigation.navigate("Home");

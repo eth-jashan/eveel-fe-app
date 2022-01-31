@@ -18,6 +18,7 @@ import {
   AntDesign,
   FontAwesome,
   MaterialCommunityIcons,
+  MaterialIcons
 } from "@expo/vector-icons";
 import YoutubeIframe from "react-native-youtube-iframe";
 import { ImageBackground } from "react-native";
@@ -88,7 +89,31 @@ const CarProfilePage = (props) => {
         null;
     }
   };
-  console.log("company", comp);
+
+  React.useEffect(
+    () =>
+      props.navigation.addListener('beforeRemove', (e) => {
+        // Prevent default behavior of leaving the screen
+        e.preventDefault();
+        // Prompt the user before leaving the screen
+        // Alert.alert(
+        //   'Discard changes?',
+        //   'You have unsaved changes. Are you sure to discard them and leave the screen?',
+        //   [
+        //     { text: "Don't leave", style: 'cancel', onPress: () => {} },
+        //     {
+        //       text: 'Discard',
+        //       style: 'destructive',
+        //       // If the user confirmed, then we dispatch the action we blocked earlier
+        //       // This will continue the action that had triggered the removal of the screen
+        //       onPress: () => navigation.dispatch(e.data.action),
+        //     },
+        //   ]
+        // );
+      }),
+    [props.navigation]
+  );
+
   const features = [
     {
       value: item.battery,
@@ -269,6 +294,19 @@ const CarProfilePage = (props) => {
           </Text>
         </View>
 
+        <Pressable style={{width:'90%', padding:8, borderColor:Color.lightgreen, borderWidth:0.75, flexDirection:'row', borderRadius:8, alignSelf:'center', justifyContent:'space-around', marginVertical:8}}>
+          <FontAwesome name="whatsapp" size={24} color={Color.lightgreen} />
+          <Text style={{ color:Color.lightgreen, fontFamily: 'medium', alignSelf:'center' }}>
+            Enquire on whatsApp
+          </Text>
+        </Pressable>
+        <Pressable style={{width:'90%', padding:8, backgroundColor:Color.lightgreen, flexDirection:'row', borderRadius:8, alignSelf:'center', justifyContent:'space-around', marginVertical:8}}>
+          <MaterialIcons name="compare" size={24} color="black" />
+          <Text style={{ color: "black", fontFamily: 'medium', alignSelf:'center' }}>
+            Compare the car
+          </Text>
+        </Pressable>
+
         <View>
           <Text style={styles.header}>Key Specs</Text>
           <FlatList
@@ -287,7 +325,7 @@ const CarProfilePage = (props) => {
             }}
           />
         </View>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={{
             backgroundColor: Color.lightgreen,
             alignSelf: "flex-start",
@@ -302,7 +340,7 @@ const CarProfilePage = (props) => {
           <Text style={{ color: "black", fontFamily: "bold", padding: 10 }}>
             Compare the car
           </Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <View>
           <Text style={styles.AboutTheCar}>About The Car</Text>
           <View style={{ marginBottom: 12 }}>
@@ -310,7 +348,7 @@ const CarProfilePage = (props) => {
               height={250}
               width={Dimensions.get("window").width * 0.98}
               webViewStyle={{ borderRadius: 10 }}
-              play={true}
+              play={false}
               videoId={item.youtube}
             />
           </View>

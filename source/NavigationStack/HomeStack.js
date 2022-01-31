@@ -44,7 +44,7 @@ const HomeDrawer = () => {
       }}
       drawerContent={(props) => <DrawerContent {...props} />}
     >
-      <HomeDrawerNav.Screen name="Home" component={HomeStack} />
+      <HomeDrawerNav.Screen name="Home_Drawer" component={HomeStack} />
     </HomeDrawerNav.Navigator>
   );
 };

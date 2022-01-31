@@ -8,12 +8,21 @@ import { Provider } from "react-redux";
 import store from "./source/Store/Store";
 import firebase from "firebase";
 import { firebaseConfig } from "./firbase";
+import * as GoogleSignIn from 'expo-google-sign-in';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 } else {
   firebase.app(); // if already initialized, use that one
 }
+
+// const initAsync = async () => {
+//   await GoogleSignIn.initAsync({
+//     // You may ommit the clientId when the firebase `googleServicesFile` is configured
+//     clientId: '<YOUR_IOS_CLIENT_ID>',
+//   });
+//   this._syncUserWithStateAsync();
+// };
 
 const fontLoading = () => {
   return Font.loadAsync({
