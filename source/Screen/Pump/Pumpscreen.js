@@ -82,6 +82,7 @@ const pumpLocation = ({ navigation, route }) => {
   //   "PumpScreen to Homescreen state====>",
   //   index.routes[0].state.routes
   // );
+  //console.log(index.routes[0].state.routes[0].key);
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
       e.preventDefault();

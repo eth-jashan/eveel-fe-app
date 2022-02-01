@@ -9,6 +9,7 @@ import {
   FlatList,
   TouchableOpacity,
   ScrollView,
+  Alert,
 } from "react-native";
 // import { View, Text, Image, StyleSheet } from "react-native";
 // import { ScrollView } from "react-native-gesture-handler";
@@ -22,12 +23,13 @@ import {
   AntDesign,
   FontAwesome,
   MaterialCommunityIcons,
-  MaterialIcons
+  MaterialIcons,
 } from "@expo/vector-icons";
 import YoutubeIframe from "react-native-youtube-iframe";
 import { ImageBackground } from "react-native";
+import { CommonActions } from "@react-navigation/native";
 import { Modalize } from "react-native-modalize";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigationState } from "@react-navigation/native";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/CarProfileScreenStyles";
 import {
@@ -44,10 +46,10 @@ import YoutubeCard from "../../Component/Utils/CarProfileScreenUtils/YoutubeUtil
 import FeatureModel from "../../Component/Utils/CarProfileScreenUtils/FeatureModal";
 const { width, height } = Dimensions.get("window");
 
-const CarProfilePage = (props) => {
-  const navigation = useNavigation();
+const CarProfilePage = ({ navigation, route }) => {
   const dispatch = useDispatch();
-  const item = props.route.params.item;
+  const item = route.params.item;
+  const list = route.params?.list;
   const companyList = useSelector((state) => state.company.companyList);
   const comp = companyList.filter((state) => state.companyid == item.companyId);
   const feature = useSelector((state) => state.feature.featureList);
@@ -154,29 +156,24 @@ const CarProfilePage = (props) => {
         null;
     }
   };
-
   React.useEffect(
     () =>
-      props.navigation.addListener('beforeRemove', (e) => {
-        // Prevent default behavior of leaving the screen
+      navigation.addListener("beforeRemove", (e) => {
         e.preventDefault();
-        // Prompt the user before leaving the screen
-        // Alert.alert(
-        //   'Discard changes?',
-        //   'You have unsaved changes. Are you sure to discard them and leave the screen?',
-        //   [
-        //     { text: "Don't leave", style: 'cancel', onPress: () => {} },
-        //     {
-        //       text: 'Discard',
-        //       style: 'destructive',
-        //       // If the user confirmed, then we dispatch the action we blocked earlier
-        //       // This will continue the action that had triggered the removal of the screen
-        //       onPress: () => navigation.dispatch(e.data.action),
-        //     },
-        //   ]
-        // );
+        Alert.alert("Are you sure?", "let's go", [
+          { text: "Stay", style: "cancel", onPress: () => {} },
+          {
+            text: "Leave",
+            style: "destructive",
+            // If the user confirmed, then we dispatch the action we blocked earlier
+            // This will continue the action that had triggered the removal of the screen
+            onPress: () => {
+              navigation.dispatch(e.data.action);
+            },
+          },
+        ]);
       }),
-    [props.navigation]
+    [navigation]
   );
 
   const features = [
@@ -262,18 +259,22 @@ const CarProfilePage = (props) => {
     }
     //scroll flatlists
   };
+  const changeState = () => {
+    setLikedCar((prev) => !prev);
+  };
   return (
     <View style={styles.screen}>
-      <ScrollView 
-      // stickyHeaderIndices={[0]}
-      style={styles.scroll}>
+      <ScrollView
+        //stickyHeaderIndices={[0]}
+        style={styles.scroll}
+      >
         <BigSlide
           topRef={topRef}
           gallery={gallery}
           carId={item.carId}
           scrollToActiveIndex={scrollToActiveIndex}
         />
-        {/* <TouchableOpacity
+        <TouchableOpacity
           style={{ position: "absolute", alignSelf: "flex-end", marginTop: 30 }}
           onPress={async () => {
             await setLikedCar((prev) => !prev);
@@ -298,7 +299,7 @@ const CarProfilePage = (props) => {
               overflow: "hidden",
             }}
           />
-        </TouchableOpacity> */}
+        </TouchableOpacity>
         <SmallSlide
           thumbRef={thumbRef}
           gallery={gallery}
@@ -329,15 +330,50 @@ const CarProfilePage = (props) => {
           </Text>
         </View>
 
-        <Pressable style={{width:'90%', padding:8, borderColor:Color.lightgreen, borderWidth:0.75, flexDirection:'row', borderRadius:8, alignSelf:'center', justifyContent:'space-around', marginVertical:8}}>
+        <Pressable
+          style={{
+            width: "90%",
+            padding: 8,
+            borderColor: Color.lightgreen,
+            borderWidth: 0.75,
+            flexDirection: "row",
+            borderRadius: 8,
+            alignSelf: "center",
+            justifyContent: "space-around",
+            marginVertical: 8,
+          }}
+        >
           <FontAwesome name="whatsapp" size={24} color={Color.lightgreen} />
-          <Text style={{ color:Color.lightgreen, fontFamily: 'medium', alignSelf:'center' }}>
+          <Text
+            style={{
+              color: Color.lightgreen,
+              fontFamily: "medium",
+              alignSelf: "center",
+            }}
+          >
             Enquire on whatsApp
           </Text>
         </Pressable>
-        <Pressable style={{width:'90%', padding:8, backgroundColor:Color.lightgreen, flexDirection:'row', borderRadius:8, alignSelf:'center', justifyContent:'space-around', marginVertical:8}}>
+        <Pressable
+          style={{
+            width: "90%",
+            padding: 8,
+            backgroundColor: Color.lightgreen,
+            flexDirection: "row",
+            borderRadius: 8,
+            alignSelf: "center",
+            justifyContent: "space-around",
+            marginVertical: 8,
+          }}
+        >
           <MaterialIcons name="compare" size={24} color="black" />
-          <Text style={{ color: "black", fontFamily: 'medium', alignSelf:'center' }}>
+          <Text
+            style={{
+              color: "black",
+              fontFamily: "medium",
+              alignSelf: "center",
+            }}
+          >
             Compare the car
           </Text>
         </Pressable>
