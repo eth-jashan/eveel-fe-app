@@ -160,11 +160,11 @@ const CarProfilePage = ({ navigation, route }) => {
     () =>
       navigation.addListener("beforeRemove", (e) => {
         e.preventDefault();
-        Alert.alert("Are you sure?", "let's go", [
-          { text: "Stay", style: "cancel", onPress: () => {} },
+        Alert.alert("Are you sure?", "Want to leave car profile", [
+          { text: "Stay", onPress: () => {} },
           {
             text: "Leave",
-            style: "destructive",
+            // style: "destructive",
             // If the user confirmed, then we dispatch the action we blocked earlier
             // This will continue the action that had triggered the removal of the screen
             onPress: () => {
