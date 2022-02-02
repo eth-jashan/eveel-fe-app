@@ -29,7 +29,11 @@ const HomeStack = () => {
         name="carlist"
         options={{ headerShown: false }}
       />
-      <HomeNav.Screen options={{ headerShown: false }} component={CarProfilePage} name="CarProfile" />
+      <HomeNav.Screen
+        options={{ headerShown: false }}
+        component={CarProfilePage}
+        name="CarProfile"
+      />
       <HomeNav.Screen
         component={CarCompareScreen}
         name="CarCompare"
@@ -50,7 +54,11 @@ const HomeStack = () => {
         name="PumpSearch"
         options={{ headerShown: false }}
       />
-      <HomeNav.Screen options={{ headerShown: false }} component={PhotoSlideScreen} name="SlideScreen" />
+      <HomeNav.Screen
+        options={{ headerShown: false }}
+        component={PhotoSlideScreen}
+        name="SlideScreen"
+      />
       <HomeNav.Screen
         component={LikedCarList}
         name="LikedCars"

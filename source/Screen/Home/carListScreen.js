@@ -185,7 +185,10 @@ const CarListScreen = ({ navigation, route }) => {
             }}
             onPress={() => {
               //console.log('heyyyy', carList[index])
-              navigation.navigate("CarProfile", { item: carList[index] });
+              navigation.navigate("CarProfile", {
+                item: carList[index],
+                list: List,
+              });
             }}
           >
             <Text

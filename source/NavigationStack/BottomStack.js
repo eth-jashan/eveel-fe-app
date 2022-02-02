@@ -1,10 +1,6 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import {
-  Feather,
-  Ionicons,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { Feather, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import Feedscreen from "../Screen/Feed/Feedscreen";
 import Homescreen from "../Screen/Home/Homescreen";
 import PumpTabScreen from "../Screen/Pump/PumpTabScreen";
