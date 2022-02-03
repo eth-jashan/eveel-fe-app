@@ -10,12 +10,13 @@ import {
   TouchableOpacity,
   ScrollView,
   Alert,
+  Linking,
 } from "react-native";
 // import { View, Text, Image, StyleSheet } from "react-native";
 // import { ScrollView } from "react-native-gesture-handler";
-import { SafeAreaView } from "react-native-safe-area-context";
+// import { SafeAreaView } from "react-native-safe-area-context";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
-import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
+// import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
 import {
   Ionicons,
   FontAwesome5,
@@ -111,6 +112,20 @@ const CarProfilePage = ({ navigation, route }) => {
   //     );
   //   },
   // });
+
+  const openWhatsApp = () => {
+    let url = "whatsapp://send?text=" +
+          `Hey can I get to know about ${item.name}` +
+          "&phone=91" +
+          '9820769479';
+        Linking.openURL(url)
+          .then(data => {
+            console.log("WhatsApp Opened successfully " + data);  //<---Success
+          })
+          .catch(() => {
+            alert("Make sure WhatsApp installed on your device");  //<---Error
+          });
+  }
 
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
@@ -331,6 +346,7 @@ const CarProfilePage = ({ navigation, route }) => {
         </View>
 
         <Pressable
+          onPress={()=>openWhatsApp()}
           style={{
             width: "90%",
             padding: 8,
