@@ -91,10 +91,9 @@ const pumpLocation = ({ navigation, route }) => {
         "Are you sure?",
         "If you leave you would be directed to Home Screen",
         [
-          { text: "Stay", style: "cancel", onPress: () => {} },
+          { text: "Stay", onPress: () => {} },
           {
             text: "Leave",
-            style: "destructive",
             // If the user confirmed, then we dispatch the action we blocked earlier
             // This will continue the action that had triggered the removal of the screen
             onPress: () => {
