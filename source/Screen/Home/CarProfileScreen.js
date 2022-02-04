@@ -437,13 +437,14 @@ const CarProfilePage = ({ navigation, route }) => {
                   style={{ color: "grey", fontFamily: "light", fontSize: 20 }}
                 >
                   {youtubeData?.title}
+                  {"  "}
+                  <Ionicons
+                    name="logo-youtube"
+                    size={24}
+                    color={"red"}
+                    style={{ alignSelf: "center" }}
+                  />
                 </Text>
-                <Ionicons
-                  name="logo-youtube"
-                  size={24}
-                  color={"red"}
-                  style={{ paddingLeft: 10 }}
-                />
               </View>
               <View style={{ alignSelf: "center" }}>
                 <ImageBackground
@@ -457,15 +458,13 @@ const CarProfilePage = ({ navigation, route }) => {
                     style={{
                       marginTop: 125,
                       alignSelf: "center",
-                      height: 50,
-                      width: 50,
                       borderRadius: 25,
-                      backgroundColor: "black",
+                      backgroundColor: "grey",
                       opacity: 0.4,
                     }}
                   >
                     <AntDesign
-                      style={{ alignSelf: "center" }}
+                      style={{ alignSelf: "center", padding: 10 }}
                       name="caretright"
                       size={24}
                       color={"white"}
