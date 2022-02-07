@@ -16,6 +16,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
 import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
+import LinkPreview from "react-native-link-preview";
 import {
   Ionicons,
   FontAwesome5,
@@ -27,7 +28,7 @@ import {
 } from "@expo/vector-icons";
 import YoutubeIframe from "react-native-youtube-iframe";
 import { ImageBackground } from "react-native";
-import { CommonActions } from "@react-navigation/native";
+import { CommonActions, Link } from "@react-navigation/native";
 import { Modalize } from "react-native-modalize";
 import { useNavigationState } from "@react-navigation/native";
 import Color from "../../../assets/Color";
@@ -57,12 +58,14 @@ const CarProfilePage = ({ navigation, route }) => {
   const modalize = useRef();
   const modalizeSafety = useRef();
   const modalizeColor = useRef();
+  const modelizeYoutube = useRef();
   const topRef = useRef();
   const thumbRef = useRef();
   const [colorname, setColorName] = useState();
   const [indexColor, setIndexColor] = useState();
   const [likedCar, setLikedCar] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [youtubeData, setYoutubeData] = useState(null);
   // navigation.setOptions({
   //   headerShown: true,
   //   headerTitle: "",
@@ -112,6 +115,16 @@ const CarProfilePage = ({ navigation, route }) => {
   //   },
   // });
 
+  useEffect(async () => {
+    const link = `https://www.youtube.com/watch?v=${item.youtube}`;
+    const metaData = await LinkPreview.getPreview(link);
+    console.log(item.youtube);
+    await setYoutubeData(metaData);
+  }, []);
+
+  useEffect(() => {
+    console.log("Youtube", youtubeData);
+  }, [youtubeData]);
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
   );
@@ -156,7 +169,7 @@ const CarProfilePage = ({ navigation, route }) => {
         null;
     }
   };
-  React.useEffect(
+  useEffect(
     () =>
       navigation.addListener("beforeRemove", (e) => {
         e.preventDefault();
@@ -175,7 +188,6 @@ const CarProfilePage = ({ navigation, route }) => {
       }),
     [navigation]
   );
-
   const features = [
     {
       value: item.battery,
@@ -414,14 +426,53 @@ const CarProfilePage = ({ navigation, route }) => {
         </TouchableOpacity> */}
         <View>
           <Text style={styles.AboutTheCar}>About The Car</Text>
-          <View style={{ marginBottom: 12 }}>
-            <YoutubeIframe
-              height={250}
-              width={Dimensions.get("window").width * 0.98}
-              webViewStyle={{ borderRadius: 10 }}
-              play={false}
-              videoId={item.youtube}
-            />
+          <View style={{ margin: 15 }}>
+            <TouchableOpacity
+              onPress={() => {
+                modelizeYoutube.current?.open();
+              }}
+            >
+              <View style={{ flexDirection: "row" }}>
+                <Text
+                  style={{ color: "grey", fontFamily: "light", fontSize: 20 }}
+                >
+                  {youtubeData?.title}
+                  {"  "}
+                  <Ionicons
+                    name="logo-youtube"
+                    size={24}
+                    color={"red"}
+                    style={{ alignSelf: "center" }}
+                  />
+                </Text>
+              </View>
+              <View style={{ alignSelf: "center" }}>
+                <ImageBackground
+                  source={{ uri: youtubeData?.images[0] }}
+                  style={{
+                    width: Dimensions.get("window").width * 0.8,
+                    height: 250,
+                  }}
+                >
+                  <View
+                    style={{
+                      marginTop: 125,
+                      alignSelf: "center",
+                      borderRadius: 25,
+                      backgroundColor: "grey",
+                      opacity: 0.4,
+                    }}
+                  >
+                    <AntDesign
+                      style={{ alignSelf: "center", padding: 10 }}
+                      name="caretright"
+                      size={24}
+                      color={"white"}
+                    />
+                  </View>
+                </ImageBackground>
+              </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.description}>
             <Text style={styles.descText}>{item.description}</Text>
@@ -542,6 +593,30 @@ const CarProfilePage = ({ navigation, route }) => {
               <Text style={styles.ColorIndex}>{indexColor}.</Text>
               <Text style={styles.ColorModalName}>{colorname}</Text>
             </>
+          </View>
+        </View>
+      </Modalize>
+      <Modalize
+        modalHeight={Dimensions.get("window").height * 0.6}
+        ref={modelizeYoutube}
+        modalStyle={{ backgroundColor: "black" }}
+      >
+        <View
+          style={{
+            backgroundColor: Color.black,
+            padding: 10,
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
+          <View style={{ alignSelf: "center" }}>
+            <YoutubeIframe
+              height={250}
+              width={Dimensions.get("window").width * 0.98}
+              webViewStyle={{ borderRadius: 10 }}
+              play={false}
+              videoId={item.youtube}
+            />
           </View>
         </View>
       </Modalize>
