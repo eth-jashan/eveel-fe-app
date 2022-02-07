@@ -30,7 +30,6 @@ import YoutubeIframe from "react-native-youtube-iframe";
 import { ImageBackground } from "react-native";
 import { CommonActions } from "@react-navigation/native";
 import { Modalize } from "react-native-modalize";
-import { useNavigationState } from "@react-navigation/native";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/CarProfileScreenStyles";
 import {
@@ -175,11 +174,11 @@ const CarProfilePage = ({ navigation, route }) => {
     () =>
       navigation.addListener("beforeRemove", (e) => {
         e.preventDefault();
-        Alert.alert("Are you sure?", "let's go", [
-          { text: "Stay", style: "cancel", onPress: () => {} },
+        Alert.alert("Are you sure?", "Want to leave car profile", [
+          { text: "Stay", onPress: () => {} },
           {
             text: "Leave",
-            style: "destructive",
+            // style: "destructive",
             // If the user confirmed, then we dispatch the action we blocked earlier
             // This will continue the action that had triggered the removal of the screen
             onPress: () => {
