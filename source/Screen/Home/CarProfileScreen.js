@@ -11,6 +11,8 @@ import {
   ScrollView,
 } from "react-native";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
+import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
+import LinkPreview from "react-native-link-preview";
 import {
   FontAwesome5,
   Feather,
@@ -21,6 +23,7 @@ import {
 } from "@expo/vector-icons";
 import YoutubeIframe from "react-native-youtube-iframe";
 import { ImageBackground } from "react-native";
+import { CommonActions, Link } from "@react-navigation/native";
 import { Modalize } from "react-native-modalize";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/CarProfileScreenStyles";
@@ -77,7 +80,9 @@ const CarProfilePage = ({ navigation, route }) => {
   //Constants
 
   const comp = companyList.filter((state) => state.companyid == item.companyId);
+ 
 
+  
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
   );
@@ -88,7 +93,7 @@ const CarProfilePage = ({ navigation, route }) => {
     (fe) => fe.name == "gallery" && fe.carid == item.carId
   );
   const likecar = likecarList.filter((car) => car.carId === item.carId);
-
+  
   const features = [
     {
       value: item.battery,
@@ -184,6 +189,19 @@ const CarProfilePage = ({ navigation, route }) => {
         null;
     }
   };
+const openWhatsApp = () => {
+    let url = "whatsapp://send?text=" +
+          `Hey can I get to know about ${item.name}` +
+          "&phone=91" +
+          '9820769479';
+        Linking.openURL(url)
+          .then(data => {
+            console.log("WhatsApp Opened successfully " + data);  //<---Success
+          })
+          .catch(() => {
+            alert("Make sure WhatsApp installed on your device");  //<---Error
+          });
+  }
 
   const onPress = (index, title) => {
     modalizeColor.current?.open();
@@ -360,7 +378,6 @@ const CarProfilePage = ({ navigation, route }) => {
 
         <View>
           <Text style={styles.AboutTheCar}>About The Car</Text>
-
           <TouchableOpacity
             onPress={() => {
               modalizeDesc.current?.open();
