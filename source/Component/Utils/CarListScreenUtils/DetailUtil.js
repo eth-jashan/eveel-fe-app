@@ -13,8 +13,12 @@ import styles from "./UtilStyles/DetailUtilStyles";
 const DetailView = ({ data, color, index }) => {
   return (
     <StaggeringView style={styles.DetailView}>
+      {/* Feature Panel */}
+
       <View style={styles.DetailInfoparts}>
         <View style={styles.features}>
+          {/* Range Panel */}
+
           <View>
             <FontAwesome5
               style={styles.IconArrange}
@@ -35,6 +39,8 @@ const DetailView = ({ data, color, index }) => {
             {data[index].range}
           </Text>
         </View>
+
+        {/* Horse Panel */}
 
         <View style={styles.features}>
           <View>
@@ -59,6 +65,8 @@ const DetailView = ({ data, color, index }) => {
         </View>
       </View>
 
+      {/* torque Panel */}
+
       <View style={styles.DetailInfoparts}>
         <View style={styles.features}>
           <View>
@@ -82,6 +90,8 @@ const DetailView = ({ data, color, index }) => {
           </Text>
         </View>
 
+        {/* Speed Panel */}
+
         <View style={styles.features}>
           <View>
             <MaterialCommunityIcons
@@ -104,6 +114,8 @@ const DetailView = ({ data, color, index }) => {
           </Text>
         </View>
       </View>
+
+      {/* Battery Panel */}
 
       <View style={styles.DetailsInfoP3}>
         <View>

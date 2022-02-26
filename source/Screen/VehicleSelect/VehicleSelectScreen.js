@@ -7,13 +7,16 @@ import VehicleDetail from "../../Component/Utils/VehicleSelectUtils/VehicleDetai
 import { useDispatch, useSelector } from "react-redux";
 import { addOwnedCar } from "../../Store/action/ownedCar";
 const VehicleSelectScreen = (props) => {
+  //Hookes
   const dispatch = useDispatch();
-  const [selectedVehicle, setSelectedVehicle] = useState();
-  const car = useSelector((state) => state.ownedCar);
-  //   useEffect(() => {
-  //     console.log("CARR=>", car);
-  //   }, [car]);
 
+  //Input state
+  const [selectedVehicle, setSelectedVehicle] = useState();
+
+  //From redux
+  const car = useSelector((state) => state.ownedCar);
+
+  /**********functions*********/
   const Submitted = (name, mileage) => {
     //console.log(name, mileage, selectedVehicle);
     dispatch(addOwnedCar(selectedVehicle, name, mileage));
@@ -23,6 +26,8 @@ const VehicleSelectScreen = (props) => {
   const Select = (type) => {
     setSelectedVehicle(type);
   };
+
+  /*************render**********/
   return selectedVehicle ? (
     <VehicleDetail selected={selectedVehicle} submit={Submitted} />
   ) : (

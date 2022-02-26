@@ -9,13 +9,20 @@ import { useNavigation } from "@react-navigation/native";
 import styles from "./UtilStyles/MapHeaderStyles";
 import Color from "../../../../assets/Color";
 const MapHeader = ({ active }) => {
+  //Hookf
   const navigation = useNavigation();
+
+  /***********Function************/
+
   const onPress = () => {
     navigation.navigate("PumpSearch");
   };
 
+  /***********Rendering************/
+
   return (
     <Pressable style={styles.LocationBar}>
+      {/* Location Panel */}
       <View style={styles.LocHeader}>
         <MaterialIcons
           name="location-on"
@@ -36,7 +43,11 @@ const MapHeader = ({ active }) => {
         />
       </View>
 
+      {/* Border Panel */}
+
       <Dash style={styles.Dash} />
+
+      {/* Search Panel */}
 
       <View style={styles.SearchBar}>
         <Ionicons name="search" size={16} color={Color.lightgreen} />

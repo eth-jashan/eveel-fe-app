@@ -4,12 +4,17 @@ import { Modalize } from "react-native-modalize";
 import { Ionicons } from "@expo/vector-icons";
 import styles from "./UtilStyles/PumpInfoModelUtilStyles";
 const PumpInfoModal = ({ height, modalRef, item, direction }) => {
+  //constants
+
   const address = item?.address ? item?.address : "";
-  //console.log("Address", item?.address);
   return (
     <Modalize modalStyle={styles.modal} modalHeight={height} ref={modalRef}>
+      {/* Content Panel */}
+
       <View style={styles.styleUp}>
         <View style={styles.styleDown}>
+          {/* Eveels Logo */}
+
           <View style={styles.styleLeft}>
             <Image
               resizeMode="contain"
@@ -17,6 +22,9 @@ const PumpInfoModal = ({ height, modalRef, item, direction }) => {
               style={styles.styleRight}
             />
           </View>
+
+          {/* Station Panel */}
+
           <View style={styles.pumpstyle}>
             <Text numberOfLines={1} style={styles.pumpModal}>
               {item?.station}
@@ -27,6 +35,8 @@ const PumpInfoModal = ({ height, modalRef, item, direction }) => {
             </Text>
           </View>
         </View>
+
+        {/* Go TO location Panel */}
 
         <TouchableOpacity
           style={styles.fontStyle}

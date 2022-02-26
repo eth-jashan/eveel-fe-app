@@ -8,6 +8,7 @@ import {
   Image,
 } from "react-native";
 import Color from "../../../../assets/Color";
+import styles from "./UtilStyles/SmallSlidePhotoUtilStyles";
 const SmallSlide = ({
   thumbRef,
   gallery,
@@ -15,16 +16,9 @@ const SmallSlide = ({
   activeIndex,
 }) => {
   return (
-    <View
-      style={{
-        width: Dimensions.get("window").width * 0.8,
-        alignSelf: "center",
-        bottom: 36,
-        padding: 16,
-        backgroundColor: Color.darkgrey,
-        borderRadius: 14,
-      }}
-    >
+    <View style={styles.container}>
+      {/* Photo Slide Panel */}
+
       <FlatList
         ref={thumbRef}
         horizontal
@@ -37,14 +31,16 @@ const SmallSlide = ({
               style={{ width: 100, height: 60, marginHorizontal: 8 }}
               onPress={() => scrollToActiveIndex(index)}
             >
+              {/* Image Panel */}
+
               <Image
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderWidth: 0.7,
-                  borderColor:
-                    index === activeIndex ? Color.lightgreen : "transparent",
-                }}
+                style={[
+                  styles.image,
+                  {
+                    borderColor:
+                      index === activeIndex ? Color.lightgreen : "transparent",
+                  },
+                ]}
                 source={{ uri: item.image }}
               />
             </TouchableOpacity>

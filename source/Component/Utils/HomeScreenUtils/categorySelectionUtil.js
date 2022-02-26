@@ -4,11 +4,18 @@ import { FlatList } from "react-native-gesture-handler";
 import color from "../../../../assets/Color";
 import styles from "./UtilStyles/categorySelectionUtilStyles";
 const CategorySelection = (props) => {
+  //constants
+
   const typeOfSelection = ["All", "Cars", "Scooty", "Cycle"];
+
+  //Input state
+
   const [selected, setSelected] = useState(0);
 
   return (
     <View style={styles.screen}>
+      {/* Category Render Panel */}
+
       <FlatList
         data={typeOfSelection}
         keyExtractor={(x) => x}
@@ -29,6 +36,8 @@ const CategorySelection = (props) => {
                 styles.button,
               ]}
             >
+              {/* Cateogory Panel */}
+
               <Text
                 style={[
                   {

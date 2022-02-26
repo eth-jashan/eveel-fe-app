@@ -1,88 +1,71 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MapView, { Marker } from "react-native-maps";
 import { CommonActions } from "@react-navigation/routers";
 import {
-  StyleSheet,
   Text,
   View,
   Dimensions,
   FlatList,
-  Animated,
   Image,
   Pressable,
-  TouchableOpacity,
-  Modal,
-  Button,
   Alert,
-  Platform,
 } from "react-native";
 import { mapStyle } from "../../Component/Utils/PumpScreen/mapStylesUtil";
 import PumpInfoModal from "../../Component/Utils/PumpScreen/PumpInfoModelUtil";
-import { Modalize } from "react-native-modalize";
 import Color from "../../../assets/Color";
-// import ListPump from "../component/listPump";
-// import MapHeader from "../component/MapHeader";
 import { AntDesign } from "@expo/vector-icons";
-import Dash from "react-native-dash";
 import { useNavigationState } from "@react-navigation/core";
 import styles from "./PumpStyles/PumpscreenStyles";
-const { width, height } = Dimensions.get("window");
 import MapViewDirections from "react-native-maps-directions";
 import { useSelector } from "react-redux";
 import getGoogleDirections from "../../Component/Common/GetDirection";
+
 const pumpLocation = ({ navigation, route }) => {
+  //from Props
+
   const { location } = route.params;
-  //console.log("PumpScreen:", location.coords);
+
+  //from redux
+
+  let listofPump = useSelector((state) => state.pumpStation.stationList);
+
+  //Contants
   const origin = {
     latitude: location.coords.latitude,
     longitude: location.coords.longitude,
   };
-  const [selectedPump, setSelectedPump] = useState(null);
-  const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
-  //const GOOGLE_MAPS_APIKEY = "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"; //for testing have to open the above one for iphone aswell
-
-  const handleGetDirections = () => {
-    getGoogleDirections(selectedPump.latitude, selectedPump.longitude, origin);
-  };
-  let listofPump = useSelector((state) => state.pumpStation.stationList);
-  console.log(listofPump.length);
-  // const listofPump = [
-  //   { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
-  //   { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
-  //   { name: "XYZ Station", lat: "19.08551", long: "72.88764" },
-  // ];
-
   const listOfCity = [
     { name: "Delhi", lat: "28.7041", long: "77.1025" },
     { name: "Mumbai", lat: "19.0760", long: "72.8777" },
     { name: "Bangalore", lat: "12.9716", long: "77.5946" },
     { name: "Hyderabad", lat: "17.3850", long: "78.4867" },
   ];
-  const [pumpInfo, setPumpInfo] = React.useState();
-  const pumpRef = React.useRef(null);
-  const [select, setSelect] = React.useState(false);
+  const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
 
-  const onLocationPress = (item) => {
-    setPumpInfo(item);
-    //console.log("Item", item);
-    pumpRef?.current?.open();
-    setSelectedPump({
-      latitude: item.lat,
-      longitude: item.long,
-    });
-  };
-  const onLocationCity = async (item, index) => {
-    await setSelect(index);
-    setPumpInfo(item);
-  };
+  // const listofPump = [
+  //   { name: "Volttic Charging Station", lat: "19.00013", long: "73.10938" },
+  //   { name: "ChargeGrid", lat: "19.07434", long: "72.9869988" },
+  //   { name: "XYZ Station", lat: "19.08551", long: "72.88764" },
+  // ];
+  //const GOOGLE_MAPS_APIKEY = "AIzaSyDkqyDGvoPwEuPXniKNb_JceM37MJscerE"; //for testing have to open the above one for iphone aswell
 
+  //Input State
+
+  const [selectedPump, setSelectedPump] = useState(null);
   const [exit, setExit] = useState(false);
+  const [pumpInfo, setPumpInfo] = useState();
+  const [select, setSelect] = useState(false);
+
+  //Input Ref
+
+  const pumpRef = useRef(null);
+
+  //Navigation state
+
   const index = useNavigationState((state) => state);
-  // console.log(
-  //   "PumpScreen to Homescreen state====>",
-  //   index.routes[0].state.routes
-  // );
-  //console.log(index.routes[0].state.routes[0].key);
+
+  /************UseEffect************/
+
   useEffect(() => {
     navigation.addListener("beforeRemove", (e) => {
       e.preventDefault();
@@ -109,8 +92,30 @@ const pumpLocation = ({ navigation, route }) => {
       );
     });
   }, [navigation]);
+
+  /************functions************/
+  const handleGetDirections = () => {
+    getGoogleDirections(selectedPump.latitude, selectedPump.longitude, origin);
+  };
+
+  const onLocationPress = (item) => {
+    setPumpInfo(item);
+    //console.log("Item", item);
+    pumpRef?.current?.open();
+    setSelectedPump({
+      latitude: item.lat,
+      longitude: item.long,
+    });
+  };
+  const onLocationCity = async (item, index) => {
+    await setSelect(index);
+    setPumpInfo(item);
+  };
+
   return (
     <View style={styles.container}>
+      {/* Map Panel */}
+
       <MapView
         userInterfaceStyle={"dark"}
         customMapStyle={mapStyle}
@@ -122,6 +127,8 @@ const pumpLocation = ({ navigation, route }) => {
         }}
         style={styles.ScreenFuller}
       >
+        {/* List of Pump rendering panel */}
+
         {listofPump.map((item, i) => {
           return (
             <Marker
@@ -139,6 +146,8 @@ const pumpLocation = ({ navigation, route }) => {
         })}
         {selectedPump && (
           <>
+            {/* Car image render in our location panel */}
+
             <Marker
               onPress={async () => await onLocationPress(item)}
               coordinate={origin}
@@ -151,6 +160,9 @@ const pumpLocation = ({ navigation, route }) => {
                 />
               </View>
             </Marker>
+
+            {/* Directions panel */}
+
             <MapViewDirections
               origin={origin}
               destination={{

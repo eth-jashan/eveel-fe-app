@@ -4,10 +4,16 @@ import { View, Text, StyleSheet } from "react-native";
 import styles from "./PumpStyles/PumpTabScreenStyles";
 import * as Location from "expo-location";
 const PumpTabScreen = (props) => {
+  //constant
   const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
   const [go, setGo] = useState(false);
+
+  //Input states
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
+
+  /********UseEffect*******/
+
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -43,6 +49,9 @@ const PumpTabScreen = (props) => {
       });
     }
   }, [location]);
+
+  /*********render*********/
+
   return (
     <View style={styles.screen}>
       {!errorMsg && <Text style={styles.title}>Loading...</Text>}

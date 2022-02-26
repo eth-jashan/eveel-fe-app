@@ -18,9 +18,16 @@ import { useSelector } from "react-redux";
 const { width, height } = Dimensions.get("window");
 
 const ListPump = (props) => {
+  //Hooks
+
   const navigation = useNavigation();
+
+  //From Redux
+
   const pumpList = useSelector((state) => state.pumpStation.stationList);
-  //console.log(props);
+
+  /************Rendering**********/
+
   return (
     <View style={styles.component}>
       <FlatList
@@ -29,11 +36,17 @@ const ListPump = (props) => {
         renderItem={({ item, index }) => {
           return (
             <View style={styles.pumpListContainer}>
+              {/* Content Panel */}
+
               <View style={styles.ContentBox}>
                 <View style={{ flexDirection: "row" }}>
+                  {/* Left Small Map Render Panel */}
+
                   <View style={{ alignSelf: "center" }}>
                     <MapView style={styles.map} />
                   </View>
+
+                  {/* Station Info Panel */}
 
                   <View style={styles.Content}>
                     <Text style={styles.PumpName}>{item.station}</Text>
@@ -50,10 +63,12 @@ const ListPump = (props) => {
                 />
               </View>
 
+              {/* Go To location Button panel */}
+
               <View style={styles.NavigationButtonView}>
                 <TouchableOpacity
                   onPress={() => {
-                    console.log("Hello")
+                    console.log("Hello");
                     getGoogleDirections(item.lat, item.long, props.origin);
                   }}
                   style={styles.NavButton}

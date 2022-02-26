@@ -1,19 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { View, Text, TouchableOpacity, FlatList, Image } from "react-native";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Color from "../../../assets/Color";
 import { CommonActions } from "@react-navigation/routers";
 import AnimatedLottieView from "lottie-react-native";
 import { useNavigationState } from "@react-navigation/core";
+import styles from "./Styles/LikedCarListStyles";
 const LikedCarList = ({ navigation }) => {
-  const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchLikedCar());
-  // }, []);
+  //From redux
+
   const likedCarList = useSelector((state) => state.likedCars.likedCarList);
   const carList = useSelector((state) => state.car.vehicleList);
+
+  //naviagtion state
+
   const index = useNavigationState((state) => state);
+
+  //constants
+
   const list = [];
+
+  //storing value in list
+
   for (const likecar in likedCarList) {
     const car = carList.filter(
       (item) => item.carId == likedCarList[likecar].carId
@@ -24,6 +32,9 @@ const LikedCarList = ({ navigation }) => {
       }
     }
   }
+
+  /************UseEffects*********/
+
   useEffect(() => {
     if (index?.routes[0]?.state?.routes[0]?.key) {
       navigation.addListener("beforeRemove", (e) => {
@@ -39,21 +50,17 @@ const LikedCarList = ({ navigation }) => {
   }, [navigation]);
 
   return (
-    <View style={{ flex: 1, backgroundColor: "black" }}>
+    <View style={styles.screen}>
+      {/* Checking if the list is empty */}
+
       {list.length > 0 ? (
-        <View style={{ marginTop: 50 }}>
-          <View style={{ margin: 15 }}>
-            <Text
-              style={{
-                color: "white",
-                fontSize: 24,
-                textAlign: "center",
-                fontFamily: "bold",
-              }}
-            >
-              Liked Cars
-            </Text>
+        <View style={styles.list}>
+          <View style={styles.listContent}>
+            <Text style={styles.title}>Liked Cars</Text>
           </View>
+
+          {/*  Car List Rendering */}
+
           <FlatList
             data={list}
             keyExtractor={(_, i) => i.toString()}
@@ -65,37 +72,24 @@ const LikedCarList = ({ navigation }) => {
                     navigation.navigate("CarProfile", { item: item });
                   }}
                 >
-                  <View style={{ flexDirection: "row", margin: 15 }}>
-                    <Image
-                      style={{ width: 100, height: 100, borderRadius: 15 }}
-                      source={{ uri: item.cover }}
-                    />
-                    <View style={{ padding: 15 }}>
-                      <View style={{ paddingBottom: 10 }}>
-                        <Text
-                          style={{
-                            color: "white",
-                            fontFamily: "bold",
-                            fontSize: 22,
-                          }}
-                        >
+                  <View style={styles.card}>
+                    {/* Car Image Panel */}
+
+                    <Image style={styles.image} source={{ uri: item.cover }} />
+
+                    <View style={styles.TextBox}>
+                      {/* Car Name panel */}
+
+                      <View style={styles.carname}>
+                        <Text style={styles.carNameText}>
                           {item.company} {item.name}
                         </Text>
                       </View>
-                      <View
-                        style={{
-                          backgroundColor: Color.darkgreen,
-                          borderRadius: 20,
-                        }}
-                      >
-                        <Text
-                          style={{
-                            color: Color.lightgreen,
-                            padding: 10,
-                            fontSize: 14,
-                            fontFamily: "medium",
-                          }}
-                        >
+
+                      {/* Car Price Panel */}
+
+                      <View style={styles.carprice}>
+                        <Text style={styles.carpriceText}>
                           Starting Price @ {item.startPrice}
                         </Text>
                       </View>
@@ -107,13 +101,9 @@ const LikedCarList = ({ navigation }) => {
           />
         </View>
       ) : (
-        <View style={{ flex: 1, justifyContent: "center" }}>
+        <View style={styles.noscreen}>
           <AnimatedLottieView
-            style={{
-              alignSelf: "center",
-              maxWidth: 300,
-              height: 300,
-            }}
+            style={styles.lottie}
             autoPlay={true}
             source={require("../../../assets/lottie-files/13525-empty.json")}
             // OR find more Lottie files @ https://lottiefiles.com/featured
@@ -121,13 +111,7 @@ const LikedCarList = ({ navigation }) => {
           />
           <View>
             <Text
-              style={{
-                color: Color.lightgreen,
-                padding: 10,
-                fontSize: 20,
-                fontFamily: "bold",
-                textAlign: "center",
-              }}
+              style={styles.Sorry}
             >
               Liked Cars will be Shown here
             </Text>

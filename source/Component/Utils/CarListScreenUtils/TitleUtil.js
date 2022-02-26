@@ -1,9 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 import styles from "./UtilStyles/TitleUtilStyles";
 const TitleInfo = ({ title_size, index, text, color }) => {
   return (
     <View index={index} style={styles.TitleView}>
+      {/* Title Panel */}
+
       <Text
         key={`title-${index}`}
         style={[

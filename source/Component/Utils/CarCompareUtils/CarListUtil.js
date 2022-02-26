@@ -10,30 +10,33 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import Color from "../../../../assets/Color";
 import { addVechile_2 } from "../../../Store/action/compareCar";
+import styles from "./Styles/CarListUtilStyles";
 const CarList = (props) => {
+  //Hooks
+
   const dispatch = useDispatch();
+
+  //from redux
+
   const List =
     props.vehicle1.type === "car"
       ? useSelector((state) => state.car.carList)
       : useSelector((state) => state.car.scootyList);
   const list = List.filter((item) => item.carId !== props.vehicle1.carId);
+
   return (
-    <View style={{ marginTop: 50 }}>
-      <View style={{ margin: 15 }}>
-        <Text
-          style={{
-            color: "white",
-            fontSize: 24,
-            textAlign: "center",
-            fontFamily: "bold",
-          }}
-        >
-          Select a vehicle
-        </Text>
+    <View style={styles.screen}>
+      {/* Title panel */}
+
+      <View style={styles.title}>
+        <Text style={styles.titleText}>Select a vehicle</Text>
       </View>
+
+      {/* List rendering panel */}
+
       <FlatList
         data={list}
-        style={{ paddingBottom: 100 }}
+        style={styles.mapping}
         keyExtractor={(item) => item.carId}
         renderItem={({ item, index }) => {
           return (
@@ -44,37 +47,23 @@ const CarList = (props) => {
                 props.selected();
               }}
             >
-              <View style={{ flexDirection: "row", margin: 15 }}>
-                <Image
-                  style={{ width: 100, height: 100, borderRadius: 15 }}
-                  source={{ uri: item.cover }}
-                />
-                <View style={{ padding: 15 }}>
+              {/* Card Panel */}
+
+              <View style={styles.card}>
+                {/* Car Image Panel */}
+
+                <Image style={styles.image} source={{ uri: item.cover }} />
+
+                {/* Car Info Panel */}
+
+                <View style={styles.content}>
                   <View style={{ paddingBottom: 10 }}>
-                    <Text
-                      style={{
-                        color: "white",
-                        fontFamily: "bold",
-                        fontSize: 22,
-                      }}
-                    >
+                    <Text style={styles.carName}>
                       {item.company} {item.name}
                     </Text>
                   </View>
-                  <View
-                    style={{
-                      backgroundColor: Color.darkgreen,
-                      borderRadius: 20,
-                    }}
-                  >
-                    <Text
-                      style={{
-                        color: Color.lightgreen,
-                        padding: 10,
-                        fontSize: 14,
-                        fontFamily: "medium",
-                      }}
-                    >
+                  <View style={styles.carPrice}>
+                    <Text style={styles.carPriceText}>
                       Starting Price @ {item.startPrice}
                     </Text>
                   </View>

@@ -13,6 +13,7 @@ const BrandScroll = (props) => {
   const data = category;
   const navigation = useNavigation();
   const getCatLogo = (data) => {
+    //For the Brand Logo
     switch (data) {
       case "tata":
         return require("../../../../assets/Images/Tata.png");
@@ -36,8 +37,13 @@ const BrandScroll = (props) => {
 
   return (
     <View>
+      {/* Title Panel */}
+
       <View style={styles.Headingbar}>
         <Text style={styles.title}>Top Brands</Text>
+
+        {/* View More Panel */}
+
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("Category", { list: category });
@@ -47,6 +53,9 @@ const BrandScroll = (props) => {
           <AntDesign name="arrowright" color="white" size={24} />
         </TouchableOpacity>
       </View>
+
+      {/* Brands Render Panel */}
+
       <View>
         <FlatList
           decelerationRate="fast"
@@ -61,10 +70,11 @@ const BrandScroll = (props) => {
               <TouchableOpacity
                 style={styles.Box}
                 onPress={() => {
-                  //console.log(item.companyid);
                   navigation.navigate("carlist", { id: item.companyid });
                 }}
               >
+                {/* Brand Panel */}
+
                 {item.type === "twoWheeler" ? (
                   <Image source={{ uri: item.logoImg }} style={styles.image} />
                 ) : (
