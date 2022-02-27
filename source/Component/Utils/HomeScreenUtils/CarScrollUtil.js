@@ -15,12 +15,18 @@ import styles from "./UtilStyles/CarScrollUtilStyles";
 import { useSelector } from "react-redux";
 import { AntDesign } from "@expo/vector-icons";
 const CarScroll = (props) => {
+  //Hooks
+
   const navigation = useNavigation();
+
+  //from props
+
   const vehicleList = props.vehicleList;
 
-  //console.log("vehicleList", vehicleList);
   return (
     <View>
+      {/* Title Panel */}
+
       <View style={styles.headingBar}>
         <Text style={styles.title}>Top Model</Text>
         <TouchableOpacity
@@ -32,6 +38,9 @@ const CarScroll = (props) => {
           <AntDesign name="arrowright" color="white" size={24} />
         </TouchableOpacity>
       </View>
+
+      {/* Cars Render Panel */}
+
       <View>
         <FlatList
           data={vehicleList}
@@ -41,9 +50,14 @@ const CarScroll = (props) => {
           showsHorizontalScrollIndicator={false}
           keyExtractor={(_, i) => i.toString()}
           renderItem={({ item, index }) => {
+            //constants
+
             const battery = parseFloat(item.battery.split("hr")[0]);
             const range = parseFloat(item.range.split("k")[0]);
             const speed = parseFloat(item.speed.split("s")[0]);
+
+            /*************rendering************/
+
             return (
               <Pressable
                 style={styles.Box}
@@ -51,12 +65,17 @@ const CarScroll = (props) => {
                   navigation.navigate("CarProfile", { item: item });
                 }}
               >
+                {/* Image Panel */}
+
                 <View style={styles.imgview}>
                   <Image
                     source={{ uri: vehicleList[index].cover }}
                     style={styles.image}
                   />
                 </View>
+
+                {/* Car Name Panel */}
+
                 <View style={{ margin: 15 }}>
                   <Text style={styles.name}>
                     {item.company} {item.name}
@@ -64,6 +83,9 @@ const CarScroll = (props) => {
                   {/* <Text style={styles.price}>
                     Starting @ ₹{item.startPrice}
                   </Text> */}
+
+                  {/* Battery Progress Panel */}
+
                   <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>Battery</Text>
@@ -75,6 +97,9 @@ const CarScroll = (props) => {
                       style={styles.progressBar}
                     />
                   </View>
+
+                  {/* Range Progress Panel */}
+
                   <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>Range</Text>
@@ -86,6 +111,9 @@ const CarScroll = (props) => {
                       style={styles.progressBar}
                     />
                   </View>
+
+                  {/* Speed Progress Panel */}
+
                   <View>
                     <View style={styles.progressView}>
                       <Text style={styles.feature}>

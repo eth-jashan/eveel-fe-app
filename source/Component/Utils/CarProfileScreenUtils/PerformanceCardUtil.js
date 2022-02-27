@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import Color from "../../../../assets/Color";
+import { View, Text } from "react-native";
 import styles from "./UtilStyles/PerformanceCardUtilStyles";
 const PerformanceCard = ({ icon, title, number }) => {
   return (
@@ -13,4 +12,3 @@ const PerformanceCard = ({ icon, title, number }) => {
 };
 
 export default PerformanceCard;
-//facing prob in title

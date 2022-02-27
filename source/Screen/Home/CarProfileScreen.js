@@ -9,21 +9,11 @@ import {
   FlatList,
   TouchableOpacity,
   ScrollView,
-  Alert,
-  Linking,
 } from "react-native";
-// import { View, Text, Image, StyleSheet } from "react-native";
-// import { ScrollView } from "react-native-gesture-handler";
-// import { SafeAreaView } from "react-native-safe-area-context";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
-<<<<<<< HEAD
-// import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
-=======
 import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
 import LinkPreview from "react-native-link-preview";
->>>>>>> b90cfaede2b508486bccceea889c69a8626eb1bd
 import {
-  Ionicons,
   FontAwesome5,
   Feather,
   AntDesign,
@@ -44,108 +34,55 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { addVechile_1 } from "../../Store/action/compareCar";
 import * as Cars from "../../Store/action/likedCars";
-import getCatLogo from "../../Component/Utils/CarProfileScreenUtils/GetCatLogoUtil";
 import BigSlide from "../../Component/Utils/CarProfileScreenUtils/BigSlidePhotoUtil";
 import SmallSlide from "../../Component/Utils/CarProfileScreenUtils/SmallSlidePhotoUtil";
-import YoutubeCard from "../../Component/Utils/CarProfileScreenUtils/YoutubeUtil";
 import FeatureModel from "../../Component/Utils/CarProfileScreenUtils/FeatureModal";
+
+//constants
+
 const { width, height } = Dimensions.get("window");
 
 const CarProfilePage = ({ navigation, route }) => {
+  //hooks
+
   const dispatch = useDispatch();
+
+  //from props
+
   const item = route.params.item;
   const list = route.params?.list;
+
+  //from redux
+
   const companyList = useSelector((state) => state.company.companyList);
-  const comp = companyList.filter((state) => state.companyid == item.companyId);
   const feature = useSelector((state) => state.feature.featureList);
   const likecarList = useSelector((state) => state.likedCars.likedCarList);
+
+  //Input State
+
+  const [colorname, setColorName] = useState();
+  const [indexColor, setIndexColor] = useState();
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  //validation State
+
+  const [likedCar, setLikedCar] = useState(false);
+
+  //Ref
+
   const modalize = useRef();
   const modalizeSafety = useRef();
   const modalizeColor = useRef();
-  const modelizeYoutube = useRef();
+  const modalizeDesc = useRef();
   const topRef = useRef();
   const thumbRef = useRef();
-  const [colorname, setColorName] = useState();
-  const [indexColor, setIndexColor] = useState();
-  const [likedCar, setLikedCar] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [youtubeData, setYoutubeData] = useState(null);
-  // navigation.setOptions({
-  //   headerShown: true,
-  //   headerTitle: "",
-  //   headerTransparent: true,
-  //   headerLeft: () => {
-  //     return (
-  //       <TouchableOpacity
-  //         style={{ marginHorizontal: 15 }}
-  //         onPress={() => {
-  //           props.navigation.navigate('Home');
-  //         }}
-  //       >
-  //         <Ionicons name="arrow-back" color={Color.black} size={25} />
-  //       </TouchableOpacity>
-  //     );
-  //   },
-  //   headerRight: () => {
-  //     return (
-  //       <TouchableOpacity
-  //         style={{
-  //           backgroundColor: Color.darkgrey,
-  //           marginHorizontal: 15,
-  //           borderRadius: 20,
-  //         }}
-  //         onPress={async () => {
-  //           await setLikedCar((prev) => !prev);
-  //           if (!likedCar) {
-  //             await dispatch(Cars.addLikedCar(item.carId));
-  //           } else {
-  //             await dispatch(Cars.dislikedCar(item.carId));
-  //             await dispatch(Cars.fetchLikedCar());
-  //           }
-  //         }}
-  //       >
-  //         <AntDesign
-  //           name={likedCar ? "heart" : "hearto"}
-  //           size={24}
-  //           color={likedCar ? Color.lightgreen : Color.white}
-  //           style={{
-  //             padding: 8,
-  //             alignSelf: "center",
-  //             overflow: "hidden",
-  //           }}
-  //         />
-  //       </TouchableOpacity>
-  //     );
-  //   },
-  // });
 
-<<<<<<< HEAD
-  const openWhatsApp = () => {
-    let url = "whatsapp://send?text=" +
-          `Hey can I get to know about ${item.name}` +
-          "&phone=91" +
-          '9820769479';
-        Linking.openURL(url)
-          .then(data => {
-            console.log("WhatsApp Opened successfully " + data);  //<---Success
-          })
-          .catch(() => {
-            alert("Make sure WhatsApp installed on your device");  //<---Error
-          });
-  }
+  //Constants
 
-=======
-  useEffect(async () => {
-    const link = `https://www.youtube.com/watch?v=${item.youtube}`;
-    const metaData = await LinkPreview.getPreview(link);
-    console.log(item.youtube);
-    await setYoutubeData(metaData);
-  }, []);
+  const comp = companyList.filter((state) => state.companyid == item.companyId);
+ 
 
-  useEffect(() => {
-    console.log("Youtube", youtubeData);
-  }, [youtubeData]);
->>>>>>> b90cfaede2b508486bccceea889c69a8626eb1bd
+  
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
   );
@@ -156,59 +93,7 @@ const CarProfilePage = ({ navigation, route }) => {
     (fe) => fe.name == "gallery" && fe.carid == item.carId
   );
   const likecar = likecarList.filter((car) => car.carId === item.carId);
-  useEffect(() => {
-    if (likecar.length == 0) {
-      setLikedCar(false);
-    } else {
-      setLikedCar(true);
-    }
-  }, []);
-  // console.log(gallery);
-  const onPress = (index, title) => {
-    modalizeColor.current?.open();
-    setIndexColor(index);
-    setColorName(title);
-  };
-  const getCatLogo = (data) => {
-    switch (data) {
-      case "tata":
-        return require("../../../assets/Images/Tata.png");
-
-      case "hyundai":
-        return require("../../../assets/Images/Hyundai.png");
-
-      case "morris garage":
-        return require("../../../assets/Images/MG.png");
-
-      case "audi":
-        return require("../../../assets/Images/Audi.png");
-
-      case "mercedes":
-        return require("../../../assets/Images/Mercedes.png");
-
-      default:
-        null;
-    }
-  };
-  useEffect(
-    () =>
-      navigation.addListener("beforeRemove", (e) => {
-        e.preventDefault();
-        Alert.alert("Are you sure?", "Want to leave car profile", [
-          { text: "Stay", onPress: () => {} },
-          {
-            text: "Leave",
-            // style: "destructive",
-            // If the user confirmed, then we dispatch the action we blocked earlier
-            // This will continue the action that had triggered the removal of the screen
-            onPress: () => {
-              navigation.dispatch(e.data.action);
-            },
-          },
-        ]);
-      }),
-    [navigation]
-  );
+  
   const features = [
     {
       value: item.battery,
@@ -271,6 +156,59 @@ const CarProfilePage = ({ navigation, route }) => {
       ),
     },
   ];
+
+  /***********UseEffects*******/
+  useEffect(() => {
+    if (likecar.length == 0) {
+      setLikedCar(false);
+    } else {
+      setLikedCar(true);
+    }
+  }, []);
+
+  /***********function************/
+
+  const getCatLogo = (data) => {
+    switch (data) {
+      case "tata":
+        return require("../../../assets/Images/Tata.png");
+
+      case "hyundai":
+        return require("../../../assets/Images/Hyundai.png");
+
+      case "morris garage":
+        return require("../../../assets/Images/MG.png");
+
+      case "audi":
+        return require("../../../assets/Images/Audi.png");
+
+      case "mercedes":
+        return require("../../../assets/Images/Mercedes.png");
+
+      default:
+        null;
+    }
+  };
+const openWhatsApp = () => {
+    let url = "whatsapp://send?text=" +
+          `Hey can I get to know about ${item.name}` +
+          "&phone=91" +
+          '9820769479';
+        Linking.openURL(url)
+          .then(data => {
+            console.log("WhatsApp Opened successfully " + data);  //<---Success
+          })
+          .catch(() => {
+            alert("Make sure WhatsApp installed on your device");  //<---Error
+          });
+  }
+
+  const onPress = (index, title) => {
+    modalizeColor.current?.open();
+    setIndexColor(index);
+    setColorName(title);
+  };
+
   const scrollToActiveIndex = (index) => {
     setActiveIndex(index);
     topRef?.current?.scrollToOffset({
@@ -290,23 +228,31 @@ const CarProfilePage = ({ navigation, route }) => {
         animated: true,
       });
     }
-    //scroll flatlists
   };
   const changeState = () => {
-    setLikedCar((prev) => !prev);
+    setLikedCar((prxev) => !prev);
   };
+
+  /**********rendering*********/
   return (
     <View style={styles.screen}>
+      {/* Content Panel */}
+
       <ScrollView
         //stickyHeaderIndices={[0]}
         style={styles.scroll}
       >
+        {/* Bigger Images Slide Panel */}
+
         <BigSlide
           topRef={topRef}
           gallery={gallery}
           carId={item.carId}
           scrollToActiveIndex={scrollToActiveIndex}
         />
+
+        {/* Like Car Panel */}
+
         <TouchableOpacity
           style={{ position: "absolute", alignSelf: "flex-end", marginTop: 30 }}
           onPress={async () => {
@@ -323,16 +269,12 @@ const CarProfilePage = ({ navigation, route }) => {
             name={likedCar ? "heart" : "hearto"}
             size={24}
             color={likedCar ? Color.lightgreen : "white"}
-            style={{
-              margin: 20,
-              backgroundColor: Color.darkgrey,
-              padding: 8,
-              borderRadius: 20,
-              alignSelf: "center",
-              overflow: "hidden",
-            }}
+            style={styles.heart}
           />
         </TouchableOpacity>
+
+        {/*  Smaller Car Image SLide Panel */}
+
         <SmallSlide
           thumbRef={thumbRef}
           gallery={gallery}
@@ -340,7 +282,11 @@ const CarProfilePage = ({ navigation, route }) => {
           activeIndex={activeIndex}
         />
 
+        {/* Brand Info Panel */}
+
         <View style={styles.BrandInfo}>
+          {/* Logo panel */}
+
           <View style={styles.BrandView}>
             {comp[0].type === "car" ? (
               <Image
@@ -356,6 +302,9 @@ const CarProfilePage = ({ navigation, route }) => {
               />
             )}
           </View>
+
+          {/* Car Name */}
+
           <Text style={styles.BrandName}>{item.name.toUpperCase()}</Text>
           <Text style={styles.BrandRate}>
             Starting <Text style={{ color: Color.lightgreen }}>@</Text> ₹
@@ -363,19 +312,13 @@ const CarProfilePage = ({ navigation, route }) => {
           </Text>
         </View>
 
+        {/* Go TO Whatsapp Panel */}
+
         <Pressable
-          onPress={()=>openWhatsApp()}
-          style={{
-            width: "90%",
-            padding: 8,
-            borderColor: Color.lightgreen,
-            borderWidth: 0.75,
-            flexDirection: "row",
-            borderRadius: 8,
-            alignSelf: "center",
-            justifyContent: "space-around",
-            marginVertical: 8,
-          }}
+          style={[
+            styles.button,
+            { borderColor: Color.lightgreen, borderWidth: 0.75 },
+          ]}
         >
           <FontAwesome name="whatsapp" size={24} color={Color.lightgreen} />
           <Text
@@ -388,16 +331,14 @@ const CarProfilePage = ({ navigation, route }) => {
             Enquire on whatsApp
           </Text>
         </Pressable>
+
+        {/* Compare the Car Panel */}
+
         <Pressable
-          style={{
-            width: "90%",
-            padding: 8,
-            backgroundColor: Color.lightgreen,
-            flexDirection: "row",
-            borderRadius: 8,
-            alignSelf: "center",
-            justifyContent: "space-around",
-            marginVertical: 8,
+          style={[styles.button, { backgroundColor: Color.lightgreen }]}
+          onPress={() => {
+            dispatch(addVechile_1(item));
+            navigation.navigate("CarCompare");
           }}
         >
           <MaterialIcons name="compare" size={24} color="black" />
@@ -411,6 +352,8 @@ const CarProfilePage = ({ navigation, route }) => {
             Compare the car
           </Text>
         </Pressable>
+
+        {/* Key Specs Panel */}
 
         <View>
           <Text style={styles.header}>Key Specs</Text>
@@ -430,78 +373,29 @@ const CarProfilePage = ({ navigation, route }) => {
             }}
           />
         </View>
-        {/* <TouchableOpacity
-          style={{
-            backgroundColor: Color.lightgreen,
-            alignSelf: "flex-start",
-            margin: 15,
-            borderRadius: 15,
-          }}
-          onPress={() => {
-            dispatch(addVechile_1(item));
-            props.navigation.navigate("CarCompare", { vehicle1: item });
-          }}
-        >
-          <Text style={{ color: "black", fontFamily: "bold", padding: 10 }}>
-            Compare the car
-          </Text>
-        </TouchableOpacity> */}
+
+        {/* Description Panel */}
+
         <View>
           <Text style={styles.AboutTheCar}>About The Car</Text>
-          <View style={{ margin: 15 }}>
-            <TouchableOpacity
-              onPress={() => {
-                modelizeYoutube.current?.open();
-              }}
-            >
-              <View style={{ flexDirection: "row" }}>
-                <Text
-                  style={{ color: "grey", fontFamily: "light", fontSize: 20 }}
-                >
-                  {youtubeData?.title}
-                  {"  "}
-                  <Ionicons
-                    name="logo-youtube"
-                    size={24}
-                    color={"red"}
-                    style={{ alignSelf: "center" }}
-                  />
-                </Text>
-              </View>
-              <View style={{ alignSelf: "center" }}>
-                <ImageBackground
-                  source={{ uri: youtubeData?.images[0] }}
-                  style={{
-                    width: Dimensions.get("window").width * 0.8,
-                    height: 250,
-                  }}
-                >
-                  <View
-                    style={{
-                      marginTop: 125,
-                      alignSelf: "center",
-                      borderRadius: 25,
-                      backgroundColor: "grey",
-                      opacity: 0.4,
-                    }}
-                  >
-                    <AntDesign
-                      style={{ alignSelf: "center", padding: 10 }}
-                      name="caretright"
-                      size={24}
-                      color={"white"}
-                    />
-                  </View>
-                </ImageBackground>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.description}>
-            <Text style={styles.descText}>{item.description}</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => {
+              modalizeDesc.current?.open();
+            }}
+            style={styles.description}
+          >
+            <Text style={styles.descText}>
+              {item.description.slice(0, 75)}...
+            </Text>
+            <Text style={styles.readMore}>Read more?</Text>
+          </TouchableOpacity>
         </View>
 
+        {/* Modal Panels */}
+
         <View style={{ alignItems: "center" }}>
+          {/* Interior and Exterior Panel */}
+
           <Pressable onPress={() => modalize.current?.open()}>
             <ImageBackground
               resizeMode="cover"
@@ -516,6 +410,8 @@ const CarProfilePage = ({ navigation, route }) => {
               </Text>
             </ImageBackground>
           </Pressable>
+
+          {/* Safety and Comfort Panel */}
 
           <Pressable onPress={() => modalizeSafety.current?.open()}>
             <ImageBackground
@@ -532,6 +428,8 @@ const CarProfilePage = ({ navigation, route }) => {
             </ImageBackground>
           </Pressable>
         </View>
+
+        {/* Variants Panel */}
 
         <View>
           <Text style={styles.header}>Variants</Text>
@@ -557,6 +455,8 @@ const CarProfilePage = ({ navigation, route }) => {
             }}
           />
         </View>
+
+        {/* Color Modal Panel */}
 
         <View style={styles.ColorView}>
           <Text style={styles.header}>Colors</Text>
@@ -586,6 +486,9 @@ const CarProfilePage = ({ navigation, route }) => {
           />
         </View>
       </ScrollView>
+
+      {/* Modals Panel */}
+
       <FeatureModel
         modalize={modalize}
         firstLine={"Exterior"}
@@ -619,19 +522,15 @@ const CarProfilePage = ({ navigation, route }) => {
         </View>
       </Modalize>
       <Modalize
-        modalHeight={Dimensions.get("window").height * 0.6}
-        ref={modelizeYoutube}
+        modalHeight={Dimensions.get("window").height * 0.8}
+        ref={modalizeDesc}
         modalStyle={{ backgroundColor: "black" }}
       >
-        <View
-          style={{
-            backgroundColor: Color.black,
-            padding: 10,
-            justifyContent: "center",
-            alignContent: "center",
-          }}
-        >
-          <View style={{ alignSelf: "center" }}>
+        <View style={styles.ModalView}>
+          <View style={{ margin: 20 }}>
+            <Text style={styles.AboutTheCar}>About the car</Text>
+          </View>
+          <View style={{ marginBottom: 12 }}>
             <YoutubeIframe
               height={250}
               width={Dimensions.get("window").width * 0.98}
@@ -639,6 +538,11 @@ const CarProfilePage = ({ navigation, route }) => {
               play={false}
               videoId={item.youtube}
             />
+          </View>
+          <View style={{ margin: 15 }}>
+            <Text style={[styles.descText, { fontSize: 20 }]}>
+              {item.description}
+            </Text>
           </View>
         </View>
       </Modalize>

@@ -12,24 +12,12 @@ import { useNavigation } from "@react-navigation/native";
 import Color from "../../../assets/Color";
 
 const PhotoSlideScreen = (props) => {
+  //navigator
+
   const navigation = useNavigation();
-  // navigation.setOptions({
-  //   headerShown: true,
-  //   headerTitle: "",
-  //   headerTransparent: true,
-  //   headerLeft: () => {
-  //     return (
-  //       <TouchableOpacity
-  //         style={{ marginHorizontal: 15 }}
-  //         onPress={() => {
-  //           props.navigation.goBack();
-  //         }}
-  //       >
-  //         <Ionicons name="arrow-back" color={Color.lightgreen} size={25} />
-  //       </TouchableOpacity>
-  //     );
-  //   },
-  // });
+
+  //from props
+
   const { gallery, index } = props.route.params;
 
   return (

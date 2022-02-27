@@ -10,8 +10,14 @@ import MapHeader from "../../Component/Utils/PumpSearchScreenUtils/MapHeader";
 //import PumpMapView from "../component/PumpMapView";
 import styles from "./PumpStyles/PumpSearchScreenStyles";
 const PumpSearchScreen = (props) => {
+  //From props
+
   const { origin } = props.route.params;
+
+  //Ref
+
   const bottomSheetRef = useRef(null);
+
   const snapPoints = useMemo(() => ["25%", "50%", "75%"], []);
 
   return (

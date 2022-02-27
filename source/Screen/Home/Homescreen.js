@@ -25,17 +25,29 @@ import { fetch_station } from "../../Store/action/station";
 import { fetchLikedCar } from "../../Store/action/likedCars";
 import AnimatedLottieView from "lottie-react-native";
 const Homescreen = ({ navigation }) => {
+  //hookes
   const dispatch = useDispatch();
+
+  //From redux
   const user = useSelector((state) => state.auth);
   const CList = useSelector((state) => state.company.companyList);
   const VList = useSelector((state) => state.car.vehicleList);
   const carList = useSelector((state) => state.car.carList);
   const scootyList = useSelector((state) => state.car.scootyList);
+
+  //Input states
   const [companyList, setCompanyList] = useState();
   const [vehicleList, setVehicleList] = useState();
+
+  //Validation
   const [empty, setEmpty] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  //CurrentTime
   const hours = new Date().getHours();
   const [greetings, setGreetings] = useState("");
+
+  /*********UseEffect******/
 
   useEffect(() => {
     if (hours < 12) {
@@ -51,6 +63,39 @@ const Homescreen = ({ navigation }) => {
     setCompanyList(CList);
     setVehicleList(VList);
   }, [CList, VList]);
+
+  useEffect(() => {
+    setLoading(true);
+    homeScreenData();
+    setLoading(false);
+  }, [dispatch]);
+
+  // useEffect(() => {
+  //   const backAction = () => {
+  //     Alert.alert("Hold on!", "Are you sure you want to go leave?", [
+  //       {
+  //         text: "Cancel",
+  //         onPress: () => null,
+  //         style: "cancel",
+  //       },
+  //       { text: "YES", onPress: () => BackHandler.exitApp() },
+  //     ]);
+  //     return true;
+  //   };
+  //   if (Platform.OS==='android') {
+  //     const backHandler = BackHandler.addEventListener(
+  //       "hardwareBackPress",
+  //       backAction
+  //     );
+  //     return () => backHandler.remove();
+  //   } else {
+  //     props.navigation.addListener("beforeRemove", (e) => {
+  //       e.preventDefault();
+  //     });
+  //   }
+  // }, [props.navigation]);
+
+  /***********functions***********/
 
   const SelectedCategory = (type) => {
     switch (type) {
@@ -77,7 +122,6 @@ const Homescreen = ({ navigation }) => {
         return;
     }
   };
-  const [loading, setLoading] = useState(true);
 
   const homeScreenData = () => {
     dispatch(fetchCompany());
@@ -87,41 +131,18 @@ const Homescreen = ({ navigation }) => {
     dispatch(fetchLikedCar());
   };
 
-  useEffect(() => {
-    setLoading(true);
-    homeScreenData();
-    setLoading(false);
-  }, [dispatch]);
-  // useEffect(() => {
-  //   const backAction = () => {
-  //     Alert.alert("Hold on!", "Are you sure you want to go leave?", [
-  //       {
-  //         text: "Cancel",
-  //         onPress: () => null,
-  //         style: "cancel",
-  //       },
-  //       { text: "YES", onPress: () => BackHandler.exitApp() },
-  //     ]);
-  //     return true;
-  //   };
-  //   if (Platform.OS==='android') {
-  //     const backHandler = BackHandler.addEventListener(
-  //       "hardwareBackPress",
-  //       backAction
-  //     );
-  //     return () => backHandler.remove();
-  //   } else {
-  //     props.navigation.addListener("beforeRemove", (e) => {
-  //       e.preventDefault();
-  //     });
-  //   }
-  // }, [props.navigation]);
   return (
     <View style={styles.screen}>
+      {/* Loading panel */}
+
       {/* {loading ? (
         <HomeScreenLoadingUtil />
       ) : ( */}
+
+      {/* Rendered Panel */}
       <View style={styles.LoadedScreen}>
+        {/* Header Panel */}
+
         <View style={styles.heading}>
           <View style={{ flexDirection: "row" }}>
             <Image
@@ -144,10 +165,15 @@ const Homescreen = ({ navigation }) => {
             />
           </TouchableOpacity>
         </View>
+
+        {/* Screen Content panel */}
+
         <ScrollView
           contentContainerStyle={styles.screenscroll}
           showsVerticalScrollIndicator={false}
         >
+          {/* Greeting Panel */}
+
           <View style={styles.TitleView}>
             <Text style={styles.welcome}>
               Good {greetings}, {user.first_name}
@@ -155,28 +181,33 @@ const Homescreen = ({ navigation }) => {
             <Text style={styles.slogan}>Let's find the perfect</Text>
             <Text style={styles.title}>Electric Vehicle ⚡ </Text>
           </View>
+
+          {/* Banner panel */}
+
           <HomeBanner />
+
+          {/* Categore selection Panel */}
+
           <CategorySelection selected={SelectedCategory} />
+
+          {/* Brand scroll Panel */}
+
           {!empty && <BrandScroll companyList={companyList} />}
+
+          {/* Car Scroll Panel */}
+
           {!empty && <CarScroll vehicleList={vehicleList} />}
+
+          {/* Coming Soon Panel */}
+
           {empty && (
-            <View style={{ paddingTop: 50 }}>
+            <View style={styles.commingSoon}>
               <AnimatedLottieView
-                style={{ alignSelf: "center", width: 200, height: 200 }}
+                style={styles.lottie}
                 autoPlay={true}
                 source={require("../../../assets/lottie-files/21538-timer-countdown.json")}
               />
-              <Text
-                style={{
-                  padding: 10,
-                  color: Color.lightgreen,
-                  fontFamily: "bold",
-                  fontSize: 24,
-                  textAlign: "center",
-                }}
-              >
-                Coming Soon
-              </Text>
+              <Text style={styles.comingText}>Coming Soon</Text>
             </View>
           )}
         </ScrollView>

@@ -10,17 +10,39 @@ import firebase from "firebase";
 import { useDispatch } from "react-redux";
 import { AddPhoneNumber } from "../../Store/action/auth";
 import { getContacts } from "../../Store/action/contact";
+import styles from "./LoginStyles/NumberVerificationScreenStyles";
 const NumberVerification = (props) => {
+  //hooks
+
   const dispatch = useDispatch();
+
+  //Inout states
+
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [inNumber, setinNumber] = useState(true);
   const [VerificationId, setVerificationId] = useState(null);
-  const recaptchaVerifier = useRef(null);
   const [send, setsend] = useState({});
+
+  //Validation State
+
+  const [inNumber, setinNumber] = useState(true);
+
+  //Ref
+
+  const recaptchaVerifier = useRef(null);
+
+  /************UseEffect************/
+
+  useEffect(() => {
+    if (send.number) {
+      dispatch(AddPhoneNumber(send.number, send.uid, send.token));
+      dispatch(getContacts(send.uid));
+    }
+  }, [send]);
+
+  /**********functions************/
 
   const sendVerification = (num) => {
     const phoneProvider = new firebase.auth.PhoneAuthProvider();
-    //console.log(phoneProvider, num);
     phoneProvider
       .verifyPhoneNumber(num, recaptchaVerifier.current)
       .then(setVerificationId)
@@ -38,12 +60,6 @@ const NumberVerification = (props) => {
     try {
       const response = await firebase.auth().signInWithCredential(credential);
       const token = await response.user.getIdToken(true);
-      // `console.log("User :", response.additionalUserInfo.isNewUser);
-      // console.log("Number :", response.user.phoneNumber);
-      // console.log("Email :", response.user.email);
-      // console.log("name ", response.user.displayName);
-      // console.log("Token:", token);
-      // console.log("UID:", response.user.uid);`
       setsend({
         number: response.user.phoneNumber,
         token: token,
@@ -59,12 +75,6 @@ const NumberVerification = (props) => {
       }
     }
   };
-  useEffect(() => {
-    if (send.number) {
-      dispatch(AddPhoneNumber(send.number, send.uid, send.token));
-      dispatch(getContacts(send.uid));
-    }
-  }, [send]);
 
   const changeToOtp = (number) => {
     setPhoneNumber("+91" + number);
@@ -79,6 +89,8 @@ const NumberVerification = (props) => {
   const ValueOtp = (code) => {
     confirmCode(code);
   };
+
+  /***********rendering***********/
   return (
     <SafeAreaView style={styles.screen}>
       {inNumber && <PNumber change={changeToOtp} send={sendVerification} />}
@@ -90,12 +102,5 @@ const NumberVerification = (props) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    backgroundColor: Color.black,
-  },
-});
 
 export default NumberVerification;

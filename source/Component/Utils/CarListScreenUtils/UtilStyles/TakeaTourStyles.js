@@ -13,13 +13,13 @@ const styles = StyleSheet.create({
     backgroundColor: Color.lightgreen,
     width: "90%",
     borderRadius: 12,
-    alignSelf:'center'
+    alignSelf: "center",
   },
   Buttontext: {
     fontSize: 18,
     color: Color.darkgreen,
     // margin: 10,
-    padding:8,
+    padding: 8,
     alignSelf: "center",
     fontFamily: "semibold",
   },

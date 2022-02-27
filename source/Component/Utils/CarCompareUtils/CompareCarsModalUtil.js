@@ -1,143 +1,83 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  Image,
-  Dimensions,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native";
-import Color from "../../../../assets/Color";
+import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import DifferenceBox from "./DifferenceBoxUtil";
 import { MaterialIcons } from "@expo/vector-icons";
+import styles from "./Styles/CompareCarsModalUtilStyle";
 
 const CompareCarsUtil = (props) => {
+  //From Props
   const vehicle1 = props.vehicle1;
   const vehicle2 = props.vehicle2;
+
+  //Validation State
+
   const [moreSpecs, setMoreSpecs] = useState(false);
+
+  /************Rendering***********/
   return (
-    <ScrollView style={{ paddingTop: 80 }}>
-      <View style={{ paddingBottom: 250 }}>
+    <ScrollView style={styles.scroll}>
+      <View style={styles.screen}>
         <View>
-          <View style={{ flexDirection: "row", alignSelf: "center" }}>
-            <View style={{ paddingRight: 10 }}>
-              <Image
-                style={{
-                  width: Dimensions.get("screen").width / 2.2,
-                  height: 100,
-                  borderTopLeftRadius: 20,
-                }}
-                source={{ uri: vehicle1.cover }}
-              />
+          {/* Car Image Compare Panel */}
+
+          <View style={styles.images}>
+            <View style={styles.leftimageView}>
+              <Image style={styles.image} source={{ uri: vehicle1.cover }} />
             </View>
             <View>
-              <Image
-                style={{
-                  width: Dimensions.get("screen").width / 2.2,
-                  height: 100,
-                  borderTopRightRadius: 20,
-                }}
-                source={{ uri: vehicle2.cover }}
-              />
+              <Image style={styles.image} source={{ uri: vehicle2.cover }} />
             </View>
           </View>
-          <View
-            style={{
-              backgroundColor: Color.darkgrey,
-              position: "absolute",
-              alignSelf: "center",
-              marginTop: 30,
-              padding: 8,
-              borderRadius: 20,
-            }}
-          >
-            <Text
-              style={{
-                color: "white",
-                fontSize: 18,
-                alignSelf: "center",
-                fontFamily: "bold",
-              }}
-            >
-              vs
-            </Text>
+
+          {/* VS panel */}
+
+          <View style={styles.VS}>
+            <Text style={styles.VSText}>vs</Text>
           </View>
         </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            margin: 15,
-          }}
-        >
-          <View style={{ marginHorizontal: 15 }}>
+
+        {/* Car Basic Info Panel */}
+
+        <View style={styles.carname}>
+          <View style={styles.carnameView}>
             <View>
-              <Text style={{ color: "white", fontFamily: "bold" }}>
-                {vehicle1.name}
-              </Text>
-              <Text style={{ color: "white", fontFamily: "medium" }}>
+              <Text style={styles.carnameText}>{vehicle1.name}</Text>
+              <Text style={styles.carPriceText}>
                 ₹{vehicle1.startPrice} onwards
               </Text>
             </View>
           </View>
 
-          <View style={{ marginHorizontal: 15 }}>
+          <View style={styles.carnameView}>
             <View>
-              <Text
-                style={{
-                  color: "white",
-                  fontFamily: "bold",
-                  textAlign: "right",
-                }}
-              >
+              <Text style={[styles.carnameText, { textAlign: "right" }]}>
                 {vehicle2.name}
               </Text>
-              <Text
-                style={{
-                  color: "white",
-                  fontFamily: "medium",
-                  textAlign: "right",
-                }}
-              >
+              <Text style={[styles.carPriceText, { textAlign: "right" }]}>
                 ₹{vehicle2.startPrice} onwards
               </Text>
             </View>
           </View>
         </View>
+
+        {/* Change 2 car to compare with button Panel */}
+
         <TouchableOpacity
-          style={{
-            alignSelf: "flex-end",
-            marginHorizontal: 30,
-            backgroundColor: Color.darkgrey,
-            padding: 10,
-            borderRadius: 10,
-          }}
+          style={styles.compareCarButton}
           onPress={() => {
             props.selected();
           }}
         >
-          <Text
-            style={{
-              color: "white",
-              fontSize: 14,
-              alignSelf: "center",
-              fontFamily: "bold",
-            }}
-          >
-            Change Car
-          </Text>
+          <Text style={styles.compareCarButtonText}>Change Car</Text>
         </TouchableOpacity>
-        <View style={{ margin: 15 }}>
+
+        {/* Car Features Compare Panel */}
+
+        <View style={styles.title}>
+          {/* Basic Info Panel */}
+
           <View>
-            <Text
-              style={{
-                color: "white",
-                fontFamily: "black",
-                fontSize: 24,
-              }}
-            >
-              Basic Information
-            </Text>
+            <Text style={styles.titleText}>Basic Information</Text>
           </View>
           <DifferenceBox
             title="Brand name"
@@ -150,17 +90,12 @@ const CompareCarsUtil = (props) => {
             car2={`₹${vehicle2.startPrice}`}
           />
         </View>
-        <View style={{ margin: 15 }}>
+
+        {/* Specific Info Panel */}
+
+        <View style={styles.title}>
           <View>
-            <Text
-              style={{
-                color: "white",
-                fontFamily: "black",
-                fontSize: 24,
-              }}
-            >
-              Specifications
-            </Text>
+            <Text style={styles.titleText}>Specifications</Text>
           </View>
           <DifferenceBox
             title="Horse"
@@ -182,6 +117,9 @@ const CompareCarsUtil = (props) => {
             car1={vehicle1.speed}
             car2={vehicle2.speed}
           />
+
+          {/* View More Button Panel */}
+
           {moreSpecs && (
             <View>
               <DifferenceBox
@@ -192,24 +130,12 @@ const CompareCarsUtil = (props) => {
             </View>
           )}
           <TouchableOpacity
-            style={{
-              margin: 15,
-              borderBottomWidth: 1,
-              borderColor: "white",
-              alignSelf: "flex-start",
-              flexDirection: "row",
-            }}
+            style={styles.viewMore}
             onPress={() => {
               setMoreSpecs((state) => !state);
             }}
           >
-            <Text
-              style={{
-                color: "white",
-                alignSelf: "center",
-                fontSize: 16,
-              }}
-            >
+            <Text style={styles.viewMoreText}>
               View {moreSpecs ? "Less" : "More"}
             </Text>
             <MaterialIcons

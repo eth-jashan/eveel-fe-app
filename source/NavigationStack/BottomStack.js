@@ -4,6 +4,7 @@ import { Feather, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import Feedscreen from "../Screen/Feed/Feedscreen";
 import Homescreen from "../Screen/Home/Homescreen";
 import PumpTabScreen from "../Screen/Pump/PumpTabScreen";
+import SocialScreen from "../Screen/Feed/SocialScreen";
 
 const BottomStack = createMaterialBottomTabNavigator();
 const BottomNav = () => {
@@ -26,6 +27,10 @@ const BottomNav = () => {
       }}
       shifting={true}
     >
+
+      {/* Home screen Panel */}
+
+
       <BottomStack.Screen
         name="Home_Bottom"
         component={Homescreen}
@@ -35,6 +40,11 @@ const BottomNav = () => {
           },
         }}
       />
+
+
+      {/* Pump Screen Panel */}
+
+
       <BottomStack.Screen
         name="Pump"
         component={PumpTabScreen}
@@ -52,7 +62,7 @@ const BottomNav = () => {
       />
       <BottomStack.Screen
         name="Feed"
-        component={Feedscreen}
+        component={SocialScreen}
         options={{
           tabBarIcon: ({ color, focused }) => {
             return <Feather name="tv" size={25} color={color} />;

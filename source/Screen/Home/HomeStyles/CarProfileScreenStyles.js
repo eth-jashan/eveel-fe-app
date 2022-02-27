@@ -1,6 +1,7 @@
-import React from "react";
 import { StyleSheet, Dimensions } from "react-native";
 import Color from "../../../../assets/Color";
+
+const { width, height } = Dimensions.get("screen");
 const styles = StyleSheet.create({
   screen: { backgroundColor: Color.black, flex: 1 },
   scroll: { height: 15000 },
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     fontFamily: "header",
     color: Color.white,
     alignSelf: "center",
-    textAlign:'center'
+    textAlign: "center",
   },
   Constyle: {
     alignSelf: "center",
@@ -115,6 +116,31 @@ const styles = StyleSheet.create({
     height: Dimensions.get("window").height * 0.75,
     backgroundColor: Color.black,
     padding: 10,
+  },
+  heart: {
+    margin: 20,
+    backgroundColor: Color.darkgrey,
+    padding: 8,
+    borderRadius: 20,
+    alignSelf: "center",
+    overflow: "hidden",
+  },
+  readMore: {
+    fontFamily: "bold",
+    color: Color.lightgreen,
+    textAlign: "center",
+    fontSize: 20,
+    padding: 10,
+  },
+  button: {
+    width: "90%",
+    padding: 8,
+
+    flexDirection: "row",
+    borderRadius: 8,
+    alignSelf: "center",
+    justifyContent: "space-around",
+    marginVertical: 8,
   },
   ModalHeader: {
     marginTop: 16,

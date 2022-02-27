@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { Dimensions, TouchableOpacity } from "react-native";
-import { StyleSheet, View, Text, SafeAreaView } from "react-native";
+import { View, Text, Dimensions, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";
+import styles from "./Styles.js/NumberStyles";
 
 const PNumber = (props) => {
+  //Inout State
+
   const [phonenumber, setPhoneNumber] = useState("");
+
+  /***********Functions***********/
+
   const validate = () => {
     if (phonenumber.length != 10) {
       alert("Enter a valid number");
@@ -17,32 +22,21 @@ const PNumber = (props) => {
     }
     props.change(phonenumber);
   };
+
+  /************Rendering***********/
   return (
     <View>
-      <View style={{ margin: 15, paddingTop: 30 }}>
-        <Text style={{ color: Color.white, fontFamily: "bold", fontSize: 28 }}>
-          Enter Phone number
-        </Text>
+      {/* Title Panel */}
+
+      <View style={styles.title}>
+        <Text style={styles.titleText}>Enter Phone number</Text>
       </View>
-      <View
-        style={{
-          backgroundColor: Color.darkgrey,
-          margin: 15,
-          padding: 10,
-          borderRadius: 10,
-          flexDirection: "row",
-        }}
-      >
+
+      {/* Input Panel */}
+
+      <View style={styles.inputBox}>
         <View>
-          <Text
-            style={{
-              fontSize: 24,
-              color: "white",
-              paddingRight: 10,
-            }}
-          >
-            +91
-          </Text>
+          <Text style={styles.countryCode}>+91</Text>
         </View>
         <TextInput
           placeholder="Phone number"
@@ -52,40 +46,25 @@ const PNumber = (props) => {
           onChangeText={(num) => {
             setPhoneNumber(num);
           }}
-          style={{ fontSize: 24, color: Color.white }}
+          style={styles.input}
         />
       </View>
-      <View style={{ marginHorizontal: 15 }}>
-        <Text style={{ color: "white", fontSize: 18, fontFamily: "medium" }}>
+      <View style={styles.desc}>
+        <Text style={styles.descText}>
           We'll send you code by SMS to confirm your phone number.
         </Text>
       </View>
-      <View
-        style={{
-          alignSelf: "center",
-          paddingTop: 100,
-        }}
-      >
+
+      {/* Submit Button Panel */}
+
+      <View style={styles.ButtonBox}>
         <TouchableOpacity
-          style={{
-            backgroundColor: Color.darkgreen,
-            padding: 15,
-            borderRadius: 20,
-          }}
+          style={styles.button}
           onPress={() => {
             validate();
           }}
         >
-          <Text
-            style={{
-              color: Color.white,
-              fontFamily: "bold",
-              fontSize: 20,
-              paddingHorizontal: 10,
-            }}
-          >
-            Next
-          </Text>
+          <Text style={styles.buttonText}>Next</Text>
         </TouchableOpacity>
       </View>
     </View>

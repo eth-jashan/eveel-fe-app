@@ -8,20 +8,12 @@ import {
 } from "react-native";
 import Color from "../../../../assets/Color";
 import AnimatedLottieView from "lottie-react-native";
+import styles from "./Styles/SelectoptionUtilStyles";
 const SelectOptionUtil = (props) => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: Color.black }}>
+    <SafeAreaView style={styles.screen}>
       <View style={{ margin: 15 }}>
-        <Text
-          style={{
-            fontFamily: "bold",
-            color: "white",
-            fontSize: 24,
-            textAlign: "center",
-          }}
-        >
-          Select Pre-Owned Vehicle
-        </Text>
+        <Text style={styles.title}>Select Pre-Owned Vehicle</Text>
       </View>
       <TouchableOpacity
         onPress={() => {
@@ -29,28 +21,15 @@ const SelectOptionUtil = (props) => {
         }}
       >
         <AnimatedLottieView
-          style={{
-            alignSelf: "center",
-            maxWidth: 300,
-            height: 300,
-          }}
+          style={styles.lottie}
           autoPlay={true}
           source={require("../../../../assets/lottie-files/60229-car-animation.json")}
           // OR find more Lottie files @ https://lottiefiles.com/featured
           // Just click the one you like, place that file in the 'assets' folder to the left, and replace the above 'require' statement
         />
       </TouchableOpacity>
-      <View style={{ margin: 15 }}>
-        <Text
-          style={{
-            fontFamily: "bold",
-            color: Color.lightgreen,
-            fontSize: 24,
-            textAlign: "center",
-          }}
-        >
-          Or
-        </Text>
+      <View style={styles.or}>
+        <Text style={styles.orText}>Or</Text>
       </View>
       <TouchableOpacity
         onPress={() => {
@@ -58,11 +37,7 @@ const SelectOptionUtil = (props) => {
         }}
       >
         <AnimatedLottieView
-          style={{
-            alignSelf: "center",
-            maxWidth: 300,
-            height: 300,
-          }}
+          style={styles.lottie}
           autoPlay={true}
           source={require("../../../../assets/lottie-files/86989-scooter.json")}
           // OR find more Lottie files @ https://lottiefiles.com/featured

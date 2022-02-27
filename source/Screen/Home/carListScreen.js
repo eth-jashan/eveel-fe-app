@@ -1,8 +1,4 @@
-import React from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
-import { useCallback } from "react";
-import { useState } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import {
   View,
   Animated,
@@ -16,23 +12,24 @@ import {
   Directions,
   FlingGestureHandler,
   State,
-  TouchableOpacity,
 } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Transition, Transitioning } from "react-native-reanimated";
-
 import StaggeringView from "../../Component/Common/StaggeringView";
-
-import TakeaTour from "../../Component/Utils/CarListScreenUtils/TakeaTourUtil";
 import TitleInfo from "../../Component/Utils/CarListScreenUtils/TitleUtil";
 import DetailView from "../../Component/Utils/CarListScreenUtils/DetailUtil";
-import { data } from "../../../model/Data/cardata";
 import { useSelector } from "react-redux";
 import Color from "../../../assets/Color";
+import styles from "./HomeStyles/carListScreenStyles";
+
+//constants
 
 export const TITLE_SIZE = 50;
 export const PRICE_SIZE = 40;
 export const DURATION = 700;
+const { width, height } = Dimensions.get("screen");
+
+//Animation
 
 const transition = (
   <Transition.Together>
@@ -50,26 +47,35 @@ const transition = (
   </Transition.Together>
 );
 
-const { width, height } = Dimensions.get("screen");
-
 const CarListScreen = ({ navigation, route }) => {
+  //from props
+
   const List = route.params.list
     ? route.params.list
     : useSelector((x) => x.car.vehicleList);
-  //console.log(List);
   const catid = route.params?.id;
-  const featureList = ["battery", "speed", "horsepower", "singleCharge"];
-  const [index, setIndex] = useState(0);
-  const activeIndex = useRef(new Animated.Value(0)).current;
-  const animation = useRef(new Animated.Value(0)).current;
-  const ref = useRef();
-  //console.log("LISTT===>", List);
+
+  //constants
+
   let carList = List;
-  //console.log(catid);
-  //console.log(carList[0]);
+
+  //For specific company
+
   if (catid !== undefined) {
     carList = List?.filter((item) => item.companyId == catid);
   }
+
+  //Input state
+
+  const [index, setIndex] = useState(0);
+
+  //ref
+
+  const activeIndex = useRef(new Animated.Value(0)).current;
+  const animation = useRef(new Animated.Value(0)).current;
+  const ref = useRef();
+
+  /***********UseEffect***********/
 
   useEffect(() => {
     Animated.timing(animation, {
@@ -78,6 +84,8 @@ const CarListScreen = ({ navigation, route }) => {
       useNativeDriver: true,
     }).start();
   }, []);
+
+  /***********functions**********/
 
   const setActiveIndex = useCallback((newIndex) => {
     activeIndex.setValue(newIndex);
@@ -89,8 +97,6 @@ const CarListScreen = ({ navigation, route }) => {
     inputRange: [-1, 0, 1],
     outputRange: [height, 0, -height],
   });
-
-  //("carlist", carList);
 
   return (
     <FlingGestureHandler
@@ -105,6 +111,8 @@ const CarListScreen = ({ navigation, route }) => {
         }
       }}
     >
+      {/* Gesture Handler Panel */}
+
       <FlingGestureHandler
         key="down"
         direction={Directions.DOWN}
@@ -117,9 +125,11 @@ const CarListScreen = ({ navigation, route }) => {
           }
         }}
       >
-        <SafeAreaView
-          style={{ height: height, width: width, backgroundColor: "red" }}
-        >
+        {/* Content Panel */}
+
+        <SafeAreaView style={styles.screen}>
+          {/* Animation Panel */}
+
           <Animated.View
             style={[
               StyleSheet.absoluteFillObject,
@@ -133,39 +143,44 @@ const CarListScreen = ({ navigation, route }) => {
               return (
                 <View
                   key={i}
-                  style={{
-                    height: height,
-                    backgroundColor: i % 2 === 0 ? "black" : "white",
-                    width: width,
-                  }}
+                  style={[
+                    styles.carlist,
+                    { backgroundColor: i % 2 === 0 ? "black" : "white" },
+                  ]}
                 ></View>
               );
             })}
           </Animated.View>
+
+          {/* Transition Panel */}
+
           <Transitioning.View
             ref={ref}
             transition={transition}
             style={{ width: width }}
           >
+            {/* Title panel */}
+
             <TitleInfo
               title_size={TITLE_SIZE}
               index={index}
               color={index % 2 === 0 ? "white" : "black"}
               text={carList[index].name}
             />
+
+            {/* Detail Panel */}
+
             <DetailView
               data={carList}
               index={index}
               color={index % 2 === 0 ? "white" : "black"}
             />
 
-            <StaggeringView
-              delay={1000}
-              key={index}
-              style={{ width: 315, height: 150, alignSelf: "center", top: 75 }}
-            >
+            {/* Car Animation panel */}
+
+            <StaggeringView delay={1000} key={index} style={styles.carAnimate}>
               <Image
-                style={{ width: "100%", height: "100%" }}
+                style={styles.car}
                 source={{
                   uri: carList[index].sideView,
                 }}
@@ -173,16 +188,12 @@ const CarListScreen = ({ navigation, route }) => {
               />
             </StaggeringView>
           </Transitioning.View>
+
+          {/* TO Car Profile Button Panel */}
+
           <Pressable
             //key={`priceInfo-${index}`}
-            style={{
-              backgroundColor: Color.lightgreen,
-              width: "90%",
-              borderRadius: 12,
-              alignSelf: "center",
-              position: "absolute",
-              bottom: 50,
-            }}
+            style={styles.button}
             onPress={() => {
               //console.log('heyyyy', carList[index])
               navigation.navigate("CarProfile", {
@@ -191,24 +202,12 @@ const CarListScreen = ({ navigation, route }) => {
               });
             }}
           >
-            <Text
-              style={{
-                fontSize: 18,
-                color: Color.darkgreen,
-                padding: 8,
-                alignSelf: "center",
-                fontFamily: "semibold",
-              }}
-            >
-              Take a Tour
-            </Text>
+            <Text style={styles.buttonText}>Take a Tour</Text>
           </Pressable>
         </SafeAreaView>
       </FlingGestureHandler>
     </FlingGestureHandler>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default CarListScreen;

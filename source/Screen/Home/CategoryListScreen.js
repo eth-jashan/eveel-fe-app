@@ -1,7 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
 import {
   View,
   Text,
@@ -13,33 +11,24 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import Color from "../../../assets/Color";
 import styles from "./HomeStyles/CategoryListScreenStyles";
-import { category } from "../../../model/Data/dummyData";
-import { useSelector } from "react-redux";
 
 const { width, height } = Dimensions.get("screen");
 
 const CategoryScreen = ({ navigation, route }) => {
-  const url1 =
-    "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FExtraImages%2F20200904110617_EQC-front-track.jpg&h=795&w=1200&c=1";
-  const url2 =
-    "https://ev-database.org/img/auto/Mercedes_EQC/Mercedes_EQC-01.jpg";
+  //from props
 
-  const [mainImage, setMainImage] = useState([
-    { index: "1", uri: url1 },
-    { index: "2", uri: url2 },
-    { index: "3", uri: url1 },
-    { index: "4", uri: url2 },
-    { index: "5", uri: url1 },
-    { index: "6", uri: url2 },
-    { index: "7", uri: url1 },
-    { index: "7", uri: url2 },
-  ]);
-  const category = route.params?.list;
-  const data = category;
+  const data = route.params?.list;
+
+  //Ref
 
   const scrollX = React.useRef(new Animated.Value(0)).current;
+
+  //constants
   const ITEM_SIZE = width * 0.72;
   const SPACER_SIZE = (width - ITEM_SIZE) / 2;
+
+  /************functions***********/
+
   const getCatLogo = (data) => {
     switch (data) {
       case "tata":
@@ -61,31 +50,14 @@ const CategoryScreen = ({ navigation, route }) => {
         null;
     }
   };
-  // const getCatName = (data) => {
-  //   switch (data) {
-  //     case "tata":
-  //       return "Tata";
 
-  //     case "hyundai":
-  //       return "Hyundai";
-
-  //     case "morris and garage":
-  //       return "Morris & Garage";
-
-  //     case "audi":
-  //       return "Audi";
-
-  //     case "mercedes":
-  //       return "Mercedes";
-
-  //     default:
-  //       null;
-  //   }
-  // };
   return (
     <SafeAreaView style={styles.Screen}>
+      {/* Rendering Categories */}
+
+      {/* Background Images */}
+
       {data.map((item, index) => {
-        //console.log("ITEM+++++>",item.backgroundImg);
         return (
           <Animated.Image
             key={index}
@@ -110,10 +82,16 @@ const CategoryScreen = ({ navigation, route }) => {
           />
         );
       })}
+
+      {/* Linear Gradient Added to Background */}
+
       <LinearGradient
         colors={["rgba(0, 0, 0, 0.3)", Color.black]}
         style={styles.gradient}
       />
+
+      {/* Content Panel */}
+
       <View style={styles.Scrolling}>
         <Animated.FlatList
           showsHorizontalScrollIndicator={false}
@@ -138,6 +116,7 @@ const CategoryScreen = ({ navigation, route }) => {
                   styles.BrandView,
                 ]}
               >
+                {/* Brand Logo Panel */}
                 {item.type === "car" ? (
                   <Image
                     resizeMode="contain"
@@ -151,11 +130,17 @@ const CategoryScreen = ({ navigation, route }) => {
                     source={{ uri: item.logoImg }}
                   />
                 )}
+
+                {/* Brand Name */}
+
                 <Text style={styles.Title}>
                   {item.name !== "morris and garage"
                     ? item.name.toUpperCase()
                     : "MG"}
                 </Text>
+
+                {/* Take a tour Panel */}
+
                 <Pressable
                   onPress={() => {
                     //console.log(item);

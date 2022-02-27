@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   modal: { backgroundColor: "black" },
   styleUp: {
+    marginHorizontal: 15,
     padding: 16,
   },
   styleDown: {

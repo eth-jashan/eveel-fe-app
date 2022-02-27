@@ -37,6 +37,15 @@ const styles = StyleSheet.create({
     // paddingTop: 10,
   },
   title: { fontSize: 30, color: Color.lightgreen, fontFamily: "bold" },
+  comingSoon: { paddingTop: 50 },
+  lottie: { alignSelf: "center", width: 200, height: 200 },
+  comingText: {
+    padding: 10,
+    color: Color.lightgreen,
+    fontFamily: "bold",
+    fontSize: 24,
+    textAlign: "center",
+  },
 });
 
 export default styles;

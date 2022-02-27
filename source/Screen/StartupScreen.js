@@ -18,7 +18,6 @@ const StartupScreen = (props) => {
     firebase.auth().onAuthStateChanged(async (user) => {
       if (user) {
         await call_function(user);
-        //console.log("CAR=====>", car);
         setIsLogged(true);
       } else {
         props.navigation.navigate("Login");
