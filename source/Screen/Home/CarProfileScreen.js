@@ -9,6 +9,7 @@ import {
   FlatList,
   TouchableOpacity,
   ScrollView,
+  Linking,
 } from "react-native";
 import PerformanceCard from "../../Component/Utils/CarProfileScreenUtils/PerformanceCardUtil";
 import ParallaxGallery from "../../Component/Utils/CarProfileScreenUtils/ParallaxGalleryUtil";
@@ -80,9 +81,7 @@ const CarProfilePage = ({ navigation, route }) => {
   //Constants
 
   const comp = companyList.filter((state) => state.companyid == item.companyId);
- 
 
-  
   const exteriorFeature = feature.filter(
     (fe) => fe.name == "ext" && fe.carid == item.carId
   );
@@ -93,7 +92,7 @@ const CarProfilePage = ({ navigation, route }) => {
     (fe) => fe.name == "gallery" && fe.carid == item.carId
   );
   const likecar = likecarList.filter((car) => car.carId === item.carId);
-  
+
   const features = [
     {
       value: item.battery,
@@ -189,19 +188,20 @@ const CarProfilePage = ({ navigation, route }) => {
         null;
     }
   };
-const openWhatsApp = () => {
-    let url = "whatsapp://send?text=" +
-          `Hey can I get to know about ${item.name}` +
-          "&phone=91" +
-          '9820769479';
-        Linking.openURL(url)
-          .then(data => {
-            console.log("WhatsApp Opened successfully " + data);  //<---Success
-          })
-          .catch(() => {
-            alert("Make sure WhatsApp installed on your device");  //<---Error
-          });
-  }
+  const openWhatsApp = () => {
+    let url =
+      "whatsapp://send?text=" +
+      `Hey can I get to know about ${item.name}` +
+      "&phone=91" +
+      "9820769479";
+    Linking.openURL(url)
+      .then((data) => {
+        console.log("WhatsApp Opened successfully " + { item }); //<---Success
+      })
+      .catch(() => {
+        alert("Make sure WhatsApp installed on your device"); //<---Error
+      });
+  };
 
   const onPress = (index, title) => {
     modalizeColor.current?.open();
@@ -314,11 +314,14 @@ const openWhatsApp = () => {
 
         {/* Go TO Whatsapp Panel */}
 
-        <Pressable
+        <TouchableOpacity
           style={[
             styles.button,
             { borderColor: Color.lightgreen, borderWidth: 0.75 },
           ]}
+          onPress={() => {
+            openWhatsApp();
+          }}
         >
           <FontAwesome name="whatsapp" size={24} color={Color.lightgreen} />
           <Text
@@ -330,7 +333,7 @@ const openWhatsApp = () => {
           >
             Enquire on whatsApp
           </Text>
-        </Pressable>
+        </TouchableOpacity>
 
         {/* Compare the Car Panel */}
 
