@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import styles from "./PumpStyles/PumpTabScreenStyles";
 import * as Location from "expo-location";
+import AnimatedLottieView from "lottie-react-native";
+import loading from "../../../assets/lottie-files/lf30_editor_iqijcc4z.json";
 const PumpTabScreen = (props) => {
   //constant
   const GOOGLE_MAPS_APIKEY = "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88";
@@ -54,7 +56,15 @@ const PumpTabScreen = (props) => {
 
   return (
     <View style={styles.screen}>
-      {!errorMsg && <Text style={styles.title}>Loading...</Text>}
+      {!errorMsg && (
+        <AnimatedLottieView
+          style={styles.lottie}
+          autoPlay={true}
+          source={loading}
+          // OR find more Lottie files @ https://lottiefiles.com/featured
+          // Just click the one you like, place that file in the 'assets' folder to the left, and replace the above 'require' statement
+        />
+      )}
       {errorMsg && <Text style={styles.title}>{errorMsg}</Text>}
     </View>
   );

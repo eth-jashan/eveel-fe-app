@@ -100,7 +100,7 @@ const DetailView = ({ data, color, index }) => {
               size={24}
               color={Color.lightgreen}
             />
-            <Text style={styles.feaText}>Range</Text>
+            <Text style={styles.feaText}>0-100Km/h</Text>
           </View>
           <Text
             style={[
