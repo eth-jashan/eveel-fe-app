@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
     borderRadius: 8,
     marginBottom: 12,
+    overflow: "hidden",
   },
 });
 
