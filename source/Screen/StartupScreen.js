@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { View, ActivityIndicator, StyleSheet } from "react-native";
+import { View, StyleSheet, Image, Dimensions } from "react-native";
+import { ActivityIndicator } from "react-native-paper";
 import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { LoggedInUser } from "../Store/action/auth";
@@ -42,13 +43,20 @@ const StartupScreen = (props) => {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" />
+      <Image
+        source={require("../../assets/Images/header-logo.png")}
+        style={{
+          width: Dimensions.get("screen").width * 0.8,
+          height: Dimensions.get("screen").height * 0.12,
+        }}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "black",
     flex: 1,
     alignItems: "center",
     justifyContent: "center",

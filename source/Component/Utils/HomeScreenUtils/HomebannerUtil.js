@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";
 import styles from "./UtilStyles/HomebannerUtilStyles";
+import banner_1 from "../../../../assets/Images/banner1.jpg";
 const HomeBanner = () => {
   return (
     <View>
@@ -23,7 +24,12 @@ const HomeBanner = () => {
                 },
                 styles.Box,
               ]}
-            ></View>
+            >
+              <Image
+                source={banner_1}
+                style={{ width: "100%", height: "100%" }}
+              />
+            </View>
           );
         }}
       />

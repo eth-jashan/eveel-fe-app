@@ -5,9 +5,8 @@
     "slug": "Eveels-App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/ic_launchers.png",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,12 +15,12 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "bundleIdentifier":"com.eveels.app",
+      "bundleIdentifier": "com.eveels.app",
       "supportsTablet": true,
       "googleServicesFile": "./GoogleService-Info.plist",
-      "config":{
-        "googleSignIn":{
-          "reservedClientId":"com.googleusercontent.apps.420327498036-4iqmvde474ihb8emsmr3v1eqh6l9nbas"
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.420327498036-4iqmvde474ihb8emsmr3v1eqh6l9nbas"
         }
       }
     },
@@ -31,6 +30,7 @@
           "apiKey": "AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88"
         }
       },
+      "icon": "./assets/ic_launcher.png",
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",

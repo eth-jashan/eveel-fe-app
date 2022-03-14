@@ -16,7 +16,27 @@ import {
   View,
 } from "react-native";
 import image from "../../../../assets/Images/Round.png";
+import { VIDEO, TWEET, IMAGE } from "../../../Screen/Feed/SocialScreen";
+import ImagePostUtil from "./ImagePostUtil";
+import TextPostUtil from "./TextPostUtil";
+import VideoPostUtil from "./VideoPostUtil";
+
 const PostUtil = (props) => {
+  const getType = (data) => {
+    switch (data) {
+      case VIDEO:
+        return <VideoPostUtil />;
+
+      case IMAGE:
+        return <ImagePostUtil />;
+
+      case TWEET:
+        return <TextPostUtil />;
+
+      default:
+        null;
+    }
+  };
   return (
     <View>
       {/* Border */}
@@ -62,12 +82,17 @@ const PostUtil = (props) => {
           <View style={{ width: "80%" }}>
             <View style={{ flexDirection: "row" }}>
               <Text
-                style={{ fontFamily: "bold", fontSize: 16, marginRight: 10 }}
+                style={{
+                  fontFamily: "bold",
+                  fontSize: 16,
+                  marginRight: 10,
+                  color: "white",
+                }}
               >
                 Tabitha Potter
               </Text>
               <Text
-                style={{ fontSize: "16", fontFamily: "medium", color: "grey" }}
+                style={{ fontSize: 16, fontFamily: "medium", color: "grey" }}
               >
                 @mis_potter
                 <Entypo
@@ -82,15 +107,7 @@ const PostUtil = (props) => {
 
             {/* Content panel  */}
 
-            <View style={{ marginTop: 5 }}>
-              <Text style={{ fontSize: "16", fontFamily: "medium" }}>
-                Kobe’s passing is really sticking w/ me in a way I didn’t
-                expect.{"\n\n"} He was an icon, the kind of person who wouldn’t
-                die this way. My wife compared it to Princess Di’s accident.
-                {"\n\n"} But the end can happen for anyone at any time, & I
-                can’t help but think of anything else lately.
-              </Text>
-            </View>
+            {getType(props.type)}
 
             {/* Feedback panel */}
 
