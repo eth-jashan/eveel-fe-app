@@ -3,13 +3,15 @@ import { View, Text, Image } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import Color from "../../../../assets/Color";
 import styles from "./UtilStyles/HomebannerUtilStyles";
-import banner_1 from "../../../../assets/Images/banner1.jpg";
+import banner_1 from "../../../../assets/Images/Banner/banner1.jpg";
+import banner_2 from "../../../../assets/Images/Banner/banner2.jpg";
+import banner_3 from "../../../../assets/Images/Banner/banner3.jpg";
 const HomeBanner = () => {
   return (
     <View>
       <FlatList
         horizontal
-        data={["1", "2", "3", "4", "5"]}
+        data={[banner_1, banner_2, banner_3]}
         showsHorizontalScrollIndicator={false}
         keyExtractor={(x) => x}
         snapToInterval={310}
@@ -26,7 +28,7 @@ const HomeBanner = () => {
               ]}
             >
               <Image
-                source={banner_1}
+                source={item}
                 style={{ width: "100%", height: "100%" }}
               />
             </View>
