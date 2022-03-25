@@ -38,7 +38,7 @@ const PostUtil = (props) => {
     }
   };
   return (
-    <View>
+    <View style={{}}>
       {/* Border */}
 
       <View style={{ borderWidth: 0.25, borderColor: "#d3d3d3" }} />
@@ -119,7 +119,12 @@ const PostUtil = (props) => {
               }}
             >
               <View style={{ flexDirection: "row" }}>
-                <EvilIcons name="comment" size={24} color="#687684" />
+                <EvilIcons
+                  name="comment"
+                  size={24}
+                  color="#687684"
+                  style={{ alignSelf: "center" }}
+                />
                 <Text
                   style={{
                     fontFamily: "medium",
@@ -134,7 +139,12 @@ const PostUtil = (props) => {
               </View>
 
               <View style={{ flexDirection: "row" }}>
-                <AntDesign name="retweet" size={20} color="#687684" />
+                <AntDesign
+                  name="retweet"
+                  size={20}
+                  color="#687684"
+                  style={{ alignSelf: "center" }}
+                />
                 <Text
                   style={{
                     fontFamily: "medium",
@@ -149,7 +159,12 @@ const PostUtil = (props) => {
               </View>
 
               <View style={{ flexDirection: "row" }}>
-                <Ionicons name="heart-outline" size={20} color="#687684" />
+                <Ionicons
+                  name="heart-outline"
+                  size={20}
+                  color="#687684"
+                  style={{ alignSelf: "center" }}
+                />
                 <Text
                   style={{
                     fontFamily: "medium",
@@ -164,7 +179,12 @@ const PostUtil = (props) => {
               </View>
 
               <View style={{ flexDirection: "row" }}>
-                <Feather name="upload" size={24} color="#687684" />
+                <Feather
+                  name="upload"
+                  size={24}
+                  color="#687684"
+                  style={{ alignSelf: "center" }}
+                />
               </View>
             </View>
           </View>
