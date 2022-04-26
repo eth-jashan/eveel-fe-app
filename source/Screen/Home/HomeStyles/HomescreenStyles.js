@@ -29,14 +29,14 @@ const styles = StyleSheet.create({
   profile: { width: 50, height: 50, alignSelf: "center" },
   screenscroll: { paddingBottom: 200 },
   TitleView: { margin: 15, paddingVertical: 10 },
-  welcome: { fontSize: 26, color: Color.white, fontFamily: "bold" },
+  welcome: { fontSize: 24, color: Color.white, fontFamily: "bold" },
   slogan: {
-    fontSize: 22,
+    fontSize: 20,
     color: Color.white,
     fontWeight: "bold",
     // paddingTop: 10,
   },
-  title: { fontSize: 30, color: Color.lightgreen, fontFamily: "bold" },
+  title: { fontSize: 26, color: Color.lightgreen, fontFamily: "bold" },
   comingSoon: { paddingTop: 50 },
   lottie: { alignSelf: "center", width: 200, height: 200 },
   comingText: {

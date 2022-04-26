@@ -1,5 +1,6 @@
 export const LOGIN = "LOGIN";
 export const PHONE = "PHONE";
+
 export const login = (first_name, last_name, email_id, uid, token) => {
   return async (dispatch) => {
     const check = await fetch(
@@ -30,14 +31,11 @@ export const login = (first_name, last_name, email_id, uid, token) => {
       first_name: first_name,
       last_name: last_name,
     });
-    //console.log(resData.name);
-    //console.log(first_name, last_name, number, email_id, uid, token);
   };
 };
 
 export const AddPhoneNumber = (number, uid, token) => {
   return async (dispatch) => {
-    //console.log(number, token, uid);
     const check = await fetch(
       `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/profile.json?`
     );
@@ -67,7 +65,6 @@ export const AddPhoneNumber = (number, uid, token) => {
 
 export const LoggedInUser = (uid) => {
   return async (dispatch) => {
-    //console.log(uid);
     const response = await fetch(
       `https://eveels-c43bb-default-rtdb.asia-southeast1.firebasedatabase.app/users/${uid}/profile.json?`
     );
@@ -76,7 +73,6 @@ export const LoggedInUser = (uid) => {
       let keys = "";
       for (keys in resData) {
       }
-      //console.log(keys);
       if (resData[keys].number !== undefined) {
         dispatch({
           type: PHONE,

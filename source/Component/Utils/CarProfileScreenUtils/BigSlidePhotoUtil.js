@@ -1,9 +1,22 @@
-import React from "react";
-import { View, FlatList, Dimensions, Image } from "react-native";
+import React, { useRef } from "react";
+import {
+  View,
+  FlatList,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./UtilStyles/BigSlidePhotoUtilStyles";
+import { Modalize } from "react-native-modalize";
 const { width, height } = Dimensions.get("window");
-const BigSlide = ({ topRef, gallery, scrollToActiveIndex, carId }) => {
+const BigSlide = ({
+  topRef,
+  gallery,
+  scrollToActiveIndex,
+  carId,
+  openModalHandler,
+}) => {
   const navigation = useNavigation();
 
   return (
@@ -28,16 +41,17 @@ const BigSlide = ({ topRef, gallery, scrollToActiveIndex, carId }) => {
             <View style={styles.screen}>
               {/* Image Panel */}
 
-              {/* <TouchableOpacity
+              <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate("SlideScreen", {
-                    carId,
-                    index,
-                  });
+                  // navigation.navigate("SlideScreen", {
+                  //   carId,
+                  //   index,
+                  // });
+                  openModalHandler(carId, index);
                 }}
-              > */}
-              <Image style={styles.image} source={{ uri: item.image }} />
-              {/* </TouchableOpacity> */}
+              >
+                <Image style={styles.image} source={{ uri: item.image }} />
+              </TouchableOpacity>
             </View>
           );
         }}

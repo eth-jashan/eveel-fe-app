@@ -27,9 +27,7 @@ const BottomNav = () => {
       }}
       shifting={true}
     >
-
       {/* Home screen Panel */}
-
 
       <BottomStack.Screen
         name="Home_Bottom"
@@ -41,9 +39,7 @@ const BottomNav = () => {
         }}
       />
 
-
       {/* Pump Screen Panel */}
-
 
       <BottomStack.Screen
         name="Pump"

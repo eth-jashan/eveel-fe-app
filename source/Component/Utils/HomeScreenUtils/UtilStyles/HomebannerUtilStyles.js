@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 import Color from "../../../../../assets/Color";
 const styles = StyleSheet.create({
   Box: {
-    width: 300,
-    height: 175,
+    width: 355,
+    height: 205,
     backgroundColor: Color.cardGrayColor,
     marginRight: 15,
     borderRadius: 8,

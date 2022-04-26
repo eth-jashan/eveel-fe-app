@@ -64,6 +64,7 @@ const CarProfilePage = ({ navigation, route }) => {
   const [colorname, setColorName] = useState();
   const [indexColor, setIndexColor] = useState();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [photoCarIndex, setPhotoCarIndex] = useState();
 
   //validation State
 
@@ -77,6 +78,7 @@ const CarProfilePage = ({ navigation, route }) => {
   const modalizeDesc = useRef();
   const topRef = useRef();
   const thumbRef = useRef();
+  const photoSlideRef = useRef();
 
   //Constants
 
@@ -203,6 +205,10 @@ const CarProfilePage = ({ navigation, route }) => {
       });
   };
 
+  const openModalHandler = (car, index) => {
+    photoSlideRef.current?.open();
+    setPhotoCarIndex(index);
+  };
   const onPress = (index, title) => {
     modalizeColor.current?.open();
     setIndexColor(index);
@@ -249,6 +255,7 @@ const CarProfilePage = ({ navigation, route }) => {
           gallery={gallery}
           carId={item.carId}
           scrollToActiveIndex={scrollToActiveIndex}
+          openModalHandler={openModalHandler}
         />
 
         {/* Like Car Panel */}
@@ -377,26 +384,9 @@ const CarProfilePage = ({ navigation, route }) => {
           />
         </View>
 
-        {/* Description Panel */}
-
-        <View>
-          <Text style={styles.AboutTheCar}>About The Car</Text>
-          <TouchableOpacity
-            onPress={() => {
-              modalizeDesc.current?.open();
-            }}
-            style={styles.description}
-          >
-            <Text style={styles.descText}>
-              {item.description.slice(0, 75)}...
-            </Text>
-            <Text style={styles.readMore}>Read more?</Text>
-          </TouchableOpacity>
-        </View>
-
         {/* Modal Panels */}
 
-        <View style={{ alignItems: "center" }}>
+        <View style={{ alignItems: "center", marginTop: 50 }}>
           {/* Interior and Exterior Panel */}
 
           <Pressable onPress={() => modalize.current?.open()}>
@@ -413,6 +403,22 @@ const CarProfilePage = ({ navigation, route }) => {
               </Text>
             </ImageBackground>
           </Pressable>
+          {/* Description Panel */}
+
+          <View>
+            <Text style={styles.AboutTheCar}>About The Car</Text>
+            <TouchableOpacity
+              onPress={() => {
+                modalizeDesc.current?.open();
+              }}
+              style={styles.description}
+            >
+              <Text style={styles.descText}>
+                {item.description.slice(0, 75)}...
+              </Text>
+              <Text style={styles.readMore}>Read more?</Text>
+            </TouchableOpacity>
+          </View>
 
           {/* Safety and Comfort Panel */}
 
@@ -545,6 +551,52 @@ const CarProfilePage = ({ navigation, route }) => {
           <View style={{ margin: 15 }}>
             <Text style={[styles.descText, { fontSize: 20 }]}>
               {item.description}
+            </Text>
+          </View>
+        </View>
+      </Modalize>
+      <Modalize
+        modalHeight={Dimensions.get("window").height * 0.8}
+        ref={photoSlideRef}
+        modalStyle={{ backgroundColor: "black" }}
+      >
+        <View style={{ justifyContent: "center", alignSelf: "center" }}>
+          <FlatList
+            initialScrollIndex={photoCarIndex}
+            horizontal
+            keyExtractor={(_, i) => i.toString()}
+            data={gallery}
+            snapToAlignment={"center"}
+            snapToInterval={Dimensions.get("window").width}
+            decelerationRate="fast"
+            showsHorizontalScrollIndicator={false}
+            renderItem={({ item, index }) => {
+              return (
+                <View
+                  style={{
+                    width: Dimensions.get("window").width,
+                    height: Dimensions.get("screen").height / 2,
+                    padding: 5,
+                  }}
+                >
+                  <Image
+                    style={{ width: "100%", height: "100%" }}
+                    source={{ uri: item.image }}
+                    resizeMode="contain"
+                  />
+                </View>
+              );
+            }}
+          />
+          <View style={{ alignSelf: "center" }}>
+            <Text
+              style={{
+                color: Color.lightgreen,
+                fontFamily: "bold",
+                fontSize: 24,
+              }}
+            >
+              Slide for more
             </Text>
           </View>
         </View>

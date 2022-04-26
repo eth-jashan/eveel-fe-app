@@ -22,11 +22,11 @@ const SocialScreen = (props) => {
   const data = [VIDEO, IMAGE, TWEET];
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
-      <View style={{ width: "40%", height: "5%", margin: 8 }}>
+      {/* <View style={{ width: "40%", height: "5%", margin: 8 }}>
         <Image source={eveels} style={{ width: "100%", height: "100%" }} />
-      </View>
+      </View> */}
       {/* Post panel */}
-      <FlatList
+      {/* <FlatList
         data={[VIDEO, IMAGE, IMAGE, TWEET, TWEET, TWEET]}
         keyExtractor={(_, i) => i.toString()}
         contentContainerStyle={{ paddingBottom: 300 }}
@@ -42,7 +42,7 @@ const SocialScreen = (props) => {
             </View>
           );
         }}
-      />
+      /> */}
     </SafeAreaView>
     // <View style={{ flex: 1, backgroundColor: "black" }}></View>
   );

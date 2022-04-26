@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import store from "./source/Store/Store";
 import firebase from "firebase";
 import { firebaseConfig } from "./firbase";
-import * as GoogleSignIn from 'expo-google-sign-in';
+import * as GoogleSignIn from "expo-google-sign-in";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
