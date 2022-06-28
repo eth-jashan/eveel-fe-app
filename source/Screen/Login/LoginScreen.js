@@ -12,7 +12,6 @@ import { login } from "../../Store/action/auth";
 import { getContacts } from "../../Store/action/contact";
 import styles from "./LoginStyles/LoginScreenStyles";
 
-
 const LoginScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const GoogleSignIn = async () => {
