@@ -405,21 +405,6 @@ const CarProfilePage = ({ navigation, route }) => {
           </Pressable>
           {/* Description Panel */}
 
-          <View>
-            <Text style={styles.AboutTheCar}>About The Car</Text>
-            <TouchableOpacity
-              onPress={() => {
-                modalizeDesc.current?.open();
-              }}
-              style={styles.description}
-            >
-              <Text style={styles.descText}>
-                {item.description.slice(0, 75)}...
-              </Text>
-              <Text style={styles.readMore}>Read more?</Text>
-            </TouchableOpacity>
-          </View>
-
           {/* Safety and Comfort Panel */}
 
           <Pressable onPress={() => modalizeSafety.current?.open()}>
@@ -436,6 +421,20 @@ const CarProfilePage = ({ navigation, route }) => {
               </Text>
             </ImageBackground>
           </Pressable>
+        </View>
+        <View>
+          <Text style={styles.AboutTheCar}>About The Car</Text>
+          <TouchableOpacity
+            onPress={() => {
+              modalizeDesc.current?.open();
+            }}
+            style={styles.description}
+          >
+            <Text style={styles.descText}>
+              {item.description.slice(0, 75)}...
+            </Text>
+            <Text style={styles.readMore}>Read more?</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Variants Panel */}

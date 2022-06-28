@@ -21,14 +21,15 @@ const styles = StyleSheet.create({
   Brand: { width: "100%", height: "100%", alignSelf: "center" },
   BrandName: {
     alignSelf: "center",
-    fontFamily: "semibold",
-    fontSize: 22,
+    fontFamily: "black",
+    fontSize: 28,
     color: Color.white,
+    marginBottom: 10,
   },
   BrandRate: {
     alignSelf: "center",
-    fontFamily: "black",
-    fontSize: 28,
+    fontFamily: "semibold",
+    fontSize: 20,
     color: Color.white,
   },
   header: {
