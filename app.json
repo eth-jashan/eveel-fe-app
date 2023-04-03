@@ -13,7 +13,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "bundleIdentifier": "com.eveels.app",
       "supportsTablet": true,
@@ -52,6 +54,9 @@
       },
       "facebook": {
         "appId": "872730930103284"
+      },
+      "eas": {
+        "projectId": "85c7c413-68a9-432e-8f68-777fd866990a"
       }
     }
   }
