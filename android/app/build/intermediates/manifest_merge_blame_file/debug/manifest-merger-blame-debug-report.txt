@@ -1,0 +1,683 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.eveels.app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:8:3-75
+11-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:8:20-73
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:2:3-78
+12-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:2:20-76
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:3:3-76
+13-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:3:20-74
+14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+14-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:4:3-74
+14-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:4:20-72
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:5:3-64
+15-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:5:20-62
+16    <uses-permission android:name="android.permission.READ_CONTACTS" />
+16-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:6:3-69
+16-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:6:20-67
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:7:3-77
+17-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:7:20-75
+18    <uses-permission android:name="android.permission.VIBRATE" />
+18-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:9:3-63
+18-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:9:20-61
+19    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+19-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:10:3-70
+19-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:10:20-68
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+20-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:11:3-78
+20-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:11:20-76
+21
+22    <queries>
+22-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:12:3-18:13
+23        <intent>
+23-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:13:5-17:14
+24            <action android:name="android.intent.action.VIEW" />
+24-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:7-58
+24-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:15-56
+25
+26            <category android:name="android.intent.category.BROWSABLE" />
+26-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:7-67
+26-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:17-65
+27
+28            <data android:scheme="https" />
+28-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+28-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+29        </intent>
+30        <intent>
+30-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-18:18
+31            <action android:name="android.intent.action.SEND" />
+31-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-65
+31-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:21-62
+32
+33            <category android:name="android.intent.category.DEFAULT" />
+33-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+33-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+34
+35            <data android:mimeType="application/octet-stream" />
+35-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+36        </intent>
+37        <intent>
+37-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-25:18
+38            <action android:name="android.intent.action.SEND" />
+38-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-65
+38-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:21-62
+39
+40            <category android:name="android.intent.category.DEFAULT" />
+40-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+40-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+41
+42            <data android:mimeType="text/x-vcard" />
+42-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+43        </intent>
+44        <intent>
+44-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:9-32:18
+45            <action android:name="android.intent.action.SEND" />
+45-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-65
+45-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:21-62
+46
+47            <category android:name="android.intent.category.DEFAULT" />
+47-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+47-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+48
+49            <data android:mimeType="text/vcard" />
+49-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+50        </intent>
+51        <intent>
+51-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:33:9-35:18
+52            <action android:name="android.intent.action.EDIT" />
+52-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:13-65
+52-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:21-62
+53        </intent>
+54        <intent>
+54-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:9-38:18
+55            <action android:name="android.intent.action.INSERT" />
+55-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:13-67
+55-->[:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:21-64
+56        </intent> <!-- Query open documents -->
+57        <intent>
+57-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-21:18
+58            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+58-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-79
+58-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:21-76
+59        </intent>
+60        <intent>
+60-->[:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:18
+61
+62            <!-- Required for opening tabs if targeting API 30 -->
+63            <action android:name="android.support.customtabs.action.CustomTabsService" />
+63-->[:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-90
+63-->[:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:21-87
+64        </intent>
+65    </queries>
+66
+67    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+67-->[com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:16:5-76
+67-->[com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:16:22-73
+68    <uses-permission android:name="android.permission.WAKE_LOCK" />
+68-->[:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+68-->[:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+69    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+69-->[:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
+69-->[:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
+70    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+71
+72    <uses-feature
+72-->[com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+73        android:glEsVersion="0x00020000"
+73-->[com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+74        android:required="true" />
+74-->[com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+75
+76    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+76-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:26:5-110
+76-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:26:22-107
+77    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+77-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+77-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+78    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+78-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+78-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+79
+80    <application
+80-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:3-41:17
+81        android:name="com.eveels.app.MainApplication"
+81-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:16-47
+82        android:allowBackup="true"
+82-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:162-188
+83        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+83-->[androidx.core:core:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/df48f9f085e362d0ee42b2061783c370/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+84        android:debuggable="true"
+85        android:icon="@mipmap/ic_launcher"
+85-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:81-115
+86        android:label="@string/app_name"
+86-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:48-80
+87        android:roundIcon="@mipmap/ic_launcher_round"
+87-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:116-161
+88        android:supportsRtl="true"
+88-->[com.facebook.android:facebook-login:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/863db28abd3856c55ab4f5044f08ed1e/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:28:18-44
+89        android:theme="@style/AppTheme"
+89-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:189-220
+90        android:usesCleartextTraffic="true" >
+90-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:221-256
+91        <meta-data
+91-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:20:5-119
+92            android:name="com.google.android.geo.API_KEY"
+92-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:20:16-61
+93            android:value="AIzaSyDsDKH-37DS6ZnGY_oIi7t5YE0oAAZ-V88" />
+93-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:20:62-117
+94        <meta-data
+94-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:21:5-82
+95            android:name="expo.modules.updates.ENABLED"
+95-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:21:16-59
+96            android:value="true" />
+96-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:21:60-80
+97        <meta-data
+97-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:22:5-93
+98            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+98-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:22:16-68
+99            android:value="44.0.0" />
+99-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:22:69-91
+100        <meta-data
+100-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:23:5-105
+101            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+101-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:23:16-80
+102            android:value="ALWAYS" />
+102-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:23:81-103
+103        <meta-data
+103-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:24:5-99
+104            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+104-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:24:16-79
+105            android:value="0" />
+105-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:24:80-97
+106        <meta-data
+106-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:25:5-122
+107            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+107-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:25:16-67
+108            android:value="https://exp.host/@curodev/Eveels-App" />
+108-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:25:68-120
+109
+110        <activity
+110-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:5-38:16
+111            android:name="com.eveels.app.MainActivity"
+111-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:15-43
+112            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+112-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:77-154
+113            android:label="@string/app_name"
+113-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:44-76
+114            android:launchMode="singleTask"
+114-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:155-186
+115            android:screenOrientation="portrait"
+115-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:276-312
+116            android:theme="@style/Theme.App.SplashScreen"
+116-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:230-275
+117            android:windowSoftInputMode="adjustResize" >
+117-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:187-229
+118            <intent-filter>
+118-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:27:7-30:23
+119                <action android:name="android.intent.action.MAIN" />
+119-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:28:9-60
+119-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:28:17-58
+120
+121                <category android:name="android.intent.category.LAUNCHER" />
+121-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:29:9-68
+121-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:29:19-66
+122            </intent-filter>
+123            <intent-filter>
+123-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:31:7-37:23
+124                <action android:name="android.intent.action.VIEW" />
+124-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:7-58
+124-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:15-56
+125
+126                <category android:name="android.intent.category.DEFAULT" />
+126-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+126-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+127                <category android:name="android.intent.category.BROWSABLE" />
+127-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:7-67
+127-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:17-65
+128
+129                <data android:scheme="https" />
+129-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+129-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+130                <data android:scheme="com.eveels.app" />
+130-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+130-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+131            </intent-filter>
+132        </activity>
+133        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+133-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:39:5-81
+133-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:39:15-79
+134
+135        <uses-library
+135-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:40:5-83
+136            android:name="org.apache.http.legacy"
+136-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:40:19-56
+137            android:required="false" />
+137-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:40:57-81
+138
+139        <meta-data
+139-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:36
+140            android:name="app_data_collection_default_enabled"
+140-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-63
+141            android:value="true" />
+141-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-33
+142
+143        <service
+143-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-20:19
+144            android:name="com.google.firebase.components.ComponentDiscoveryService"
+144-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-89
+145            android:directBootAware="true"
+145-->[com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+146            android:exported="false" >
+146-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:76:13-37
+147            <meta-data
+147-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:85
+148                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+148-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-120
+149                android:value="com.google.firebase.components.ComponentRegistrar" />
+149-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-82
+150            <meta-data
+150-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
+151                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+151-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:78:17-109
+152                android:value="com.google.firebase.components.ComponentRegistrar" />
+152-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:79:17-82
+153            <meta-data
+153-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:30:13-32:85
+154                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+154-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:31:17-139
+155                android:value="com.google.firebase.components.ComponentRegistrar" />
+155-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:32:17-82
+156            <meta-data
+156-->[com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+157                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+157-->[com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+158                android:value="com.google.firebase.components.ComponentRegistrar" />
+158-->[com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+159        </service>
+160
+161        <provider
+161-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-26:38
+162            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+162-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-88
+163            android:authorities="com.eveels.app.reactnativefirebaseappinitprovider"
+163-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-86
+164            android:exported="false"
+164-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-37
+165            android:initOrder="99" />
+165-->[:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-35
+166        <provider
+166-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+167            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+167-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+168            android:authorities="com.eveels.app.fileprovider"
+168-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+169            android:exported="false"
+169-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+170            android:grantUriPermissions="true" >
+170-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+171            <meta-data
+171-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+172                android:name="android.support.FILE_PROVIDER_PATHS"
+172-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+173                android:resource="@xml/file_provider_paths" />
+173-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+174        </provider>
+175
+176        <activity
+176-->[:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:75
+177            android:name="expo.modules.appauth.AppAuthBrowserActivity"
+177-->[:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-71
+178            android:exported="false"
+178-->[:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+179            android:launchMode="singleTask"
+179-->[:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-44
+180            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+180-->[:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-72
+181
+182        <provider
+182-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:9-34:20
+183            android:name="expo.modules.filesystem.FileSystemFileProvider"
+183-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-74
+184            android:authorities="com.eveels.app.FileSystemFileProvider"
+184-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-74
+185            android:exported="false"
+185-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-37
+186            android:grantUriPermissions="true" >
+186-->[:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-47
+187            <meta-data
+187-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+188                android:name="android.support.FILE_PROVIDER_PATHS"
+188-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+189                android:resource="@xml/file_system_provider_paths" />
+189-->[:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+190        </provider>
+191
+192        <service
+192-->[:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-19:56
+193            android:name="expo.modules.location.services.LocationTaskService"
+193-->[:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+194            android:exported="false"
+194-->[:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+195            android:foregroundServiceType="location" />
+195-->[:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-53
+196
+197        <meta-data
+197-->[:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:89
+198            android:name="org.unimodules.core.AppLoader#react-native-headless"
+198-->[:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
+199            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+199-->[:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-86
+200
+201        <activity
+201-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:30:9-33:66
+202            android:name="com.facebook.FacebookActivity"
+202-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:31:13-57
+203            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+203-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:32:13-96
+204            android:theme="@style/com_facebook_activity_theme" />
+204-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:33:13-63
+205        <activity android:name="com.facebook.CustomTabMainActivity" />
+205-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:9-71
+205-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:19-68
+206        <activity
+206-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:35:9-49:20
+207            android:name="com.facebook.CustomTabActivity"
+207-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:36:13-58
+208            android:exported="true" >
+208-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:37:13-36
+209            <intent-filter>
+209-->[com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:39:13-48:29
+210                <action android:name="android.intent.action.VIEW" />
+210-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:7-58
+210-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:15-56
+211
+212                <category android:name="android.intent.category.DEFAULT" />
+212-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+212-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+213                <category android:name="android.intent.category.BROWSABLE" />
+213-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:7-67
+213-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:17-65
+214
+215                <data
+215-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+216                    android:host="cct.com.eveels.app"
+217                    android:scheme="fbconnect" />
+217-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+218            </intent-filter>
+219        </activity>
+220        <activity
+220-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
+221            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+221-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:28:13-80
+222            android:excludeFromRecents="true"
+222-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:29:13-46
+223            android:exported="true"
+223-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:30:13-36
+224            android:launchMode="singleTask"
+224-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:31:13-44
+225            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+225-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:32:13-72
+226            <intent-filter>
+226-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:33:13-43:29
+227                <action android:name="android.intent.action.VIEW" />
+227-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:7-58
+227-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:15-56
+228
+229                <category android:name="android.intent.category.DEFAULT" />
+229-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+229-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+230                <category android:name="android.intent.category.BROWSABLE" />
+230-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:7-67
+230-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:17-65
+231
+232                <data
+232-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+233                    android:host="firebase.auth"
+234                    android:path="/"
+235                    android:scheme="genericidp" />
+235-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+236            </intent-filter>
+237        </activity>
+238        <activity
+238-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:45:9-62:20
+239            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+239-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:46:13-79
+240            android:excludeFromRecents="true"
+240-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:47:13-46
+241            android:exported="true"
+241-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:48:13-36
+242            android:launchMode="singleTask"
+242-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:49:13-44
+243            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+243-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:50:13-72
+244            <intent-filter>
+244-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:51:13-61:29
+245                <action android:name="android.intent.action.VIEW" />
+245-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:7-58
+245-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:15-56
+246
+247                <category android:name="android.intent.category.DEFAULT" />
+247-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+247-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+248                <category android:name="android.intent.category.BROWSABLE" />
+248-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:7-67
+248-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:17-65
+249
+250                <data
+250-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+251                    android:host="firebase.auth"
+252                    android:path="/"
+253                    android:scheme="recaptcha" />
+253-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+254            </intent-filter>
+255        </activity>
+256
+257        <service
+257-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:64:9-73:19
+258            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+258-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:65:13-101
+259            android:enabled="true"
+259-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:66:13-35
+260            android:exported="false" >
+260-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:67:13-37
+261            <intent-filter>
+261-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:68:13-72:29
+262                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+262-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:17-89
+262-->[com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:25-86
+263
+264                <category android:name="android.intent.category.DEFAULT" />
+264-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+264-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+265            </intent-filter>
+266        </service>
+267
+268        <activity
+268-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:27:9-31:75
+269            android:name="net.openid.appauth.AuthorizationManagementActivity"
+269-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:28:13-78
+270            android:exported="false"
+270-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:29:13-37
+271            android:launchMode="singleTask"
+271-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:30:13-44
+272            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+272-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:31:13-72
+273        <activity
+273-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:32:9-43:20
+274            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+274-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:33:13-74
+275            android:exported="true" >
+275-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:34:13-36
+276            <intent-filter>
+276-->[net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:35:13-42:29
+277                <action android:name="android.intent.action.VIEW" />
+277-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:7-58
+277-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:15-56
+278
+279                <category android:name="android.intent.category.DEFAULT" />
+279-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+279-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+280                <category android:name="android.intent.category.BROWSABLE" />
+280-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:7-67
+280-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:17-65
+281
+282                <data android:scheme="https" />
+282-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+282-->/Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+283            </intent-filter>
+284        </activity>
+285        <activity
+285-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:23:9-27:75
+286            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+286-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:24:13-93
+287            android:excludeFromRecents="true"
+287-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:25:13-46
+288            android:exported="false"
+288-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:26:13-37
+289            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+289-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:27:13-72
+290        <!--
+291            Service handling Google Sign-In user revocation. For apps that do not integrate with
+292            Google Sign-In, this service will never be started.
+293        -->
+294        <service
+294-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:33:9-37:51
+295            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+295-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:34:13-89
+296            android:exported="true"
+296-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:35:13-36
+297            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+297-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:36:13-107
+298            android:visibleToInstantApps="true" />
+298-->[com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:37:13-48
+299
+300        <activity
+300-->[com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+301            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+301-->[com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+302            android:exported="false"
+302-->[com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+303            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+303-->[com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+304
+305        <provider
+305-->[com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+306            android:name="com.google.firebase.provider.FirebaseInitProvider"
+306-->[com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+307            android:authorities="com.eveels.app.firebaseinitprovider"
+307-->[com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+308            android:directBootAware="true"
+308-->[com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+309            android:exported="false"
+309-->[com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+310            android:initOrder="100" />
+310-->[com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+311
+312        <receiver
+312-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:29:9-33:20
+313            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+313-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:30:13-85
+314            android:enabled="true"
+314-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:31:13-35
+315            android:exported="false" >
+315-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:32:13-37
+316        </receiver>
+317
+318        <service
+318-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:35:9-38:40
+319            android:name="com.google.android.gms.measurement.AppMeasurementService"
+319-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:36:13-84
+320            android:enabled="true"
+320-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:37:13-35
+321            android:exported="false" />
+321-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:38:13-37
+322        <service
+322-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:39:9-43:72
+323            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+323-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:40:13-87
+324            android:enabled="true"
+324-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:41:13-35
+325            android:exported="false"
+325-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:42:13-37
+326            android:permission="android.permission.BIND_JOB_SERVICE" />
+326-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:43:13-69
+327
+328        <meta-data
+328-->[com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
+329            android:name="com.google.android.gms.version"
+329-->[com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
+330            android:value="@integer/google_play_services_version" />
+330-->[com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
+331        <!--
+332         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+333         with the application context. This config is merged in with the host app's manifest,
+334         but there can only be one provider with the same authority activated at any given
+335         point; so if the end user has two or more different apps that use Facebook SDK, only the
+336         first one will be able to use the provider. To work around this problem, we use the
+337         following placeholder in the authority to identify each host application as if it was
+338         a completely different provider.
+339        -->
+340        <provider
+340-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
+341            android:name="com.facebook.internal.FacebookInitProvider"
+341-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
+342            android:authorities="com.eveels.app.FacebookInitProvider"
+342-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
+343            android:exported="false" />
+343-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
+344
+345        <receiver
+345-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
+346            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+346-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
+347            android:exported="false" >
+347-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
+348            <intent-filter>
+348-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
+349                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+349-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
+349-->[com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
+350            </intent-filter>
+351        </receiver>
+352
+353        <service
+353-->[androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+354            android:name="androidx.room.MultiInstanceInvalidationService"
+354-->[androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+355            android:directBootAware="true"
+355-->[androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+356            android:exported="false" />
+356-->[androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+357        <service
+357-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+358            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+358-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+359            android:exported="false" />
+359-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+360        <service
+360-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+361            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+361-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+362            android:exported="false" />
+362-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+363        <service
+363-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+364            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+364-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+365            android:exported="false" />
+365-->[io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+366    </application>
+367
+368</manifest>

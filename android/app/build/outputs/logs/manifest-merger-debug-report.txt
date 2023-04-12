@@ -1,0 +1,1191 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:1-42:12
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:1-42:12
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:1-42:12
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:1-42:12
+MERGED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:1-42:12
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:8:1-18:12
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/76e7f409656b6bd51ffe90c3d6a6b882/transformed/jetified-flipper-network-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/a8e1e290516a6a6989532a7b612ba5fd/transformed/jetified-flipper-fresco-plugin-0.54.0/AndroidManifest.xml:8:1-15:12
+MERGED from [:react-native-community_masked-view] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-29:12
+MERGED from [:react-native-google-signin_google-signin] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-google-signin/google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:lottie-react-native] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-maps] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:react-native-reanimated] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [react-native-reanimated-64-jsc.aar] /Users/saahithshetty/.gradle/caches/transforms-3/b133fbf34af9e4c0cb7b75f9267440ce/transformed/jetified-react-native-reanimated-64-jsc/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-safe-area-context] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-svg] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-vector-icons] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-video] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-video/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
+MERGED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
+MERGED from [:expo-application] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-application/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-constants] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-41:12
+MERGED from [:expo-error-recovery] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-facebook] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-facebook/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-37:12
+MERGED from [:expo-firebase-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-firebase-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-font] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-google-sign-in] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-google-sign-in/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-keep-awake] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-linear-gradient] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
+MERGED from [:expo-splash-screen] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-updates] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
+MERGED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
+MERGED from [:unimodules-task-manager-interface] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [com.facebook.react:react-native:0.64.3] /Users/saahithshetty/.gradle/caches/transforms-3/0d8790eec06b9ebf76702d328db12673/transformed/jetified-react-native-0.64.3/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/dd4836609ad6755e36fd529755835c9a/transformed/jetified-flipper-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/4cf75d2d6e63e6902bb3cf1e6342f8fe/transformed/jetified-stetho-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/53150a1f7952314bf3eafac3dcaf4804/transformed/jetified-fresco-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/10335f7d3beec6f5e2f7fa9e3bf0f1ab/transformed/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-gif:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/88fb5bf04e2ac55fe7e233f5cfcab800/transformed/jetified-animated-gif-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:webpsupport:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/cd62b1004e725a73f0971ae9a7b99cd8/transformed/jetified-webpsupport-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.android:facebook-login:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/863db28abd3856c55ab4f5044f08ed1e/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:21:1-52:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/98184be9367c1fd2f4aa1a83f5cdd16b/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e9698b128c8227d3f8a7a93a46dad30e/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/931105e2b4eb6ee787cb22040d1595ad/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [org.webkit:android-jsc:r245459] /Users/saahithshetty/.gradle/caches/transforms-3/be0bbdab5491649d6789ae16380fe0d0/transformed/jetified-android-jsc-r245459/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-linear-gradient] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.fresco:animated-base:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/2668a75c91d3f6bbb2db80763a546793/transformed/jetified-animated-base-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:animated-drawable:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e191c314b4633594cdbdf0905e47cb74/transformed/jetified-animated-drawable-2.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/046a822ec72737bc043f613f2ec15d60/transformed/jetified-drawee-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/68d82676f4cf304d531c58b51f96f137/transformed/jetified-nativeimagefilters-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/85fc486979588abac103db08c32c92e5/transformed/jetified-memory-type-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/cc87b9bec1885b388d9cfee6d7a4a0bd/transformed/jetified-memory-type-java-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/01684ad0207810e9ef08c34311179cd0/transformed/jetified-imagepipeline-native-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/6c01fb5e2cc87498db2fd6223c7dc214/transformed/jetified-memory-type-ashmem-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/27d82412e9f7abe0db494de631ab6027/transformed/jetified-imagepipeline-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/64822cce48ecac74ba4df6fd2ebe51c1/transformed/jetified-nativeimagetranscoder-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/12530b826ad7bcea5638f8ddaa9eb455/transformed/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/502341717aa291c563cd1ea34a1386e3/transformed/jetified-soloader-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/saahithshetty/.gradle/caches/transforms-3/3f4377899cbbaf337e24c3490a2064f3/transformed/jetified-soloader-0.9.0/AndroidManifest.xml:2:1-13:12
+MERGED from [:expo-structured-headers] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-structured-headers/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:lottie:4.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e8870825d4b30079d4283e5145d0d287/transformed/jetified-lottie-4.0.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/6bf7e9917536c9934afcaa4bd01cca9c/transformed/material-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/8b0353ab1d6585fbbd1ebfcd44d22e76/transformed/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/2366f8948ff4cfe66dde27a67ecbc3ce/transformed/jetified-fbcore-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:17:1-83:12
+MERGED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:15:1-46:12
+MERGED from [androidx.browser:browser:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/53c272f074daef69801831aede708396/transformed/browser-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/02074d1e2a323e808243076daa1feb1d/transformed/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/5a60cd075cef9678942fe20acc7f20f8/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/759318bdcbfe83fbc5e3e65542f0992b/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/173137b2e353a45437118738098a2a36/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ebc8831a47192eb5188cef8be99bdcf/transformed/jetified-play-services-location-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/bde8e248512a0da2d7a3605ffb3f33b0/transformed/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/saahithshetty/.gradle/caches/transforms-3/2b7d2b6886230f1d99f28c78feec2f3c/transformed/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1c76a2fae2bbdc71de13600358ae1c9b/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0184c436058cb47d30646e1c1fd97b65/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-core:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/f5b48cc5edcbe4f53c674d6ca531c4b6/transformed/jetified-firebase-core-20.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/6a7368b69a23f1d7e63f98ebd5de5840/transformed/jetified-firebase-analytics-20.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:15:1-40:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/b7e4722e1247f0578eab2f2f66c2f8ae/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/15d201285efb35821004e1b0124c00e4/transformed/jetified-firebase-installations-interop-17.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/24a0d453341f40371aed42eba6de98f0/transformed/jetified-play-services-tasks-17.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ce4a8cf0ee5de2489ca9660a74c0a4e/transformed/jetified-play-services-measurement-sdk-20.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/23872d479d7526651ae59c8b90ae65a1/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5fd763f5a2b9eac83def0b8bcac0a75b/transformed/jetified-play-services-measurement-base-20.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d407fd7ce26abbc82391e98eb659d874/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/47c1074b167ad65b08c40df057108aba/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/77c5f8ebe522150cf525866974390aa6/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.2.1] /Users/saahithshetty/.gradle/caches/transforms-3/dcea4d765f1e125ea760e94ce09f72ee/transformed/fragment-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/1939117246e6eef9b11c8d70fc6a0038/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.webkit:webkit:1.4.0] /Users/saahithshetty/.gradle/caches/transforms-3/76cd940a623e611253ea4775fc12c5cf/transformed/webkit-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:21:1-53:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fd07e7456fc084e7dff868887607855c/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5d7fd7cad925e3652e6bea96ecf96a62/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ef2e0b3eaa94628baaea1bcb2266aff0/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ee3e754653998162ffbb4edf10557257/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/093bd42bfdb2909d83220dfbe43ab6d7/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/609550f654a31771b35ad4d36b7f48a1/transformed/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/4e456bd85741acac68d8c071c0fbfe51/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/3d7b76fb78a1c2b707fb8e191bb00713/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0048be2674a2cf85fa830db71787153b/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/567f73e74780a96b2277330e1a31f8b7/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/dec5c39909d3646f6c1c05a88f5421ec/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ca87d1e081d3c93a7d109b7e6efb46cc/transformed/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fa8be8032938a949a431a44cc6a93467/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/df48f9f085e362d0ee42b2061783c370/transformed/core-1.6.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/saahithshetty/.gradle/caches/transforms-3/041c7b520b6c8a305c7eb372df07c7bf/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/ecebc46d3378c73f3ddf62f0b0484203/transformed/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/8ffb189c331af005afd9664a63dfc2bb/transformed/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/dff42dde6741d03c5b9a54cc58e56618/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/86c774cd71fc5fcab8126a766e4f4143/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/63d1aa091ed59ae896b83636d1eaf627/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/4a685226c369c460acaef0dd539d3524/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/0f9387caa01b8a067a8702be51dc95bf/transformed/sqlite-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/d94bd3e8325b5f397dfe0b528f8cf4f2/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/cc78a23b71ede1999902a398cb8049d1/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/366958ac9e8ebbfe2d5a066c45df98c5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/d6630bbe7fe6ed39de19ebc9bb38dd28/transformed/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/804de37072a079e112a97f3c3a7c1f9b/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/a5671c6c54a45adcffcfd09191cf5d12/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/bc900fc237e7205a635413e59c3b6054/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [:expo-manifests] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-manifests/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-json-utils] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-json-utils/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-updates-interface] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/saahithshetty/.gradle/caches/transforms-3/aa11798965144c32c16ed1f4e8f19de4/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:2:1-13:12
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/saahithshetty/.gradle/caches/transforms-3/11d7dcd08ae07be9394e506a50cd22ed/transformed/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:2:1-12:12
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/c33d4b422db92e86fae62b998269f796/transformed/jetified-ui-common-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d61c63cbe320f54c00400d8819ba8a71/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:2:1-13:12
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:2:1-30:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d8b7c3f6590b8a73356321fa61fee17c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:70-94
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:70-94
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:1-42:12
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:1-42:12
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:2:3-78
+MERGED from [:react-native-maps] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+MERGED from [:react-native-maps] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:2:20-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:3:3-76
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:3:20-74
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:4:3-74
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:4:20-72
+uses-permission#android.permission.INTERNET
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:5:3-64
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:15:5-67
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:15:5-67
+MERGED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-67
+MERGED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-67
+MERGED from [:lottie-react-native] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:lottie-react-native] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:23:5-67
+MERGED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:24:5-67
+MERGED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:5:20-62
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:6:3-69
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:6:20-67
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:7:3-77
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:7:20-75
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:8:3-75
+MERGED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:8:3-75
+MERGED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:8:3-75
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:8:20-73
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:9:3-63
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:9:20-61
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:10:3-70
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:10:20-68
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:11:3-78
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:11:20-76
+queries
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:12:3-18:13
+MERGED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-39:15
+MERGED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-39:15
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-22:15
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-22:15
+MERGED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:15
+MERGED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:15
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:13:5-17:14
+action#android.intent.action.VIEW
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:7-58
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:14:15-56
+category#android.intent.category.BROWSABLE
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:7-67
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:15:17-65
+data
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:7-37
+	android:scheme
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:16:13-35
+application
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:3-41:17
+MERGED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:3-41:17
+MERGED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:3-41:17
+MERGED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-27:19
+MERGED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-27:19
+MERGED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
+MERGED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:5-35:19
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:5-35:19
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-20:19
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-20:19
+MERGED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [com.facebook.react:react-native:0.64.3] /Users/saahithshetty/.gradle/caches/transforms-3/0d8790eec06b9ebf76702d328db12673/transformed/jetified-react-native-0.64.3/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.64.3] /Users/saahithshetty/.gradle/caches/transforms-3/0d8790eec06b9ebf76702d328db12673/transformed/jetified-react-native-0.64.3/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.android:facebook-login:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/863db28abd3856c55ab4f5044f08ed1e/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/863db28abd3856c55ab4f5044f08ed1e/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:29:5-50:19
+MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:29:5-50:19
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/saahithshetty/.gradle/caches/transforms-3/3f4377899cbbaf337e24c3490a2064f3/transformed/jetified-soloader-0.9.0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/saahithshetty/.gradle/caches/transforms-3/3f4377899cbbaf337e24c3490a2064f3/transformed/jetified-soloader-0.9.0/AndroidManifest.xml:11:5-20
+MERGED from [com.airbnb.android:lottie:4.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e8870825d4b30079d4283e5145d0d287/transformed/jetified-lottie-4.0.0/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:4.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e8870825d4b30079d4283e5145d0d287/transformed/jetified-lottie-4.0.0/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/6bf7e9917536c9934afcaa4bd01cca9c/transformed/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/6bf7e9917536c9934afcaa4bd01cca9c/transformed/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:26:5-81:19
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:26:5-81:19
+MERGED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:26:5-44:19
+MERGED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:26:5-44:19
+MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ebc8831a47192eb5188cef8be99bdcf/transformed/jetified-play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ebc8831a47192eb5188cef8be99bdcf/transformed/jetified-play-services-location-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1c76a2fae2bbdc71de13600358ae1c9b/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1c76a2fae2bbdc71de13600358ae1c9b/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0184c436058cb47d30646e1c1fd97b65/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0184c436058cb47d30646e1c1fd97b65/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-core:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/f5b48cc5edcbe4f53c674d6ca531c4b6/transformed/jetified-firebase-core-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/f5b48cc5edcbe4f53c674d6ca531c4b6/transformed/jetified-firebase-core-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/6a7368b69a23f1d7e63f98ebd5de5840/transformed/jetified-firebase-analytics-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/6a7368b69a23f1d7e63f98ebd5de5840/transformed/jetified-firebase-analytics-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/b7e4722e1247f0578eab2f2f66c2f8ae/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/b7e4722e1247f0578eab2f2f66c2f8ae/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/24a0d453341f40371aed42eba6de98f0/transformed/jetified-play-services-tasks-17.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/24a0d453341f40371aed42eba6de98f0/transformed/jetified-play-services-tasks-17.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ce4a8cf0ee5de2489ca9660a74c0a4e/transformed/jetified-play-services-measurement-sdk-20.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ce4a8cf0ee5de2489ca9660a74c0a4e/transformed/jetified-play-services-measurement-sdk-20.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/23872d479d7526651ae59c8b90ae65a1/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/23872d479d7526651ae59c8b90ae65a1/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5fd763f5a2b9eac83def0b8bcac0a75b/transformed/jetified-play-services-measurement-base-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5fd763f5a2b9eac83def0b8bcac0a75b/transformed/jetified-play-services-measurement-base-20.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d407fd7ce26abbc82391e98eb659d874/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d407fd7ce26abbc82391e98eb659d874/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/47c1074b167ad65b08c40df057108aba/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/47c1074b167ad65b08c40df057108aba/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:28:5-51:19
+MERGED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:28:5-51:19
+MERGED from [androidx.core:core:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/df48f9f085e362d0ee42b2061783c370/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/df48f9f085e362d0ee42b2061783c370/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/saahithshetty/.gradle/caches/transforms-3/041c7b520b6c8a305c7eb372df07c7bf/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/saahithshetty/.gradle/caches/transforms-3/041c7b520b6c8a305c7eb372df07c7bf/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:24:5-29:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/saahithshetty/.gradle/caches/transforms-3/aa11798965144c32c16ed1f4e8f19de4/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/saahithshetty/.gradle/caches/transforms-3/aa11798965144c32c16ed1f4e8f19de4/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
+MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d61c63cbe320f54c00400d8819ba8a71/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d61c63cbe320f54c00400d8819ba8a71/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:11:5-20
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:18:5-28:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/df48f9f085e362d0ee42b2061783c370/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from [com.facebook.android:facebook-login:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/863db28abd3856c55ab4f5044f08ed1e/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:28:18-44
+	android:label
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:48-80
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:48-80
+	tools:ignore
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml:6:75-114
+	android:roundIcon
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:116-161
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:116-161
+	tools:targetApi
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml:6:54-74
+	android:icon
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:81-115
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:81-115
+	android:allowBackup
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:162-188
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:162-188
+	android:theme
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:189-220
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:189-220
+	android:usesCleartextTraffic
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:221-256
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:16-47
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:19:16-47
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:20:5-119
+	android:value
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:20:62-117
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:20:16-61
+meta-data#expo.modules.updates.ENABLED
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:21:5-82
+	android:value
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:21:60-80
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:21:16-59
+meta-data#expo.modules.updates.EXPO_SDK_VERSION
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:22:5-93
+	android:value
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:22:69-91
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:22:16-68
+meta-data#expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:23:5-105
+	android:value
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:23:81-103
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:23:16-80
+meta-data#expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:24:5-99
+	android:value
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:24:80-97
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:24:16-79
+meta-data#expo.modules.updates.EXPO_UPDATE_URL
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:25:5-122
+	android:value
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:25:68-120
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:25:16-67
+activity#com.eveels.app.MainActivity
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:5-38:16
+	android:screenOrientation
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:276-312
+	android:label
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:44-76
+	android:launchMode
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:155-186
+	android:windowSoftInputMode
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:187-229
+	android:configChanges
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:77-154
+	android:theme
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:230-275
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:26:15-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:27:7-30:23
+action#android.intent.action.MAIN
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:28:9-60
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:28:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:29:9-68
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:29:19-66
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:com.eveels.app+data:scheme:https
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:31:7-37:23
+category#android.intent.category.DEFAULT
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:9-67
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:33:19-65
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:39:5-81
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:39:15-79
+uses-library#org.apache.http.legacy
+ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:40:5-83
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:40:57-81
+	android:name
+		ADDED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml:40:19-56
+uses-sdk
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/76e7f409656b6bd51ffe90c3d6a6b882/transformed/jetified-flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/76e7f409656b6bd51ffe90c3d6a6b882/transformed/jetified-flipper-network-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/a8e1e290516a6a6989532a7b612ba5fd/transformed/jetified-flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/a8e1e290516a6a6989532a7b612ba5fd/transformed/jetified-flipper-fresco-plugin-0.54.0/AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-community_masked-view] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_masked-view] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-google-signin_google-signin] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-google-signin/google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-google-signin_google-signin] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-google-signin/google-signin/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:lottie-react-native] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:lottie-react-native] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/lottie-react-native/src/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-maps] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-reanimated] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-43
+MERGED from [:react-native-reanimated] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-43
+MERGED from [react-native-reanimated-64-jsc.aar] /Users/saahithshetty/.gradle/caches/transforms-3/b133fbf34af9e4c0cb7b75f9267440ce/transformed/jetified-react-native-reanimated-64-jsc/AndroidManifest.xml:5:5-7:41
+MERGED from [react-native-reanimated-64-jsc.aar] /Users/saahithshetty/.gradle/caches/transforms-3/b133fbf34af9e4c0cb7b75f9267440ce/transformed/jetified-react-native-reanimated-64-jsc/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-svg] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-video] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-video/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-video] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-video/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-application] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-application/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-application] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-application/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-facebook] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-facebook/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-facebook] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-facebook/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-firebase-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-firebase-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-firebase-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-firebase-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-font] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-font] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-google-sign-in] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-google-sign-in/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-google-sign-in] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-google-sign-in/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-splash-screen] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-splash-screen] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-splash-screen/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-updates] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-updates] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.64.3] /Users/saahithshetty/.gradle/caches/transforms-3/0d8790eec06b9ebf76702d328db12673/transformed/jetified-react-native-0.64.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.64.3] /Users/saahithshetty/.gradle/caches/transforms-3/0d8790eec06b9ebf76702d328db12673/transformed/jetified-react-native-0.64.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/dd4836609ad6755e36fd529755835c9a/transformed/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:flipper:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/dd4836609ad6755e36fd529755835c9a/transformed/jetified-flipper-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/4cf75d2d6e63e6902bb3cf1e6342f8fe/transformed/jetified-stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:stetho:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/4cf75d2d6e63e6902bb3cf1e6342f8fe/transformed/jetified-stetho-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/53150a1f7952314bf3eafac3dcaf4804/transformed/jetified-fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/53150a1f7952314bf3eafac3dcaf4804/transformed/jetified-fresco-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/10335f7d3beec6f5e2f7fa9e3bf0f1ab/transformed/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/10335f7d3beec6f5e2f7fa9e3bf0f1ab/transformed/jetified-imagepipeline-okhttp3-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/88fb5bf04e2ac55fe7e233f5cfcab800/transformed/jetified-animated-gif-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-gif:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/88fb5bf04e2ac55fe7e233f5cfcab800/transformed/jetified-animated-gif-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/cd62b1004e725a73f0971ae9a7b99cd8/transformed/jetified-webpsupport-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:webpsupport:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/cd62b1004e725a73f0971ae9a7b99cd8/transformed/jetified-webpsupport-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.android:facebook-login:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/863db28abd3856c55ab4f5044f08ed1e/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/863db28abd3856c55ab4f5044f08ed1e/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:25:5-27:41
+MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:25:5-27:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/98184be9367c1fd2f4aa1a83f5cdd16b/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/98184be9367c1fd2f4aa1a83f5cdd16b/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e9698b128c8227d3f8a7a93a46dad30e/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e9698b128c8227d3f8a7a93a46dad30e/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/931105e2b4eb6ee787cb22040d1595ad/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/931105e2b4eb6ee787cb22040d1595ad/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [org.webkit:android-jsc:r245459] /Users/saahithshetty/.gradle/caches/transforms-3/be0bbdab5491649d6789ae16380fe0d0/transformed/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /Users/saahithshetty/.gradle/caches/transforms-3/be0bbdab5491649d6789ae16380fe0d0/transformed/jetified-android-jsc-r245459/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:animated-base:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/2668a75c91d3f6bbb2db80763a546793/transformed/jetified-animated-base-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-base:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/2668a75c91d3f6bbb2db80763a546793/transformed/jetified-animated-base-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e191c314b4633594cdbdf0905e47cb74/transformed/jetified-animated-drawable-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:animated-drawable:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e191c314b4633594cdbdf0905e47cb74/transformed/jetified-animated-drawable-2.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/046a822ec72737bc043f613f2ec15d60/transformed/jetified-drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/046a822ec72737bc043f613f2ec15d60/transformed/jetified-drawee-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/68d82676f4cf304d531c58b51f96f137/transformed/jetified-nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/68d82676f4cf304d531c58b51f96f137/transformed/jetified-nativeimagefilters-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/85fc486979588abac103db08c32c92e5/transformed/jetified-memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/85fc486979588abac103db08c32c92e5/transformed/jetified-memory-type-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/cc87b9bec1885b388d9cfee6d7a4a0bd/transformed/jetified-memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/cc87b9bec1885b388d9cfee6d7a4a0bd/transformed/jetified-memory-type-java-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/01684ad0207810e9ef08c34311179cd0/transformed/jetified-imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/01684ad0207810e9ef08c34311179cd0/transformed/jetified-imagepipeline-native-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/6c01fb5e2cc87498db2fd6223c7dc214/transformed/jetified-memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/6c01fb5e2cc87498db2fd6223c7dc214/transformed/jetified-memory-type-ashmem-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/27d82412e9f7abe0db494de631ab6027/transformed/jetified-imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/27d82412e9f7abe0db494de631ab6027/transformed/jetified-imagepipeline-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/64822cce48ecac74ba4df6fd2ebe51c1/transformed/jetified-nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/64822cce48ecac74ba4df6fd2ebe51c1/transformed/jetified-nativeimagetranscoder-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/12530b826ad7bcea5638f8ddaa9eb455/transformed/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/12530b826ad7bcea5638f8ddaa9eb455/transformed/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/502341717aa291c563cd1ea34a1386e3/transformed/jetified-soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/502341717aa291c563cd1ea34a1386e3/transformed/jetified-soloader-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/saahithshetty/.gradle/caches/transforms-3/3f4377899cbbaf337e24c3490a2064f3/transformed/jetified-soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.9.0] /Users/saahithshetty/.gradle/caches/transforms-3/3f4377899cbbaf337e24c3490a2064f3/transformed/jetified-soloader-0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-structured-headers] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-structured-headers/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-structured-headers] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-structured-headers/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.airbnb.android:lottie:4.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e8870825d4b30079d4283e5145d0d287/transformed/jetified-lottie-4.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:4.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/e8870825d4b30079d4283e5145d0d287/transformed/jetified-lottie-4.0.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/6bf7e9917536c9934afcaa4bd01cca9c/transformed/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/6bf7e9917536c9934afcaa4bd01cca9c/transformed/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/8b0353ab1d6585fbbd1ebfcd44d22e76/transformed/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/8b0353ab1d6585fbbd1ebfcd44d22e76/transformed/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/2366f8948ff4cfe66dde27a67ecbc3ce/transformed/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/2366f8948ff4cfe66dde27a67ecbc3ce/transformed/jetified-fbcore-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:21:5-44
+MERGED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:20:5-22:41
+MERGED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/53c272f074daef69801831aede708396/transformed/browser-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/53c272f074daef69801831aede708396/transformed/browser-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/02074d1e2a323e808243076daa1feb1d/transformed/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/02074d1e2a323e808243076daa1feb1d/transformed/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/5a60cd075cef9678942fe20acc7f20f8/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/5a60cd075cef9678942fe20acc7f20f8/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/759318bdcbfe83fbc5e3e65542f0992b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/759318bdcbfe83fbc5e3e65542f0992b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/173137b2e353a45437118738098a2a36/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/173137b2e353a45437118738098a2a36/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ebc8831a47192eb5188cef8be99bdcf/transformed/jetified-play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ebc8831a47192eb5188cef8be99bdcf/transformed/jetified-play-services-location-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/bde8e248512a0da2d7a3605ffb3f33b0/transformed/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/bde8e248512a0da2d7a3605ffb3f33b0/transformed/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/saahithshetty/.gradle/caches/transforms-3/2b7d2b6886230f1d99f28c78feec2f3c/transformed/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/saahithshetty/.gradle/caches/transforms-3/2b7d2b6886230f1d99f28c78feec2f3c/transformed/jetified-play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1c76a2fae2bbdc71de13600358ae1c9b/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1c76a2fae2bbdc71de13600358ae1c9b/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0184c436058cb47d30646e1c1fd97b65/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0184c436058cb47d30646e1c1fd97b65/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/f5b48cc5edcbe4f53c674d6ca531c4b6/transformed/jetified-firebase-core-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/f5b48cc5edcbe4f53c674d6ca531c4b6/transformed/jetified-firebase-core-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/6a7368b69a23f1d7e63f98ebd5de5840/transformed/jetified-firebase-analytics-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/6a7368b69a23f1d7e63f98ebd5de5840/transformed/jetified-firebase-analytics-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/b7e4722e1247f0578eab2f2f66c2f8ae/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/b7e4722e1247f0578eab2f2f66c2f8ae/transformed/jetified-play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/15d201285efb35821004e1b0124c00e4/transformed/jetified-firebase-installations-interop-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/15d201285efb35821004e1b0124c00e4/transformed/jetified-firebase-installations-interop-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/24a0d453341f40371aed42eba6de98f0/transformed/jetified-play-services-tasks-17.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/24a0d453341f40371aed42eba6de98f0/transformed/jetified-play-services-tasks-17.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ce4a8cf0ee5de2489ca9660a74c0a4e/transformed/jetified-play-services-measurement-sdk-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/9ce4a8cf0ee5de2489ca9660a74c0a4e/transformed/jetified-play-services-measurement-sdk-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/23872d479d7526651ae59c8b90ae65a1/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/23872d479d7526651ae59c8b90ae65a1/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5fd763f5a2b9eac83def0b8bcac0a75b/transformed/jetified-play-services-measurement-base-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5fd763f5a2b9eac83def0b8bcac0a75b/transformed/jetified-play-services-measurement-base-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d407fd7ce26abbc82391e98eb659d874/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d407fd7ce26abbc82391e98eb659d874/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/47c1074b167ad65b08c40df057108aba/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/47c1074b167ad65b08c40df057108aba/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/77c5f8ebe522150cf525866974390aa6/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/77c5f8ebe522150cf525866974390aa6/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /Users/saahithshetty/.gradle/caches/transforms-3/dcea4d765f1e125ea760e94ce09f72ee/transformed/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.1] /Users/saahithshetty/.gradle/caches/transforms-3/dcea4d765f1e125ea760e94ce09f72ee/transformed/fragment-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/1939117246e6eef9b11c8d70fc6a0038/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/1939117246e6eef9b11c8d70fc6a0038/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.4.0] /Users/saahithshetty/.gradle/caches/transforms-3/76cd940a623e611253ea4775fc12c5cf/transformed/webkit-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.4.0] /Users/saahithshetty/.gradle/caches/transforms-3/76cd940a623e611253ea4775fc12c5cf/transformed/webkit-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:24:5-26:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fd07e7456fc084e7dff868887607855c/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fd07e7456fc084e7dff868887607855c/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5d7fd7cad925e3652e6bea96ecf96a62/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/5d7fd7cad925e3652e6bea96ecf96a62/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ef2e0b3eaa94628baaea1bcb2266aff0/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ef2e0b3eaa94628baaea1bcb2266aff0/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ee3e754653998162ffbb4edf10557257/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ee3e754653998162ffbb4edf10557257/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/093bd42bfdb2909d83220dfbe43ab6d7/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/093bd42bfdb2909d83220dfbe43ab6d7/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/609550f654a31771b35ad4d36b7f48a1/transformed/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/609550f654a31771b35ad4d36b7f48a1/transformed/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/4e456bd85741acac68d8c071c0fbfe51/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/4e456bd85741acac68d8c071c0fbfe51/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/3d7b76fb78a1c2b707fb8e191bb00713/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/3d7b76fb78a1c2b707fb8e191bb00713/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0048be2674a2cf85fa830db71787153b/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/0048be2674a2cf85fa830db71787153b/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/567f73e74780a96b2277330e1a31f8b7/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/567f73e74780a96b2277330e1a31f8b7/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/dec5c39909d3646f6c1c05a88f5421ec/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/dec5c39909d3646f6c1c05a88f5421ec/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ca87d1e081d3c93a7d109b7e6efb46cc/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/ca87d1e081d3c93a7d109b7e6efb46cc/transformed/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fa8be8032938a949a431a44cc6a93467/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fa8be8032938a949a431a44cc6a93467/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/df48f9f085e362d0ee42b2061783c370/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] /Users/saahithshetty/.gradle/caches/transforms-3/df48f9f085e362d0ee42b2061783c370/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/saahithshetty/.gradle/caches/transforms-3/041c7b520b6c8a305c7eb372df07c7bf/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/saahithshetty/.gradle/caches/transforms-3/041c7b520b6c8a305c7eb372df07c7bf/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/ecebc46d3378c73f3ddf62f0b0484203/transformed/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/ecebc46d3378c73f3ddf62f0b0484203/transformed/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/8ffb189c331af005afd9664a63dfc2bb/transformed/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/8ffb189c331af005afd9664a63dfc2bb/transformed/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/dff42dde6741d03c5b9a54cc58e56618/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/dff42dde6741d03c5b9a54cc58e56618/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/86c774cd71fc5fcab8126a766e4f4143/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/86c774cd71fc5fcab8126a766e4f4143/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/63d1aa091ed59ae896b83636d1eaf627/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/63d1aa091ed59ae896b83636d1eaf627/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/4a685226c369c460acaef0dd539d3524/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/4a685226c369c460acaef0dd539d3524/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/0f9387caa01b8a067a8702be51dc95bf/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/0f9387caa01b8a067a8702be51dc95bf/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/d94bd3e8325b5f397dfe0b528f8cf4f2/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/d94bd3e8325b5f397dfe0b528f8cf4f2/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/cc78a23b71ede1999902a398cb8049d1/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/cc78a23b71ede1999902a398cb8049d1/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/366958ac9e8ebbfe2d5a066c45df98c5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/366958ac9e8ebbfe2d5a066c45df98c5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/d6630bbe7fe6ed39de19ebc9bb38dd28/transformed/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/d6630bbe7fe6ed39de19ebc9bb38dd28/transformed/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/804de37072a079e112a97f3c3a7c1f9b/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/804de37072a079e112a97f3c3a7c1f9b/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/a5671c6c54a45adcffcfd09191cf5d12/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/a5671c6c54a45adcffcfd09191cf5d12/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/bc900fc237e7205a635413e59c3b6054/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/bc900fc237e7205a635413e59c3b6054/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [:expo-manifests] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-manifests/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-manifests] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-manifests/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-json-utils] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-json-utils/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-json-utils] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-json-utils/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-updates-interface] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-updates-interface] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/saahithshetty/.gradle/caches/transforms-3/aa11798965144c32c16ed1f4e8f19de4/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/saahithshetty/.gradle/caches/transforms-3/aa11798965144c32c16ed1f4e8f19de4/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/saahithshetty/.gradle/caches/transforms-3/11d7dcd08ae07be9394e506a50cd22ed/transformed/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/saahithshetty/.gradle/caches/transforms-3/11d7dcd08ae07be9394e506a50cd22ed/transformed/jetified-android-scalablevideoview-1.0.4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/c33d4b422db92e86fae62b998269f796/transformed/jetified-ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/c33d4b422db92e86fae62b998269f796/transformed/jetified-ui-common-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d61c63cbe320f54c00400d8819ba8a71/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d61c63cbe320f54c00400d8819ba8a71/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:8:5-10:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d8b7c3f6590b8a73356321fa61fee17c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d8b7c3f6590b8a73356321fa61fee17c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/saahithshetty/.gradle/caches/transforms-3/2ed1cf6f84ede3558ac0f06ce57f4d62/transformed/jetified-flipper-0.54.0/AndroidManifest.xml:16:22-73
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-79
+MERGED from [:expo-updates] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [:expo-updates] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-updates/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/1971ad547b7ab4cc557078a0991aabb9/transformed/jetified-play-services-measurement-sdk-api-20.0.0/AndroidManifest.xml:24:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from [:react-native-firebase_auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-76
+meta-data#app_data_collection_default_enabled
+ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:36
+	android:value
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-33
+	android:name
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-63
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-20:19
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:74:9-80:19
+MERGED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:74:9-80:19
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:15:9-21:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:15:9-21:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:33:9-37:35
+MERGED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:33:9-37:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:76:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:37:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+	android:name
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:18-89
+meta-data#com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar
+ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-120
+provider#io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider
+ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:9-26:38
+	android:authorities
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-86
+	android:exported
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-37
+	android:initOrder
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-35
+	android:name
+		ADDED from [:react-native-firebase_app] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/@react-native-firebase/app/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-88
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/saahithshetty/ReactNative/eveel-fe-app/android/app/src/debug/AndroidManifest.xml:1:1-7:12 reason: com.swmansion.reanimated has a targetSdkVersion < 4
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+	android:resource
+		ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+	android:name
+		ADDED from [:react-native-webview] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
+activity#expo.modules.appauth.AppAuthBrowserActivity
+ADDED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:75
+	android:launchMode
+		ADDED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-44
+	android:exported
+		ADDED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-37
+	android:theme
+		ADDED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-72
+	android:name
+		ADDED from [:expo-app-auth] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-app-auth/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-71
+intent#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:application/octet-stream
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-18:18
+action#android.intent.action.SEND
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-65
+	android:name
+		ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:21-62
+intent#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:text/x-vcard
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-25:18
+intent#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:text/vcard
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:9-32:18
+intent#action:name:android.intent.action.EDIT
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:33:9-35:18
+action#android.intent.action.EDIT
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:13-65
+	android:name
+		ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:21-62
+intent#action:name:android.intent.action.INSERT
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:9-38:18
+action#android.intent.action.INSERT
+ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:13-67
+	android:name
+		ADDED from [:expo-contacts] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-contacts/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:21-64
+intent#action:name:android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:9-21:18
+action#android.intent.action.OPEN_DOCUMENT_TREE
+ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-79
+	android:name
+		ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:21-76
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:9-34:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-47
+	android:authorities
+		ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:13-74
+	android:exported
+		ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-37
+	tools:replace
+		ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-48
+	android:name
+		ADDED from [:expo-file-system] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:13-74
+service#expo.modules.location.services.LocationTaskService
+ADDED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-19:56
+	android:exported
+		ADDED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+	android:foregroundServiceType
+		ADDED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-53
+	android:name
+		ADDED from [:expo-location] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+intent#action:name:android.support.customtabs.action.CustomTabsService
+ADDED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:18
+action#android.support.customtabs.action.CustomTabsService
+ADDED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-90
+	android:name
+		ADDED from [:expo-web-browser] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:21-87
+meta-data#org.unimodules.core.AppLoader#react-native-headless
+ADDED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:89
+	android:value
+		ADDED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-86
+	android:name
+		ADDED from [:expo-modules-core] /Users/saahithshetty/ReactNative/eveel-fe-app/node_modules/expo-modules-core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
+activity#com.facebook.FacebookActivity
+ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:30:9-33:66
+	android:configChanges
+		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:32:13-96
+	android:theme
+		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:33:13-63
+	android:name
+		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:31:13-57
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:19-68
+activity#com.facebook.CustomTabActivity
+ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:35:9-49:20
+	tools:node
+		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:38:13-31
+	android:exported
+		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:37:13-36
+	android:name
+		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:36:13-58
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.${applicationId}+data:scheme:fbconnect
+ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:39:13-48:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.com.eveels.app+data:scheme:fbconnect
+ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/7fe9e156637d4f1db4fe407a5d91bbf7/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:39:13-48:29
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:29:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:31:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:30:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:32:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:28:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:33:13-43:29
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:45:9-62:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:47:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:49:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:48:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:50:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:46:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:51:13-61:29
+service#com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:64:9-73:19
+	android:enabled
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:66:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:67:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:65:13-101
+intent-filter#action:name:com.google.firebase.auth.api.gms.service.START+category:name:android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:68:13-72:29
+action#com.google.firebase.auth.api.gms.service.START
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:17-89
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:69:25-86
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:79:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.0.1] /Users/saahithshetty/.gradle/caches/transforms-3/de711463f3495de32755b328e9dc635c/transformed/jetified-firebase-auth-21.0.1/AndroidManifest.xml:78:17-109
+activity#net.openid.appauth.AuthorizationManagementActivity
+ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:27:9-31:75
+	android:launchMode
+		ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:30:13-44
+	android:exported
+		ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:29:13-37
+	android:theme
+		ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:31:13-72
+	android:name
+		ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:28:13-78
+activity#net.openid.appauth.RedirectUriReceiverActivity
+ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:32:9-43:20
+	android:exported
+		ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:34:13-36
+	android:name
+		ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:33:13-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:${appAuthRedirectScheme}
+ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:35:13-42:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:https
+ADDED from [net.openid:appauth:0.7.1] /Users/saahithshetty/.gradle/caches/transforms-3/8eefdafe9786ac217e603e8294285035/transformed/jetified-appauth-0.7.1/AndroidManifest.xml:35:13-42:29
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:19.2.0] /Users/saahithshetty/.gradle/caches/transforms-3/885e1e8c988fd8e03f924719c4a57c68/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml:34:13-89
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/d2ff47d7aeb0c43f1908a5aabce32d9e/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/e021049d1168890ac186a454e2389fb4/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/21f39c1ce4b9470284041fb61b20eb2e/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:31:17-139
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/414ecca30676208cbd1816d4170bec5c/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/83a74689d7cb04d01f4da6af80c3ee46/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/fe6e0469774187737f9242a2fa813b7d/transformed/jetified-play-services-measurement-impl-20.0.0/AndroidManifest.xml:26:5-110
+MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d61c63cbe320f54c00400d8819ba8a71/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/saahithshetty/.gradle/caches/transforms-3/d61c63cbe320f54c00400d8819ba8a71/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:20.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/c32e046de6c05d213f399255f60bc4db/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:40:13-87
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/saahithshetty/.gradle/caches/transforms-3/aa11798965144c32c16ed1f4e8f19de4/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/saahithshetty/.gradle/caches/transforms-3/aa11798965144c32c16ed1f4e8f19de4/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:8:9-10:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.5.0] /Users/saahithshetty/.gradle/caches/transforms-3/b2a3dc2055f59249240c9f01c2a95c21/transformed/jetified-play-services-basement-17.5.0/AndroidManifest.xml:24:13-58
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
+receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
+ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
+	android:exported
+		ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
+intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
+action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
+ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
+	android:name
+		ADDED from [com.facebook.android:facebook-core:9.0.0] /Users/saahithshetty/.gradle/caches/transforms-3/623b5061226daa283987b289ef4f2086/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.3.0] /Users/saahithshetty/.gradle/caches/transforms-3/720b418cbaef1ab723af2b0b940c7852/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:15:5-98
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:15:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:16:22-91
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /Users/saahithshetty/.gradle/caches/transforms-3/05e473f545cac968579a62193b2141e5/transformed/jetified-library-3.2.11/AndroidManifest.xml:26:13-120

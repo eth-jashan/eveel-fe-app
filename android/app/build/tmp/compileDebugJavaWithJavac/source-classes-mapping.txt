@@ -1,0 +1,14 @@
+com/eveels/app/ReactNativeFlipper.java
+ com.eveels.app.ReactNativeFlipper
+ com.eveels.app.ReactNativeFlipper$1
+ com.eveels.app.ReactNativeFlipper$2
+ com.eveels.app.ReactNativeFlipper$2$1
+com/eveels/app/BuildConfig.java
+ com.eveels.app.BuildConfig
+com/eveels/app/MainApplication.java
+ com.eveels.app.MainApplication
+ com.eveels.app.MainApplication$1
+com/eveels/app/MainActivity.java
+ com.eveels.app.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
